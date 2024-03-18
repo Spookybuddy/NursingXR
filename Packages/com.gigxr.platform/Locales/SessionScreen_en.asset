@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: SessionScreen_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4206e160146469645b427f3ddb505e81, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 98618298368
+    m_Localized: Are you sure you want to end the session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242492332822528
+    m_Localized: Are you sure you want to leave this session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242510984892416
+    m_Localized: Are you sure you want to save and overwrite the current session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242536511426560
+    m_Localized: Do you want to save the current session as a copy?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242560167301120
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242586775965696
+    m_Localized: You have unsaved changes in your session. Do you want to save your
+      changes and end the session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242662076305408
+    m_Localized: Are you sure you want to leave this session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326467510095872
+    m_Localized: Fetching session data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266892482433024
+    m_Localized: Failed to load the session
+    m_Metadata:
+      m_Items: []
+  - m_Id: 267482067357696
+    m_Localized: '"{0}" has been Saved'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766541110628352
+    m_Localized: Please wait for {0} to accept the role of host
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766636291969024
+    m_Localized: 'Host transfer to {0} timed out...
+
+      Try again?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766716650639360
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10818027542794240
+    m_Localized: You are now the host!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10818142428975104
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18446707853086720
+    m_Localized: '{0} is now the host.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18458071506079744
+    m_Localized: The creator of this session has taken back host privileges.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19186405013704704
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19186495950409728
+    m_Localized: Are you sure you want to reclaim the host?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20174443634216960
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20174613008601088
+    m_Localized: '{0} rejected the host request...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20179635884773376
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20182453110689792
+    m_Localized: '{0} is asking you to be the host.
+
+      Accept?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20184514753712128
+    m_Localized: '{0} cancelled host transfer.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23546265746526208
+    m_Localized: Do you want to save the current session as a copy?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943299356250112
+    m_Localized: To enter the session, select your location
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943594425536512
+    m_Localized: Remote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943635559075840
+    m_Localized: In class
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35793709863522304
+    m_Localized: The scenario will resume when the host is finished preparing the
+      scenario.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46696727597273088
+    m_Localized: Leave Session
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46696845318803456
+    m_Localized: The host has left the session. You may wait for the host to return,
+      or leave the session now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51760069886070784
+    m_Localized: Syncing with host
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52148733002633216
+    m_Localized: '{0} has entered the session'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52148957951545344
+    m_Localized: '{0} has left the session'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52149124838707200
+    m_Localized: Welcome {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52152614059233280
+    m_Localized: Waiting for host. You may wait for the host to join, or leave the
+      session now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53892609153421312
+    m_Localized: The session has been closed by the host.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61148545043648512
+    m_Localized: Please Wait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61177972079185920
+    m_Localized: The session has been locked by the host.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106434183820988416
+    m_Localized: Saving...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106785442402914304
+    m_Localized: Save and close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157540140348854272
+    m_Localized: Failed to load the session due to GMS Server issues. Please contact
+      GIGXR Admins to resolve.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326476313939968
+    m_Localized: Spawning assets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326539530489856
+    m_Localized: Connecting to room
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

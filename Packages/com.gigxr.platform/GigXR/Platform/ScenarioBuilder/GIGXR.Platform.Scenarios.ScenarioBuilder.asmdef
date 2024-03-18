@@ -1,0 +1,28 @@
+{
+    "name": "GIGXR.Platform.Scenarios.ScenarioBuilder",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d47da1136ce44555b66b7574d4d5f837",
+        "GUID:01ab19f82c484d66ad88a31d45e47879",
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:b0c081b402344e63b2ebd0ec2ccee178",
+        "GUID:d8571eacdc7d0d849b55910fe329642a",
+        "GUID:5e7b043a4ce92b74e96cac8aba4879a3",
+        "GUID:d67ddf996eb5f624cbeaf06ccd090cb6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:54197823cd778b54e8916ec0e9cbadde",
+        "GUID:467728d8f7602c14289e3f4d4c63c4b5",
+        "GUID:4bc551ca88f73b149b3a2f66d9dd3b64",
+        "GUID:8cb605f89cf647f6b273b4660af75f50",
+        "GUID:668dc102a22d0854294b2eb4199045ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

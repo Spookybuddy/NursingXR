@@ -1,0 +1,20 @@
+{
+    "name": "GIGXR.Platform.Scenarios.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:d47da1136ce44555b66b7574d4d5f837",
+        "GUID:69448af7b92c7f342b298e06a37122aa"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
+  m_Name: Conditional Sample
+  m_EditorClassIdentifier: 
+  presetScenarioName: Sample Scenario Title
+  presetStages:
+  - presetStageId: stage-one
+    stage:
+      stageId: abd49aaa-2521-4fdf-83d8-0d651a2f0b77
+      stageTitle: stage-1
+  - presetStageId: stage-two
+    stage:
+      stageId: 6b8f5e69-5087-478e-ac4f-d9b51376d381
+      stageTitle: stage-2
+  presetAssets:
+  - presetAssetId: asset-1
+    assetTypePrefabReference:
+      m_AssetGUID: 709ff67bc94f0c14c8386aa6096ffcde
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: c46f9bbc-b358-46a3-8aef-5e7ec2f1b2e3
+    assetData: '{"version":0,"assetDataByTypeName":{"allowMultipleAssetTypeComponent":{"version":0,"assetData":{"allowMultiple":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":true},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":true}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["allowMultiple"]}},"isEnabledAssetTypeComponent":{"version":0,"assetData":{"isEnabled":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":true},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":true}]}},"isEnabledHostOnly":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":false},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":false},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":false}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isEnabled","isEnabledHostOnly"]}},"positionAssetTypeComponent":{"version":0,"assetData":{"isMovableInPlayMode":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":false},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":false},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":false}]}},"isMovableInEditMode":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":false},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":false},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":false}]}},"position":{"runtimeData":{"sharedValue":{"x":0.0,"y":0.0,"z":0.0},"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isMovableInPlayMode","isMovableInEditMode","position"]}},"rotationAssetTypeComponent":{"version":0,"assetData":{"rotation":{"runtimeData":{"sharedValue":{"x":0.0,"y":1.0,"z":0.0,"w":0.0},"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0}},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0}}]}},"playModeConstraints":{"runtimeData":{"sharedValue":0,"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":0},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":0},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":0}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["rotation","playModeConstraints"]}},"scaleAssetTypeComponent":{"version":0,"assetData":{"scale":{"runtimeData":{"sharedValue":{"x":1.0,"y":1.0,"z":1.0},"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":{"x":1.0,"y":1.0,"z":1.0}},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":{"x":1.0,"y":1.0,"z":1.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["scale"]}},"stageTimerAssetTypeComponent":{"version":0,"assetData":{"timeLimit":{"runtimeData":{"sharedValue":0,"stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":false,"localValue":5},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":false,"localValue":5}]}},"simulationStageChangeTime":{"runtimeData":{"sharedValue":0,"stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":false,"localValue":60},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":false,"localValue":60}]}},"stageIdToSwitchTo":{"runtimeData":{"sharedValue":"","stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":""},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":false,"localValue":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77"}]}},"simulationStartTime":{"runtimeData":{"sharedValue":0,"stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":0},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":false,"localValue":0}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["timeLimit","simulationStageChangeTime","stageIdToSwitchTo","simulationStartTime"]}},"timeAssetTypeComponent":{"version":0,"assetData":{"timeType":{"runtimeData":{"sharedValue":"SimulationTime","stageAssetProperties":[{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":"SimulationTime"},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":"SimulationTime"}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["timeType"]}},"digitalClockDisplayAssetTypeComponent":{"version":0,"assetData":{"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":[]}},"networkAuthorityAssetTypeComponent":{"version":0,"assetData":{"authority":{"runtimeData":{"sharedValue":"HostOnly","stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":"HostOnly"},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":"HostOnly"},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":"HostOnly"}]}},"authoritySet":{"runtimeData":{"sharedValue":[],"stageAssetProperties":[{"stageId":"00000000-0000-0000-0000-000000000000","useShared":true,"localValue":[]},{"stageId":"abd49aaa-2521-4fdf-83d8-0d651a2f0b77","useShared":true,"localValue":[]},{"stageId":"6b8f5e69-5087-478e-ac4f-d9b51376d381","useShared":true,"localValue":[]}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["authority","authoritySet"]}}}}'
+  presetAssetTypeLoadBundles: []
+  presetRuleIds: []
+  presetRuleObjects:
+  - {fileID: 11400000, guid: 6528351be27ee7049a126f6c6c9f7fe4, type: 2}
+  - {fileID: 11400000, guid: 0a1392c8b44b0424792c0987bf29d36b, type: 2}
+  - {fileID: 11400000, guid: 1db1b64723830ee468add474997c8b62, type: 2}
+  - {fileID: 11400000, guid: 9d1f18533e2997345b1dd8ce60bf3217, type: 2}
+  pathwayData: []

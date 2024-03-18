@@ -1,0 +1,200 @@
+{
+  "demoSphereComponent": {
+    "assetData": {
+      "color": {
+        "runtimeData": {
+          "sharedValue": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 0.0
+          },
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "scaleAssetTypeComponent": {
+    "assetData": {
+      "scale": {
+        "runtimeData": {
+          "sharedValue": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "rotationAssetTypeComponent": {
+    "assetData": {
+      "rotation": {
+        "runtimeData": {
+          "sharedValue": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "positionAssetTypeComponent": {
+    "assetData": {
+      "position": {
+        "runtimeData": {
+          "sharedValue": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "isVisibleHostOnlyAssetTypeComponent": {
+    "assetData": {
+      "isVisibleToHostOnly": {
+        "runtimeData": {
+          "sharedValue": false,
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "isVisibleAssetTypeComponent": {
+    "assetData": {
+      "isVisible": {
+        "runtimeData": {
+          "sharedValue": false,
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "isMovableAssetTypeComponent": {
+    "assetData": {
+      "isMovable": {
+        "runtimeData": {
+          "sharedValue": false,
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "isEnabledAssetTypeComponent": {
+    "assetData": {
+      "isEnabled": {
+        "runtimeData": {
+          "sharedValue": false,
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  },
+  "allowMultipleAssetTypeComponent": {
+    "assetData": {
+      "allowMultiple": {
+        "runtimeData": {
+          "sharedValue": false,
+          "stageAssetProperties": []
+        }
+      },
+      "name": {
+        "runtimeData": {
+          "value": ""
+        }
+      },
+      "description": {
+        "runtimeData": {
+          "value": ""
+        }
+      }
+    }
+  }
+}

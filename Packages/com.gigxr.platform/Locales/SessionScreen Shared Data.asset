@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: SessionScreen Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: SessionScreenTable
+  m_TableCollectionNameGuidString: 4206e160146469645b427f3ddb505e81
+  m_Entries:
+  - m_Id: 98618298368
+    m_Key: closePromptText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242492332822528
+    m_Key: leavePromptText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242510984892416
+    m_Key: savePromptText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242536511426560
+    m_Key: saveCopyPromptText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242560167301120
+    m_Key: yesText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242586775965696
+    m_Key: closePromptSavedText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242662076305408
+    m_Key: leavePromptSavedText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266892482433024
+    m_Key: failedJoinSessionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 267482067357696
+    m_Key: savedSessionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766541110628352
+    m_Key: pleaseWaitForUserToAccept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766636291969024
+    m_Key: userTimeout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10766716650639360
+    m_Key: cancelText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10818027542794240
+    m_Key: newHost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10818142428975104
+    m_Key: continueText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18446707853086720
+    m_Key: userNewHost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18458071506079744
+    m_Key: hostReclaimed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19186405013704704
+    m_Key: confirmText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19186495950409728
+    m_Key: promptReclaimHost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20174443634216960
+    m_Key: closeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20174613008601088
+    m_Key: userRejectsHostText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20179635884773376
+    m_Key: noText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20182453110689792
+    m_Key: acceptHostRequestText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20184514753712128
+    m_Key: hostCancelledText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23546265746526208
+    m_Key: savedSessionAsCopyText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943299356250112
+    m_Key: remotePromptText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943594425536512
+    m_Key: remoteText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32943635559075840
+    m_Key: colocatedText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35793709863522304
+    m_Key: scenarioEditMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46696727597273088
+    m_Key: leaveSessionPrompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46696845318803456
+    m_Key: hostLeftSession
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51760069886070784
+    m_Key: syncingText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52148733002633216
+    m_Key: userEnterSessionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52148957951545344
+    m_Key: userLeftSessionText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52149124838707200
+    m_Key: welcomeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52152614059233280
+    m_Key: waitForHostText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53892609153421312
+    m_Key: sessionClosedText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61148545043648512
+    m_Key: pleaseWait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61177972079185920
+    m_Key: joiningLockedSession
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106434183820988416
+    m_Key: savingText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106785442402914304
+    m_Key: saveAndCloseText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157540140348854272
+    m_Key: failedServerIssueText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326467510095872
+    m_Key: fetchSessionDataText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326476313939968
+    m_Key: spawnAssetText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163326539530489856
+    m_Key: connectRoomText
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1637622692028

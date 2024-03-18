@@ -1,0 +1,33 @@
+{
+    "name": "GIGXR.Platform.Mobile",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:a9420e37d7990b54abdef6688edbe313",
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:d67ddf996eb5f624cbeaf06ccd090cb6",
+        "GUID:01ab19f82c484d66ad88a31d45e47879",
+        "GUID:92703082f92b41ba80f0d6912de66115",
+        "GUID:d8571eacdc7d0d849b55910fe329642a",
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
+        "GUID:4ca033ee547ec451c8a2d3c33d7620ad",
+        "GUID:d47da1136ce44555b66b7574d4d5f837",
+        "GUID:54197823cd778b54e8916ec0e9cbadde",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:8cb605f89cf647f6b273b4660af75f50"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

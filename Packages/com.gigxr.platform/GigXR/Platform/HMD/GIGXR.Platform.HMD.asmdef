@@ -1,0 +1,40 @@
+{
+    "name": "GIGXR.Platform.HMD",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:3d9f59ae91c131e408fec0e5f661c340",
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:d8571eacdc7d0d849b55910fe329642a",
+        "GUID:01ab19f82c484d66ad88a31d45e47879",
+        "GUID:d47da1136ce44555b66b7574d4d5f837",
+        "GUID:d67ddf996eb5f624cbeaf06ccd090cb6",
+        "GUID:8cb605f89cf647f6b273b4660af75f50",
+        "GUID:8b7cc3e86d77403b8b984c08cbaeaf8f",
+        "GUID:a7a4c34601384f9389d5c4207f3c6331",
+        "GUID:7404ed9ad29ad3844ac3a261c8d45b60",
+        "GUID:57c32fc907df0f54e8e6e8f0d2488336",
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
+        "GUID:ece0142dc65a6ac46a7fe169e73c59a5",
+        "GUID:467728d8f7602c14289e3f4d4c63c4b5",
+        "GUID:54197823cd778b54e8916ec0e9cbadde",
+        "GUID:4bc551ca88f73b149b3a2f66d9dd3b64",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:3b76ab8242cc35d479edf0a949d56d59"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Android",
+        "iOS"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "PlatformLinkXml.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

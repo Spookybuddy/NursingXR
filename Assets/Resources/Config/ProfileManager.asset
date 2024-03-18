@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4562aea60d93fa3478fb1a2ca5238476, type: 3}
+  m_Name: ProfileManager
+  m_EditorClassIdentifier: 
+  networkProfile:
+    DefaultRoomName: Event
+    PingInterval: 10
+    BadPingThreshold: 150
+    SeverePingThreshold: 250
+  dictationProfile:
+    Key: 
+    Region: 
+    ProfanityOptionSetting: 0
+  appDetailsProfile:
+    appDetailsScriptableObject: {fileID: 11400000, guid: ee1dfabd791d52d41891a66bf1fd15c7,
+      type: 2}
+  authenticationProfile:
+    TokenValidDurationSeconds: 3600
+    TermsAndConditionsURL: https://www.gigxr.com/privacy
+    CreditsURL: https://www.gigxr.com/credits
+    TargetEnvironmentalDetails: {fileID: 11400000, guid: 79d9913d009f9db4d9515c9b87d7a8f4,
+      type: 2}
+    EnvironmentalDetailOptions: []
+  FeatureFlagsProfile:
+    FeatureFlags: -1
+  PerformanceProfile:
+    WaitTimeBetweenAssetGroupsMilliseconds: 500
+  CalibrationProfile:
+    DefaultCalibrationHandle: {fileID: 2538538527357525348, guid: b5847b54a188ac7468f1e641820ccc8c,
+      type: 3}
+    MoveScenarioButtonPrefab: {fileID: 2127352402331892920, guid: 2f3b7ad824424d14bbaaeffde2c58eaa,
+      type: 3}
+  StyleProfile:
+    styleScriptableObject: {fileID: 0}
+  injectableScriptableObjects: {fileID: 0}

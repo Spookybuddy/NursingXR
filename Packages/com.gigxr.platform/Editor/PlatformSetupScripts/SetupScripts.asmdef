@@ -1,0 +1,26 @@
+{
+    "name": "SetupScripts",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dfd0ce20189d48e5b22bb4134b558f5a",
+        "GUID:e40ba710768534012815d3193fa296cb",
+        "GUID:8b0c2853a940d4fd9979bac438eb5bf3",
+        "GUID:d76576b768da4171b007f21c44fabe13",
+        "GUID:7910d4af31b741acb1bce1140634a975",
+        "GUID:92703082f92b41ba80f0d6912de66115",
+        "GUID:f9fe0089ec81f4079af78eb2287a6163",
+        "GUID:0d0a5c5ecc09e084586ee3c84e765bb5",
+        "GUID:3d9f59ae91c131e408fec0e5f661c340"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

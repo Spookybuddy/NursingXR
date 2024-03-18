@@ -1,0 +1,303 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2994156523722816537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 598372949174687332, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fe678c2090ea2d4390eaac9ddddbd4f, type: 3}
+    - target: {fileID: 598372949174687332, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365852788286814449, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_text
+      value: Move Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 319372046061015923}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7857275379984164936}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleSettingContentMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetState
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StartContentMarkerComponent, GIGXR.Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ToggleSpriteRendererColor, GIGXR.Platform.Utilities
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145539895104279259, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478137401759669544, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749456436719665313, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_Name
+      value: Hand Menu Tab Button - Move Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164513091172761438, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212481245749427924, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_text
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235093402821341231, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277282092293234762, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: linkedTabInformation
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d844ceea4e3f0f448ac1f7a39125539, type: 2}
+    - target: {fileID: 8299042419604651950, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fe678c2090ea2d4390eaac9ddddbd4f, type: 3}
+    - target: {fileID: 8347441541439475465, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0015
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.025000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099987163863140090, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+--- !u!1 &2127352402331892920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3749456436719665313, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+  m_PrefabInstance: {fileID: 2994156523722816537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &319372046061015923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127352402331892920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f75a29a7c006c46acf69cfe5683edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7857275379984164936}
+        m_TargetAssemblyTypeName: ToggleSpriteRendererColor, GIGXR.Platform.Utilities
+        m_MethodName: SetState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4285485800472528104}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Done
+          m_BoolArgument: 1
+        m_CallState: 2
+  cancelEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7857275379984164936}
+        m_TargetAssemblyTypeName: ToggleSpriteRendererColor, GIGXR.Platform.Utilities
+        m_MethodName: SetState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4285485800472528104}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Move Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7857275379984164936}
+        m_TargetAssemblyTypeName: ToggleSpriteRendererColor, GIGXR.Platform.Utilities
+        m_MethodName: SetState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4285485800472528104}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Move Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5006355091128407679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127352402331892920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c067bd63c745fb4aa4e04a8cc3a2db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  update: 1
+  offset: {x: 0, y: 0, z: 0}
+  reverseForward: 1
+--- !u!114 &4285485800472528104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1365852788286814449, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+  m_PrefabInstance: {fileID: 2994156523722816537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7360935460515603602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5740447626360346763, guid: c31ed93fc9e59574ca01b48ea8633413, type: 3}
+  m_PrefabInstance: {fileID: 2994156523722816537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7857275379984164936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360935460515603602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aee1fafa7f62c944bec899e28b71b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryColor: {r: 0.24705882, g: 0.23529412, b: 0.23529412, a: 1}
+  secondaryColor: {r: 0, g: 0.5294118, b: 0.54901963, a: 1}

@@ -1,0 +1,30 @@
+{
+    "name": "GIGXR.Platform.Scenarios",
+    "rootNamespace": "",
+    "references": [
+        "GUID:01ab19f82c484d66ad88a31d45e47879",
+        "GUID:8b7cc3e86d77403b8b984c08cbaeaf8f",
+        "GUID:a7a4c34601384f9389d5c4207f3c6331",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:d8571eacdc7d0d849b55910fe329642a",
+        "GUID:d67ddf996eb5f624cbeaf06ccd090cb6",
+        "GUID:cdd0d9c5901b7644a9b8c3fcafc39e8f",
+        "GUID:57c32fc907df0f54e8e6e8f0d2488336",
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:8cb605f89cf647f6b273b4660af75f50",
+        "GUID:54197823cd778b54e8916ec0e9cbadde",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5c01796d064528144a599661eaab93a6",
+        "GUID:7404ed9ad29ad3844ac3a261c8d45b60"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7328951400461836171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4863913569091729172, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_text
+      value: Place Manually
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211902191894517506, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b99f9216c29cb144a827441635c1e839, type: 3}
+    - target: {fileID: 7913819116856126607, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_text
+      value: Select the location of your anchor manually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928409165526, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928409165526, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartManualCalibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928409165526, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: onClickEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GIGXR.Platform.HMD.UI.CalibrationScreen, GIGXR.Platform.HMD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928409165527, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: targetSubScreenState
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928409165529, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_Name
+      value: Manual Anchor Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0269
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0060000243
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375269928963336248, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4c577fe10545b7429e4bfa8b48b766a, type: 3}
