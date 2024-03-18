@@ -1,0 +1,20 @@
+{
+    "name": "GIGXR.Platform.Mobile.iOS",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:b7007355853bd4340a676c611844e909"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "iOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
+  m_Name: Animation Test
+  m_EditorClassIdentifier: 
+  presetScenarioName: 
+  presetStages:
+  - presetStageId: 1
+    stage:
+      stageId: 3d9611b6-256c-4224-92aa-10b2ea91bd8e
+      stageTitle: 1
+  presetAssets:
+  - presetAssetId: 1
+    assetTypePrefabReference:
+      m_AssetGUID: 6dc33ff9bf8e0564fadcb981397d951d
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: b4fb573c-ebd7-4035-bd94-efa506844aab
+    assetData: '{"version":0,"assetDataByTypeName":{"allowMultipleAssetTypeComponent":{"version":0,"assetData":{"allowMultiple":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":true}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["allowMultiple"]}},"isEnabledAssetTypeComponent":{"version":0,"assetData":{"isEnabled":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":true}]}},"isEnabledHostOnly":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":false}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isEnabled","isEnabledHostOnly"]}},"isMovableAssetTypeComponent":{"version":0,"assetData":{"isMovable":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":false}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isMovable"]}},"positionAssetTypeComponent":{"version":0,"assetData":{"position":{"runtimeData":{"sharedValue":{"x":-0.61,"y":0.0,"z":0.0},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["position"]}},"rotationAssetTypeComponent":{"version":0,"assetData":{"rotation":{"runtimeData":{"sharedValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["rotation"]}},"scaleAssetTypeComponent":{"version":0,"assetData":{"scale":{"runtimeData":{"sharedValue":{"x":0.5,"y":0.5,"z":0.5},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.5,"y":0.5,"z":0.5}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["scale"]}},"networkAuthorityAssetTypeComponent":{"version":0,"assetData":{"authority":{"runtimeData":{"sharedValue":"Everyone","stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":"Everyone"}]}},"authoritySet":{"runtimeData":{"sharedValue":[],"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":[]}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["authority","authoritySet"]}}}}'
+  - presetAssetId: 2
+    assetTypePrefabReference:
+      m_AssetGUID: 6dc33ff9bf8e0564fadcb981397d951d
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 9532a353-89bf-49e0-9d0a-0f22e4a907fe
+    assetData: '{"version":0,"assetDataByTypeName":{"allowMultipleAssetTypeComponent":{"version":0,"assetData":{"allowMultiple":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":true}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["allowMultiple"]}},"isEnabledAssetTypeComponent":{"version":0,"assetData":{"isEnabled":{"runtimeData":{"sharedValue":true,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":true}]}},"isEnabledHostOnly":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":false}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isEnabled","isEnabledHostOnly"]}},"isMovableAssetTypeComponent":{"version":0,"assetData":{"isMovable":{"runtimeData":{"sharedValue":false,"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":false}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["isMovable"]}},"positionAssetTypeComponent":{"version":0,"assetData":{"position":{"runtimeData":{"sharedValue":{"x":0.51,"y":0.0,"z":0.0},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["position"]}},"rotationAssetTypeComponent":{"version":0,"assetData":{"rotation":{"runtimeData":{"sharedValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.0,"y":0.0,"z":0.0,"w":1.0}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["rotation"]}},"scaleAssetTypeComponent":{"version":0,"assetData":{"scale":{"runtimeData":{"sharedValue":{"x":0.5,"y":0.5,"z":0.5},"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":{"x":0.5,"y":0.5,"z":0.5}}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["scale"]}},"networkAuthorityAssetTypeComponent":{"version":0,"assetData":{"authority":{"runtimeData":{"sharedValue":"Everyone","stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":"Everyone"}]}},"authoritySet":{"runtimeData":{"sharedValue":[],"stageAssetProperties":[{"stageId":"3d9611b6-256c-4224-92aa-10b2ea91bd8e","useShared":true,"localValue":[]}]}},"name":{"runtimeData":{"value":""}},"description":{"runtimeData":{"value":""}},"allAssetPropertyNames":["authority","authoritySet"]}}}}'
+  presetRuleIds: []
+  presetRuleObjects: []

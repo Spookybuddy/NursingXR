@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b50c4b3b303cd764a901dcc5f498a9cc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sessionTabToggleGroup: {instanceID: 0}
+  - sessionButtonPrefab: {fileID: 549027477292787910, guid: f0433055240d08c46b08a3965f14a43e,
+      type: 3}
+  - sessionGrid: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

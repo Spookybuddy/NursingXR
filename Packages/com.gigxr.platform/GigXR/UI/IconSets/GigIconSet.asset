@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41c8335e2ca96449f3991db5fa5702, type: 3}
+  m_Name: GigIconSet
+  m_EditorClassIdentifier: 
+  quadIcons: []
+  spriteIcons:
+  - {fileID: 21300000, guid: 814b652e00ddee24e9398f128c710ac6, type: 3}
+  - {fileID: 21300000, guid: 10616ab8eb1a2594c9910742bdeca89b, type: 3}
+  charIconFont: {fileID: 11400000, guid: 1c95bf628b711684497e39517ca0206b, type: 2}
+  charIcons: []

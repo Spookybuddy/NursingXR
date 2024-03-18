@@ -1,0 +1,19 @@
+{
+    "name": "GIGXR.Platform.Core.FeatureManagement",
+    "rootNamespace": "",
+    "references": [
+        "GUID:54197823cd778b54e8916ec0e9cbadde",
+        "GUID:d67ddf996eb5f624cbeaf06ccd090cb6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:01ab19f82c484d66ad88a31d45e47879"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

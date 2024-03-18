@@ -1,0 +1,21 @@
+{
+    "name": "GIGXR.Platform.Utilities.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fd58620702ff4c1a8b6910c5d13493fd",
+        "GUID:01ab19f82c484d66ad88a31d45e47879",
+        "GUID:4bc551ca88f73b149b3a2f66d9dd3b64",
+        "GUID:5e7b043a4ce92b74e96cac8aba4879a3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "GIGXR.Platform.Data",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2bf482dbe6424a44ea9690f201a43e9a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
