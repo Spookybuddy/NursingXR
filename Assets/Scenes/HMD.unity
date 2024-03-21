@@ -707,6 +707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GIGXR Core HMD
       objectReference: {fileID: 0}
+    - target: {fileID: 2557607975900731578, guid: 7fd5eeb133cd5fc4c9833274a13e0ba7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3922510120322374299, guid: 7fd5eeb133cd5fc4c9833274a13e0ba7,
         type: 3}
       propertyPath: testCredentials

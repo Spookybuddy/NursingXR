@@ -41,5 +41,6 @@ MonoBehaviour:
     MoveScenarioButtonPrefab: {fileID: 2127352402331892920, guid: 2f3b7ad824424d14bbaaeffde2c58eaa,
       type: 3}
   StyleProfile:
-    styleScriptableObject: {fileID: 0}
+    styleScriptableObject: {fileID: 11400000, guid: ddc011ca5af6238429863c4f0baa88f5,
+      type: 2}
   injectableScriptableObjects: {fileID: 0}

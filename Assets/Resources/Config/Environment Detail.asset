@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77951aa0fa0f49345b0d7a5d43af9051, type: 3}
   m_Name: Environment Detail
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Decorum
   Api: /api/v1/
-  URL: 
-  AppID: 
-  ClientSecret: 
+  URL: https://api.sandbox.gigxr.dev/
+  AppID: 6CC16335-4125-428F-83B0-0033A1B52FD1
+  ClientSecret: 9CCF8FB9-E7F1-43A1-B5E4-DF352AF72352
   SwitchToThisEnvironmentCode: 
   GmsVersion: 
   IsQAEnvironment: 0
