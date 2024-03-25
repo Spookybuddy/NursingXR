@@ -53,7 +53,7 @@ public class IncrementableNumberFieldAssetTypeComponent : BaseAssetTypeComponent
 
     #region Button Listeners
 
-    private void OnIncrementClicked()
+    public void OnIncrementClicked()
     {
         // if the scenario is not playing, do nothing
         if (scenarioManager.ScenarioStatus != ScenarioStatus.Playing) return;
@@ -61,7 +61,7 @@ public class IncrementableNumberFieldAssetTypeComponent : BaseAssetTypeComponent
         assetData.currentValue.runtimeData.Value += 1;
     }
 
-    private void OnDecrementClicked()
+    public void OnDecrementClicked()
     {
         // if the scenario is not playing, do nothing
         if (scenarioManager.ScenarioStatus != ScenarioStatus.Playing) return;
@@ -135,4 +135,3 @@ public class IncrementableNumberFieldAssetTypeComponent : BaseAssetTypeComponent
 
     #endregion
 }
-

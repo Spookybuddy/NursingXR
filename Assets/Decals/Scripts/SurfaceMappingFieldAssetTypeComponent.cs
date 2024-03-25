@@ -60,23 +60,25 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     #region Manipulation Functions
 
-    private void OnManipulationStart()
+    public void OnManipulationStart()
     {
-        // if the scenario is not playing, do nothing
-        if (scenarioManager.ScenarioStatus != ScenarioStatus.Playing) return;
-
+        Debug.LogWarning(scenarioManager.ScenarioStatus);
+        //If the scenario is not editing, do nothing. Editing enum is missing?
+        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
+        Debug.DrawRay(transform.position, transform.forward, Color.yellow, 10, false);
         //Returns mesh to quad shape for easier visualization while adjusting
         for (int i = 0; i < meshCorners.Length; i++) vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
         UpdateMesh();
-        assetData.decal.runtimeData.Value = mesh;
+        //assetData.decal.runtimeData.Value = mesh;
     }
 
-    private void OnManipulationEnd()
+    public void OnManipulationEnd()
     {
-        // if the scenario is not playing, do nothing
-        if (scenarioManager.ScenarioStatus != ScenarioStatus.Playing) return;
+        //If the scenario is not editing, do nothing. Editing enum is missing?
+        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
 
         //Finds the normals of the surface and snaps to it, then finding the normals from the corners and adjusting those as well
+        Debug.DrawRay(transform.position, transform.forward, Color.green, 10, false);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastRange, spatialLayer)) {
             transform.SetPositionAndRotation(hit.point, Quaternion.LookRotation(-hit.normal));
             for (int i = 0; i < meshCorners.Length; i++) {
@@ -90,26 +92,29 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
             //Update the data
             UpdateMesh();
-            assetData.decal.runtimeData.Value = mesh;
+            //assetData.decal.runtimeData.Value = mesh;
         }
     }
 
     #endregion
-
+    /*
     #region Property Change Handlers
 
     [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.decal))]
-    private void OnMeshChanged(AssetPropertyChangeEventArgs args)
+    private void OnDecalChanged(AssetPropertyChangeEventArgs args)
     {
+        if (!IsInitialized) return;
+
         Mesh newValue = (Mesh)args.AssetPropertyValue;
 
         //Directly update mesh filter and collider (to avoid feedback loops I think)
         meshFilter.mesh = newValue;
+        Debug.Log("Networked mesh update");
         if (TryGetComponent<MeshCollider>(out MeshCollider collider)) collider.sharedMesh = newValue;
     }
 
     #endregion
-
+    */
     //Update mesh with new data
     private void UpdateMesh()
     {

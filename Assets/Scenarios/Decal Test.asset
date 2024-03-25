@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
-  m_Name: Scenario
+  m_Name: Decal Test
   m_EditorClassIdentifier: 
   presetScenarioName: 
   presetStages: []
   presetAssets:
-  - presetAssetId: my-asset
+  - presetAssetId: test-decal
     assetTypePrefabReference:
-      m_AssetGUID: 08a3f2b34ffab4440827852b2c5cd551
+      m_AssetGUID: 184ce44b2f7527148b70b1197320c37e
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
-    assetId: 351ddcb3-6599-47d8-85a3-1faf990320fe
+    assetId: 602dc28b-0c70-4890-95dc-f5ded939bb7c
     assetData: 
-  assetDataPrefabReferences: {fileID: 2835713846921298731}
+  assetDataPrefabReferences: {fileID: 3547594671840072246}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
   pathwayData: []
---- !u!114 &2835713846921298731
+--- !u!114 &3547594671840072246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,6 +42,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assetData:
     m_keys:
-    - my-asset
+    - test-decal
     m_values:
-    - {fileID: 5588841925934332376, guid: 925d05029f114244c89a3bf4d15cd152, type: 3}
+    - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}

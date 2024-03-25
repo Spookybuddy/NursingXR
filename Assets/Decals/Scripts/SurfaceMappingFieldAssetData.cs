@@ -5,6 +5,6 @@ using System;
 [Serializable]
 public class SurfaceMappingFieldAssetData : BaseAssetData
 {
-    //Mesh data networked
-    public AssetPropertyDefinition<Mesh> decal;
+    //Mesh does not seem to like to network
+    //public AssetPropertyDefinition<Mesh> decal;
 }

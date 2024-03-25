@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: my-asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 184ce44b2f7527148b70b1197320c37e
+    m_Address: test-decal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:
