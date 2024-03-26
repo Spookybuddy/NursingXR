@@ -62,10 +62,9 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     public void OnManipulationStart()
     {
-        Debug.LogWarning(scenarioManager.ScenarioStatus);
         //If the scenario is not editing, do nothing. Editing enum is missing?
         //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
-        Debug.DrawRay(transform.position, transform.forward, Color.yellow, 10, false);
+
         //Returns mesh to quad shape for easier visualization while adjusting
         for (int i = 0; i < meshCorners.Length; i++) vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
         UpdateMesh();
@@ -78,9 +77,11 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
 
         //Finds the normals of the surface and snaps to it, then finding the normals from the corners and adjusting those as well
-        Debug.DrawRay(transform.position, transform.forward, Color.green, 10, false);
+        Debug.DrawRay(transform.position, transform.forward, Color.yellow, 10, false);
+        Debug.LogWarning(transform.name);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastRange, spatialLayer)) {
             transform.SetPositionAndRotation(hit.point, Quaternion.LookRotation(-hit.normal));
+            Debug.DrawRay(transform.position, transform.forward, Color.green, 10, false);
             for (int i = 0; i < meshCorners.Length; i++) {
                 //Ray pointing towards center and backwards
                 Vector3 inward = transform.forward - (meshCorners[i].localPosition.x * transform.right) - (meshCorners[i].localPosition.y * transform.up);
