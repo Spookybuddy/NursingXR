@@ -24,6 +24,78 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 602dc28b-0c70-4890-95dc-f5ded939bb7c
     assetData: 
+  - presetAssetId: spray
+    assetTypePrefabReference:
+      m_AssetGUID: 39ef10756309b9f4d949cd9747b87db5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 46589011-5e78-4793-9312-0cb5e2721fa7
+    assetData: 
+  - presetAssetId: ointment
+    assetTypePrefabReference:
+      m_AssetGUID: 74ef48dbfbdcf3f489b8b48dd54b75aa
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: d59a0b75-94c2-473a-9975-393ebd3c68ea
+    assetData: 
+  - presetAssetId: pad
+    assetTypePrefabReference:
+      m_AssetGUID: 3234a6e94d87d7c48a12a8a93a76a8e0
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 9f64af15-a44c-447c-8b60-7fbd7451f3c2
+    assetData: 
+  - presetAssetId: scissors
+    assetTypePrefabReference:
+      m_AssetGUID: d45a50a2bc2dba643ae73feed5b2ca15
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 18807033-eec1-46fb-a924-1df325c8d2ff
+    assetData: 
+  - presetAssetId: tape
+    assetTypePrefabReference:
+      m_AssetGUID: d81acedb0bacb6449a34ccee825bd216
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 577740a6-27e2-4b36-a412-d7511fbad903
+    assetData: 
+  - presetAssetId: qtip
+    assetTypePrefabReference:
+      m_AssetGUID: ec6ebc5179813374c89322769c9ea224
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: a11f3b0f-a50c-42ca-881c-acc577c5e282
+    assetData: 
+  - presetAssetId: ruler
+    assetTypePrefabReference:
+      m_AssetGUID: 1d5a2e9607cc447489d115ecad84bc4e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 17d18935-b3e8-4235-982e-1925e76c1ed2
+    assetData: 
+  - presetAssetId: cloth
+    assetTypePrefabReference:
+      m_AssetGUID: 7b79ce03658cd5c4e95b9ed376521dc5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: b9cbc2f2-7a8a-4c36-abb8-440c4b5a8411
+    assetData: 
   assetDataPrefabReferences: {fileID: 3547594671840072246}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
@@ -43,5 +115,19 @@ MonoBehaviour:
   assetData:
     m_keys:
     - test-decal
+    - spray
+    - ointment
+    - pad
+    - scissors
+    - tape
+    - qtip
+    - ruler
     m_values:
     - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}
+    - {fileID: 9209711686215667436, guid: b9ae112f8357d3044bfeb97e84c8989a, type: 3}
+    - {fileID: 8582347905454388894, guid: 039f200eb5756bc4f88440530c802b0e, type: 3}
+    - {fileID: 5380544011129482111, guid: 8c2446b8d91c4f34d9bf81f155057677, type: 3}
+    - {fileID: 8578918244410628405, guid: 48550afc69b7ff44790ad62d67ccbc76, type: 3}
+    - {fileID: 6280938825394107215, guid: 4191bb180aaa63f4e98ee72b7b911229, type: 3}
+    - {fileID: 5127018897900688339, guid: eb945eb990afd044f9b7ad72efa7ad6a, type: 3}
+    - {fileID: 7632201276438820825, guid: 916a319c7b2189248b946293ba4b2473, type: 3}

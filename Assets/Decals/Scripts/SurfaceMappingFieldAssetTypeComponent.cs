@@ -3,9 +3,7 @@ using GIGXR.Platform.Scenarios;
 using GIGXR.Platform.Scenarios.Data;
 using GIGXR.Platform.Scenarios.GigAssets;
 using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
 
 public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<SurfaceMappingFieldAssetData>
 {
@@ -88,17 +86,11 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     private IScenarioManager scenarioManager;
 
-    #region Dependencies
-
     [InjectDependencies]
     public void InjectDependencies(IScenarioManager injectedScenarioManager)
     {
         scenarioManager = injectedScenarioManager;
     }
-
-    #endregion
-
-    #region BaseAssetTypeComponent overrides
 
     public override void SetEditorValues()
     {
@@ -115,19 +107,16 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         mesh.Clear();
     }
 
-    #endregion
-
-    #region Manipulation Functions
-
     public void OnManipulationStart()
     {
         //If the scenario is not editing, do nothing. Editing enum is missing?
-        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
+        if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
 
         //Returns mesh to quad shape for easier visualization while adjusting
         for (int i = 0; i < meshCorners.Length; i++) vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
         UpdateOverlay();
-        //assetData.decal.runtimeData.Value = mesh;
+
+        assetData.updateMesh.runtimeData.Value -= 1;
     }
 
     public void OnManipulationEnd()
@@ -148,7 +137,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
                 UpdateOverlay();
             }
 
-            //assetData.decal.runtimeData.Value = mesh;
+            assetData.updateMesh.runtimeData.Value += 1;
         }
     }
 
@@ -158,6 +147,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         for (int i = 0; i < meshCorners.Length; i++) {
             //Ray pointing towards center and backwards
             Vector3 inward = center.forward - (meshCorners[i].localPosition.x * center.right) - (meshCorners[i].localPosition.y * center.up);
+            Debug.DrawRay(meshCorners[i].position, inward * raycastRange, Color.cyan, 5);
 
             //If surface is not found resort to original position
             if (Physics.Raycast(meshCorners[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) vertices[i + 1] = center.InverseTransformPoint(surface.point);
@@ -169,16 +159,25 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     private void GenerateCavity()
     {
         //Center in hole
-        Cav_vertices[0] = new Vector3(0, 0, holeDepth);
+        Vector3 middle = new Vector3(0, 0, holeDepth);
+        Cav_vertices[0] = 1.5f * middle;
         Cav_UVs[0] = new Vector2(0.5f, 0.5f);
 
         //Update vertex and uv positions based off of transform list
-        for (int i = 0; i < meshHoles.Length; i++) {
+        for (int i = 0; i < meshHoles.Length; i++)
+        {
             //Positions
-            Cav_vertices[i + 1] = meshHoles[i].localPosition + Cav_vertices[0];
+            Cav_vertices[i + 1] = meshHoles[i].localPosition + middle;
             Cav_vertices[i + meshHoles.Length + 1] = meshHoles[i].localPosition;
 
             //Raycast to surface
+            Vector3 inward = center.forward - (meshHoles[i].localPosition.x * center.right) - (meshHoles[i].localPosition.y * center.up);
+            Debug.DrawRay(meshHoles[i].position, inward * raycastRange, Color.cyan, 5);
+
+            if (Physics.Raycast(meshHoles[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) {
+                Cav_vertices[i + 1] = center.InverseTransformPoint(surface.point) + middle;
+                Cav_vertices[i + meshHoles.Length + 1] = center.InverseTransformPoint(surface.point);
+            }
 
             //UVs
             Cav_UVs[i + 1] = new Vector2(0.5f + meshHoles[i].localPosition.x, 0.5f + meshHoles[i].localPosition.y);
@@ -188,13 +187,12 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         }
     }
 
-    #endregion
-    /*
-    #region Property Change Handlers
-
-    [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.decal))]
-    private void OnDecalChanged(AssetPropertyChangeEventArgs args)
+    //Detect changes in the networked variable, and update the mesh client-side (Position should be already networked)
+    [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.updateMesh))]
+    private void OnUpdateMeshChanged(AssetPropertyChangeEventArgs args)
     {
+        Debug.LogWarning("Value has changed");
+
         if (!IsInitialized) return;
 
         Mesh newValue = (Mesh)args.AssetPropertyValue;
@@ -204,9 +202,6 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         Debug.Log("Networked mesh update");
         if (TryGetComponent<MeshCollider>(out MeshCollider collider)) collider.sharedMesh = newValue;
     }
-
-    #endregion
-    */
 
     //Update mesh
     private void UpdateOverlay()

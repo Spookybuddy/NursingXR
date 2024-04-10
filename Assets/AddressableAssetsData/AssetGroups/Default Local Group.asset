@@ -25,6 +25,38 @@ MonoBehaviour:
     m_Address: test-decal
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 74ef48dbfbdcf3f489b8b48dd54b75aa
+    m_Address: ointment
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b79ce03658cd5c4e95b9ed376521dc5
+    m_Address: cloth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3234a6e94d87d7c48a12a8a93a76a8e0
+    m_Address: pad
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec6ebc5179813374c89322769c9ea224
+    m_Address: qtip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1d5a2e9607cc447489d115ecad84bc4e
+    m_Address: ruler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d45a50a2bc2dba643ae73feed5b2ca15
+    m_Address: scissors
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39ef10756309b9f4d949cd9747b87db5
+    m_Address: spray
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d81acedb0bacb6449a34ccee825bd216
+    m_Address: tape
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5797515491271079103
+--- !u!1 &7632201276438820825
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,33 +8,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4784665882566590740}
-  - component: {fileID: 7790994191417673280}
-  - component: {fileID: 4352641023753863626}
-  - component: {fileID: 3634878124425222509}
-  - component: {fileID: 5885427013916990785}
-  - component: {fileID: 7727898930610999385}
-  - component: {fileID: 2576234721414018680}
-  - component: {fileID: 8132884328371727150}
-  - component: {fileID: 5217762371641430904}
-  - component: {fileID: 8227115140654004625}
-  - component: {fileID: 2106090163081402516}
-  - component: {fileID: 6160445749594062858}
-  - component: {fileID: 6720922142267006416}
+  - component: {fileID: 582079551806461294}
+  - component: {fileID: 369122004619708420}
+  - component: {fileID: 8905061302212346411}
+  - component: {fileID: 4288758829724841842}
+  - component: {fileID: 2289686170452193337}
+  - component: {fileID: 5380954937369192961}
+  - component: {fileID: 2441073183918636957}
+  - component: {fileID: 3729550779542762679}
+  - component: {fileID: 2942701815002177125}
+  - component: {fileID: 634614800246607790}
+  - component: {fileID: 8480544300648768505}
+  - component: {fileID: 8270508921992100610}
   m_Layer: 0
-  m_Name: Decal Test.asset.test-decal
+  m_Name: Decal Test.asset.ruler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4784665882566590740
+--- !u!4 &582079551806461294
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,58 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7790994191417673280
+--- !u!114 &369122004619708420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ac3eee99f17b24e9ee98b0e92e39ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    updateMesh:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 0
-      runtimeData:
-        sharedValue: 0
-        stageAssetProperties: []
-  center: {fileID: 0}
-  meshCorners:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  meshFilter: {fileID: 0}
-  raycastRange: 0.5
-  spatialLayer:
-    serializedVersion: 2
-    m_Bits: 2147483648
-  indentation: 0
-  meshHoles: []
-  holeDepth: 0
---- !u!114 &4352641023753863626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -104,29 +58,29 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &3634878124425222509
+--- !u!114 &8905061302212346411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: test-decal
+  assetTypeId: ruler
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &5885427013916990785
+--- !u!114 &4288758829724841842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -158,13 +112,44 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
---- !u!114 &7727898930610999385
+--- !u!114 &2289686170452193337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17ce617dc6ab7747bd28c1e5b3a3c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    step:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+--- !u!114 &5380954937369192961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -177,17 +162,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 2576234721414018680}
+  - {fileID: 2441073183918636957}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2576234721414018680
+--- !u!114 &2441073183918636957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -197,13 +182,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &8132884328371727150
+--- !u!114 &3729550779542762679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -228,13 +213,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []
---- !u!114 &5217762371641430904
+--- !u!114 &2942701815002177125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -270,13 +255,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8227115140654004625
+--- !u!114 &634614800246607790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}
@@ -308,41 +293,17 @@ MonoBehaviour:
   manageManipulationColliderEnabledState: 0
   OnManipulationStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7790994191417673280}
-        m_TargetAssemblyTypeName: SurfaceMappingFieldAssetTypeComponent, Assembly-CSharp
-        m_MethodName: OnManipulationStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnManipulationEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7790994191417673280}
-        m_TargetAssemblyTypeName: SurfaceMappingFieldAssetTypeComponent, Assembly-CSharp
-        m_MethodName: OnManipulationEnd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2106090163081402516
+      m_Calls: []
+--- !u!114 &8480544300648768505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -352,13 +313,13 @@ MonoBehaviour:
   proximityType: 3
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &6160445749594062858
+--- !u!114 &8270508921992100610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
+  m_GameObject: {fileID: 7632201276438820825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -381,36 +342,5 @@ MonoBehaviour:
         isEditableByAuthor: 0
         defaultValue: {x: 0, y: 0, z: 0, w: 1}
       runtimeData:
-        sharedValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-        stageAssetProperties: []
---- !u!114 &6720922142267006416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00a6368aa785184e9085702be9299b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: Scale
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: The start scale of the interactable.
-      runtimeData:
-        value: 
-    scale:
-      designTimeData:
-        isEditableByAuthor: 1
-        defaultValue: {x: 1, y: 1, z: 1}
-      runtimeData:
-        sharedValue: {x: 1, y: 1, z: 1}
+        sharedValue: {x: 0, y: 0, z: 0, w: 1}
         stageAssetProperties: []
