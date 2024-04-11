@@ -17,8 +17,60 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: dd9250d06dc336e4c98aaa6dc4d235b5
   m_SerializeEntries:
-  - m_GUID: 08a3f2b34ffab4440827852b2c5cd551
-    m_Address: my-asset
+  - m_GUID: 184ce44b2f7527148b70b1197320c37e
+    m_Address: test-decal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 74ef48dbfbdcf3f489b8b48dd54b75aa
+    m_Address: ointment
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b79ce03658cd5c4e95b9ed376521dc5
+    m_Address: cloth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3234a6e94d87d7c48a12a8a93a76a8e0
+    m_Address: pad
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec6ebc5179813374c89322769c9ea224
+    m_Address: qtip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1d5a2e9607cc447489d115ecad84bc4e
+    m_Address: ruler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d45a50a2bc2dba643ae73feed5b2ca15
+    m_Address: scissors
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39ef10756309b9f4d949cd9747b87db5
+    m_Address: spray
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d81acedb0bacb6449a34ccee825bd216
+    m_Address: tape
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 916f5963e74be784191b34adfa6f4d29
+    m_Address: manager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f3256f1cb207124a81281c1413e7b1f
+    m_Address: pressure-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32a88b22512499b4c8a9e191368657bd
+    m_Address: pressure-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef557bb2dc7775e478ce63306e23a359
+    m_Address: pressure-3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69ec38bd2738431409247f34031a1a55
+    m_Address: pressure-4
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

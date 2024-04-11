@@ -36,7 +36,7 @@ namespace GIGXR.Platform.CommonAssetTypes
         [Tooltip("Box collider use for manipulation.")]
         [SerializeField] private Collider manipulationCollider;
 
-        [Tooltip("If true, the manipulation collider will be turend on/off with the object manipulator.")]
+        [Tooltip("If true, the manipulation collider will be turned on/off with the object manipulator.")]
         [SerializeField] private bool manageManipulationColliderEnabledState = false;
 
         #endregion
