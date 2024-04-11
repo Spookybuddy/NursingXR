@@ -127,7 +127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3b921edd705d8b46a39911bd16ae618, type: 2}
+  - {fileID: 2100000, guid: d71c5e17998b8c146bf439237ece1c02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -897,8 +897,8 @@ GameObject:
   - component: {fileID: 1702931195981537189}
   - component: {fileID: 9143615884439857367}
   m_Layer: 0
-  m_Name: Decal
-  m_TagString: Untagged
+  m_Name: Stage 1
+  m_TagString: Overlay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetTypeId: test-decal
-  presetAssetId: test-decal
+  presetAssetId: pressure-1
   assetTypeDependencyIds: []
   version: 0
 --- !u!114 &5199893820514956859
@@ -985,7 +985,7 @@ MonoBehaviour:
     isEnabledHostOnly:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: 0
+        defaultValue: 1
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     scale:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: {x: 0, y: 0, z: 0}
+        defaultValue: {x: 1, y: 1, z: 1}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []

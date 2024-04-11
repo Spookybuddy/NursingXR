@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 1191142003540944771}
   m_Layer: 0
   m_Name: Medical-Cloth
-  m_TagString: Untagged
+  m_TagString: Supplies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191142003540944770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetTypeId: cloth
-  presetAssetId: 
+  presetAssetId: cloth
   assetTypeDependencyIds: []
   version: 0
 --- !u!114 &1191142003540944779
@@ -144,6 +144,16 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+  isManager: 0
+  arraySize: 0
+  medicalSupplies: []
+  stepAmount: 0
+  treatmentAtStep: []
+  manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
+  usedOnStep: 0
+  usedBy: 1
+  isInUse: 0
+  onCorrectStep: 0
 --- !u!114 &1191142003540944781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +297,7 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
-  objectManipulator: {fileID: 0}
+  objectManipulator: {fileID: 1191142004104477786}
   boundsControl: {fileID: 0}
   manageBoundsControlEnabledState: 0
   manipulationCollider: {fileID: 0}

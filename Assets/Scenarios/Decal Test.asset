@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
   m_Name: Decal Test
   m_EditorClassIdentifier: 
-  presetScenarioName: 
-  presetStages: []
+  presetScenarioName: Pressure Ulcer
+  presetStages:
+  - presetStageId: PU-1
+    stage:
+      stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+      stageTitle: Ulcer Stage 1
+  - presetStageId: PU-2
+    stage:
+      stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+      stageTitle: Ulcer Stage 2
+  - presetStageId: PU-3
+    stage:
+      stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+      stageTitle: Ulcer Stage 3
+  - presetStageId: PU-4
+    stage:
+      stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+      stageTitle: Ulcer Stage 4
   presetAssets:
   - presetAssetId: test-decal
     assetTypePrefabReference:
@@ -96,6 +112,51 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: b9cbc2f2-7a8a-4c36-abb8-440c4b5a8411
     assetData: 
+  - presetAssetId: manager
+    assetTypePrefabReference:
+      m_AssetGUID: 916f5963e74be784191b34adfa6f4d29
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: e166c78f-e2d1-4d68-8e39-ba3690811406
+    assetData: 
+  - presetAssetId: pressure-1
+    assetTypePrefabReference:
+      m_AssetGUID: 6f3256f1cb207124a81281c1413e7b1f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 1b74a729-2a44-42a9-ae10-a933ece889b9
+    assetData: 
+  - presetAssetId: pressure-2
+    assetTypePrefabReference:
+      m_AssetGUID: 32a88b22512499b4c8a9e191368657bd
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: ed4ec8ae-810c-4ee2-8205-21f52012cd59
+    assetData: 
+  - presetAssetId: pressure-3
+    assetTypePrefabReference:
+      m_AssetGUID: ef557bb2dc7775e478ce63306e23a359
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: a918d32c-e2ac-46f2-9609-4b1420e625ca
+    assetData: 
+  - presetAssetId: pressure-4
+    assetTypePrefabReference:
+      m_AssetGUID: 69ec38bd2738431409247f34031a1a55
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: c036bf45-cd01-46d1-8207-26594986a875
+    assetData: 
   assetDataPrefabReferences: {fileID: 3547594671840072246}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
@@ -122,6 +183,12 @@ MonoBehaviour:
     - tape
     - qtip
     - ruler
+    - cloth
+    - manager
+    - pressure-1
+    - pressure-2
+    - pressure-3
+    - pressure-4
     m_values:
     - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}
     - {fileID: 9209711686215667436, guid: b9ae112f8357d3044bfeb97e84c8989a, type: 3}
@@ -131,3 +198,9 @@ MonoBehaviour:
     - {fileID: 6280938825394107215, guid: 4191bb180aaa63f4e98ee72b7b911229, type: 3}
     - {fileID: 5127018897900688339, guid: eb945eb990afd044f9b7ad72efa7ad6a, type: 3}
     - {fileID: 7632201276438820825, guid: 916a319c7b2189248b946293ba4b2473, type: 3}
+    - {fileID: 7607288267219792554, guid: 842fa5ecaa305a24cb2a878ba2aa4363, type: 3}
+    - {fileID: 1345984976400413760, guid: e012f30e911dfc54198f8aad7f3dbc1a, type: 3}
+    - {fileID: 7147815272826737415, guid: 506d6f387c2c7b648bd50a87225174d1, type: 3}
+    - {fileID: 4007472503196490181, guid: 4e3e3c8f5ff37494086b4b6024dde41d, type: 3}
+    - {fileID: 5916926067955406621, guid: 3fb39458377c63240ba6317fe1b54e32, type: 3}
+    - {fileID: 237391676015655065, guid: 8c93aef6bfb5f9441a3585bf2feecbac, type: 3}

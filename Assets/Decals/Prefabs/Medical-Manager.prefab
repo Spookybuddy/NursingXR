@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5588841925934332376
+--- !u!1 &6262536319828144806
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,78 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5716649983356420854}
-  - component: {fileID: 1944788614977639054}
-  - component: {fileID: 2105301885809774027}
-  - component: {fileID: 6385194879340486230}
-  - component: {fileID: 4461446450244253451}
-  - component: {fileID: 2141835499142127814}
-  - component: {fileID: 3555948033518464746}
-  - component: {fileID: 2797832459913873344}
-  - component: {fileID: 109323380828676461}
-  - component: {fileID: 2788953961967849099}
-  - component: {fileID: 3750809573261846986}
-  - component: {fileID: 3318806403660374219}
+  - component: {fileID: 6262536319828144805}
   m_Layer: 0
-  m_Name: Scenario.asset.my-asset
+  m_Name: DisplayRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5716649983356420854
+--- !u!4 &6262536319828144805
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536319828144806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6262536320525999521}
+  m_Father: {fileID: 6262536320255261262}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6262536320255261274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6262536320255261262}
+  - component: {fileID: 6262536320255261263}
+  - component: {fileID: 6262536320255261264}
+  - component: {fileID: 6262536320255261265}
+  - component: {fileID: 6262536320255261266}
+  - component: {fileID: -5827647803779150039}
+  - component: {fileID: -839930615991678720}
+  - component: {fileID: 8732438727627376867}
+  - component: {fileID: 6262536320255261270}
+  - component: {fileID: 8340230847162116324}
+  m_Layer: 0
+  m_Name: Medical-Manager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6262536320255261262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262536320255261274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6262536319828144805}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1944788614977639054
+--- !u!114 &6262536320255261263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -58,29 +89,29 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &2105301885809774027
+--- !u!114 &6262536320255261264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: my-asset
+  assetTypeId: spray
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &6385194879340486230
+--- !u!114 &6262536320255261265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -103,25 +134,25 @@ MonoBehaviour:
         isEditableByAuthor: 1
         defaultValue: 1
       runtimeData:
-        sharedValue: 1
+        sharedValue: 0
         stageAssetProperties: []
     isEnabledHostOnly:
       designTimeData:
-        isEditableByAuthor: 1
-        defaultValue: 1
+        isEditableByAuthor: 0
+        defaultValue: 0
       runtimeData:
-        sharedValue: 1
+        sharedValue: 0
         stageAssetProperties: []
---- !u!114 &4461446450244253451
+--- !u!114 &6262536320255261266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c615f709393f4b147ab916c7c7d90d08, type: 3}
+  m_Script: {fileID: 11500000, guid: d17ce617dc6ab7747bd28c1e5b3a3c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 0
@@ -136,37 +167,38 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
-    currentValue:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 0
-      runtimeData:
-        sharedValue: 5
-        stageAssetProperties: []
-    minValue:
+    step:
       designTimeData:
         isEditableByAuthor: 0
         defaultValue: 0
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
-    maxValue:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 0
-      runtimeData:
-        sharedValue: 10
-        stageAssetProperties: []
-  incrementButtonInteractable: {fileID: 0}
-  decrementButtonInteractable: {fileID: 0}
-  valueDisplayText: {fileID: 0}
---- !u!114 &2141835499142127814
+  isManager: 1
+  arraySize: 8
+  medicalSupplies:
+  - {fileID: 1191142003540944770, guid: 7b79ce03658cd5c4e95b9ed376521dc5, type: 3}
+  - {fileID: 7721900797302777148, guid: 74ef48dbfbdcf3f489b8b48dd54b75aa, type: 3}
+  - {fileID: 4884884204820181186, guid: 3234a6e94d87d7c48a12a8a93a76a8e0, type: 3}
+  - {fileID: 2520168602698018023, guid: ec6ebc5179813374c89322769c9ea224, type: 3}
+  - {fileID: 3284942818043010066, guid: 1d5a2e9607cc447489d115ecad84bc4e, type: 3}
+  - {fileID: 7303057915124088266, guid: d45a50a2bc2dba643ae73feed5b2ca15, type: 3}
+  - {fileID: 6262536320255261274, guid: 39ef10756309b9f4d949cd9747b87db5, type: 3}
+  - {fileID: 6734006669806001138, guid: d81acedb0bacb6449a34ccee825bd216, type: 3}
+  stepAmount: 0
+  treatmentAtStep: []
+  manager: {fileID: 0}
+  usedOnStep: 0
+  usedBy: 0
+  isInUse: 0
+  onCorrectStep: 0
+--- !u!114 &-5827647803779150039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -179,17 +211,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 3555948033518464746}
+  - {fileID: -839930615991678720}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3555948033518464746
+--- !u!114 &-839930615991678720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -199,13 +231,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &2797832459913873344
+--- !u!114 &8732438727627376867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -230,13 +262,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []
---- !u!114 &109323380828676461
+--- !u!114 &6262536320255261270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -272,13 +304,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2788953961967849099
+--- !u!114 &8340230847162116324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320255261274}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}
@@ -303,85 +335,104 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
-  objectManipulator: {fileID: 0}
+  objectManipulator: {fileID: 4504191762367046899}
   boundsControl: {fileID: 0}
   manageBoundsControlEnabledState: 0
   manipulationCollider: {fileID: 0}
   manageManipulationColliderEnabledState: 0
   OnManipulationStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4461446450244253451}
-        m_TargetAssemblyTypeName: IncrementableNumberFieldAssetTypeComponent, Assembly-CSharp
-        m_MethodName: OnIncrementClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnManipulationEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4461446450244253451}
-        m_TargetAssemblyTypeName: IncrementableNumberFieldAssetTypeComponent, Assembly-CSharp
-        m_MethodName: OnDecrementClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3750809573261846986
+      m_Calls: []
+--- !u!1 &6262536320525999522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6262536320525999521}
+  - component: {fileID: 8008301224374124099}
+  - component: {fileID: 4504191762367046899}
+  m_Layer: 0
+  m_Name: Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6262536320525999521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262536320525999522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6262536319828144805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8008301224374124099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320525999522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
+  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handType: 3
-  proximityType: 3
-  constraintOnRotation: 0
-  useLocalSpaceForConstraint: 0
---- !u!114 &3318806403660374219
+  autoConstraintSelection: 1
+  selectedConstraints: []
+--- !u!114 &4504191762367046899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588841925934332376}
+  m_GameObject: {fileID: 6262536320525999522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
+  m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: Rotation
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: The start rotation of the interactable in a Quaternion.
-      runtimeData:
-        value: 
-    rotation:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: {x: 0, y: 0, z: 0, w: 1}
-      runtimeData:
-        sharedValue: {x: 0, y: 0, z: 0, w: 1}
-        stageAssetProperties: []
+  hostTransform: {fileID: 6262536320525999521}
+  manipulationType: 0
+  twoHandedManipulationType: 7
+  allowFarManipulation: 0
+  useForcesForNearManipulation: 0
+  oneHandRotationModeNear: 1
+  oneHandRotationModeFar: 1
+  releaseBehavior: 3
+  transformSmoothingLogicType:
+    reference: Microsoft.MixedReality.Toolkit.Utilities.DefaultTransformSmoothingLogic,
+      Microsoft.MixedReality.Toolkit.SDK
+  smoothingFar: 1
+  smoothingNear: 1
+  moveLerpTime: 0.001
+  rotateLerpTime: 0.001
+  scaleLerpTime: 0.001
+  enableConstraints: 1
+  constraintsManager: {fileID: 8008301224374124099}
+  elasticsManager: {fileID: 0}
+  onManipulationStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onManipulationEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoverExited:
+    m_PersistentCalls:
+      m_Calls: []

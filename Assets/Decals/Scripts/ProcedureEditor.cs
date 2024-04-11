@@ -14,13 +14,16 @@ public class ProcedureEditor : Editor
     private bool _isInUse;
     private bool _onCorrectStep;
 
+    private bool foldout;
+
     private readonly GUIContent[] _displays = new GUIContent[] {
         new GUIContent("Manager Object", "The manager object that networks the steps."),
         new GUIContent("Used On Step", "Which step the object is to be used on."),
         new GUIContent("Object Use", "How the object is to be used."),
         new GUIContent("Is In Use", "The object is currently being manipulated."),
         new GUIContent("On Correct Step", "Used On Step matches the manager's step."),
-        new GUIContent("List Of Medical Supplies", "Length of the array containing app medical supplies."),
+        new GUIContent("Number of Medical Supplies", "Length of the array containing app medical supplies."),
+        new GUIContent("List Of Medical Supplies", "Array containing prefabs."),
         new GUIContent("Medical Supply", "Medical Supply Prefab in scene.")
     };
 
@@ -59,14 +62,16 @@ public class ProcedureEditor : Editor
             }
 
             //Creates X number of fields for the prefabs
-            if (_arraySize > 0) {
+            foldout = EditorGUILayout.BeginFoldoutHeaderGroup(foldout, _displays[6]);
+            if (_arraySize > 0 && foldout) {
                 for (int i = 0; i < _arraySize; i++) {
                     //GameObjects
                     EditorGUI.BeginChangeCheck();
-                    _medicalSupplies[i] = EditorGUILayout.ObjectField(_displays[6], _medicalSupplies[i], typeof(GameObject), false) as GameObject;
+                    _medicalSupplies[i] = EditorGUILayout.ObjectField(_displays[7], _medicalSupplies[i], typeof(GameObject), false) as GameObject;
                     if (EditorGUI.EndChangeCheck()) script.medicalSupplies[i] = _medicalSupplies[i];
                 }
             }
+            EditorGUILayout.EndFoldoutHeaderGroup();
         } else {
             //Check for values first
             if (script.manager != null) _manager = script.manager;

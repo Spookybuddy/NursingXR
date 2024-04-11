@@ -897,8 +897,8 @@ GameObject:
   - component: {fileID: 1702931195981537189}
   - component: {fileID: 9143615884439857367}
   m_Layer: 0
-  m_Name: Decal
-  m_TagString: Untagged
+  m_Name: Stage 3
+  m_TagString: Overlay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetTypeId: test-decal
-  presetAssetId: test-decal
+  presetAssetId: pressure-3
   assetTypeDependencyIds: []
   version: 0
 --- !u!114 &5199893820514956859
@@ -985,7 +985,7 @@ MonoBehaviour:
     isEnabledHostOnly:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: 0
+        defaultValue: 1
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
@@ -1024,7 +1024,7 @@ MonoBehaviour:
   spatialLayer:
     serializedVersion: 2
     m_Bits: 2147483648
-  indentation: 0
+  indentation: 1
   meshHoles:
   - {fileID: 3965291280221510322}
   - {fileID: 2109807241045691793}
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   - {fileID: 8288372324773485519}
   - {fileID: 1020953847342341915}
   - {fileID: 148133304203160170}
-  holeDepth: 0.03
+  holeDepth: 0.0125
 --- !u!114 &1561605320349285061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     scale:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: {x: 0, y: 0, z: 0}
+        defaultValue: {x: 1, y: 1, z: 1}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []

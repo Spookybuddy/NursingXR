@@ -12,8 +12,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     [Tooltip("Center of manipulated object.")]
     [SerializeField] private Transform center;
 
-    [Tooltip("Corner transforms, listed in a Z shape.")]
-    [SerializeField] private Transform[] meshCorners;
+    [HideInInspector] public Transform[] meshCorners;
 
     [Tooltip("Render meshes.")]
     [SerializeField] private MeshFilter meshFilter;
@@ -24,16 +23,11 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     [Tooltip("Raycast check against only these layers. \nInclude layer of spatial awareness (31)")]
     [SerializeField] private LayerMask spatialLayer;
 
-    [Header("Higher detailed mesh variables")]
+    [Tooltip("Should the mesh physically have a hole?")] public bool indentation;
 
-    [Tooltip("Should the mesh physically have a hole?")]
-    [SerializeField] private bool indentation;
+    [HideInInspector] public Transform[] meshHoles;
 
-    [Tooltip("If indentation is true, the transforms of the hole, in a clockwise order.")]
-    [SerializeField] private Transform[] meshHoles;
-
-    [Tooltip("If indentation is true, the depth of the indent.")]
-    [SerializeField] private float holeDepth;
+    [HideInInspector] public float holeDepth;
 
     //Mesh 
     private Mesh mesh;
@@ -115,8 +109,6 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         //Returns mesh to quad shape for easier visualization while adjusting
         for (int i = 0; i < meshCorners.Length; i++) vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
         UpdateOverlay();
-
-        assetData.updateMesh.runtimeData.Value -= 1;
     }
 
     public void OnManipulationEnd()
@@ -136,8 +128,6 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
                 GenerateOverlay();
                 UpdateOverlay();
             }
-
-            assetData.updateMesh.runtimeData.Value += 1;
         }
     }
 
@@ -186,7 +176,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             Cav_UVs[i + meshHoles.Length + 1] = new Vector2(0.5f + x + meshHoles[i].localPosition.x, 0.5f + y + meshHoles[i].localPosition.y);
         }
     }
-
+    /*
     //Detect changes in the networked variable, and update the mesh client-side (Position should be already networked)
     [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.updateMesh))]
     private void OnUpdateMeshChanged(AssetPropertyChangeEventArgs args)
@@ -202,7 +192,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         Debug.Log("Networked mesh update");
         if (TryGetComponent<MeshCollider>(out MeshCollider collider)) collider.sharedMesh = newValue;
     }
-
+    */
     //Update mesh
     private void UpdateOverlay()
     {

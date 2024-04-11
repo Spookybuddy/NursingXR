@@ -12,27 +12,24 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
     [SerializeField] public bool isManager;
 
     //Manager specific variables
-    [HideInInspector]
-    public int arraySize;
+    [HideInInspector] public int arraySize;
 
-    [HideInInspector]
-    public GameObject[] medicalSupplies;
+    [HideInInspector] public GameObject[] medicalSupplies;
+
+    [HideInInspector] public int stepAmount;
+
+    [HideInInspector] public string[] treatmentAtStep;
 
     //Non-Manager variables
-    [HideInInspector]
-    public ProcedureFieldAssetTypeComponent manager;
+    [HideInInspector] public ProcedureFieldAssetTypeComponent manager;
 
-    [HideInInspector]
-    public int usedOnStep;
+    [HideInInspector] public int usedOnStep;
 
-    [HideInInspector]
-    public int usedBy;
+    [HideInInspector] public int usedBy;
 
-    [HideInInspector]
-    public bool isInUse;
+    [HideInInspector] public bool isInUse;
 
-    [HideInInspector]
-    public bool onCorrectStep;
+    [HideInInspector] public bool onCorrectStep;
 
     private IScenarioManager scenarioManager;
 
@@ -49,13 +46,14 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
 
     protected override void Setup()
     {
-
+        for (int i = 0; i < medicalSupplies.Length; i++) {
+            Debug.LogError(medicalSupplies[i].name);
+            
+        }
     }
 
     protected override void Teardown()
     {
 
     }
-
-
 }

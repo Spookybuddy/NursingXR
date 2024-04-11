@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 690083852}
   - component: {fileID: 690083851}
   - component: {fileID: 690083850}
+  - component: {fileID: 690083854}
   m_Layer: 31
   m_Name: Sphere
   m_TagString: Untagged
@@ -513,6 +514,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690083854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690083849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ac3eee99f17b24e9ee98b0e92e39ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    updateMesh:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+  center: {fileID: 0}
+  meshCorners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  meshFilter: {fileID: 0}
+  raycastRange: 0
+  spatialLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  indentation: 0
+  meshHoles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  holeDepth: 0
 --- !u!1 &980940297
 GameObject:
   m_ObjectHideFlags: 0

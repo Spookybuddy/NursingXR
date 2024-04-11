@@ -104,14 +104,46 @@ MonoBehaviour:
         defaultValue: 1
       runtimeData:
         sharedValue: 1
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 1
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 1
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 1
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 1
     isEnabledHostOnly:
       designTimeData:
         isEditableByAuthor: 0
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
 --- !u!114 &4214915600860828866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +174,33 @@ MonoBehaviour:
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+  isManager: 0
+  arraySize: 0
+  medicalSupplies: []
+  stepAmount: 0
+  treatmentAtStep: []
+  manager: {fileID: 0}
+  usedOnStep: 0
+  usedBy: 0
+  isInUse: 0
+  onCorrectStep: 0
 --- !u!114 &4087168884614451117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +270,23 @@ MonoBehaviour:
         defaultValue: {x: 0, y: 0, z: 0}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0}
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0}
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0}
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0}
 --- !u!114 &813839126250890550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,14 +318,46 @@ MonoBehaviour:
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
     authoritySet:
       designTimeData:
         isEditableByAuthor: 0
         defaultValue: []
       runtimeData:
         sharedValue: []
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: []
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: []
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: []
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: []
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -285,7 +391,23 @@ MonoBehaviour:
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
   objectManipulator: {fileID: 0}
   boundsControl: {fileID: 0}
   manageBoundsControlEnabledState: 0
@@ -343,4 +465,20 @@ MonoBehaviour:
         defaultValue: {x: 0, y: 0, z: 0, w: 1}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0, w: 1}
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0, w: 1}
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0, w: 1}
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0, w: 1}
