@@ -176,15 +176,7 @@ MonoBehaviour:
         stageAssetProperties: []
   isManager: 1
   arraySize: 8
-  medicalSupplies:
-  - {fileID: 1191142003540944770, guid: 7b79ce03658cd5c4e95b9ed376521dc5, type: 3}
-  - {fileID: 7721900797302777148, guid: 74ef48dbfbdcf3f489b8b48dd54b75aa, type: 3}
-  - {fileID: 4884884204820181186, guid: 3234a6e94d87d7c48a12a8a93a76a8e0, type: 3}
-  - {fileID: 2520168602698018023, guid: ec6ebc5179813374c89322769c9ea224, type: 3}
-  - {fileID: 3284942818043010066, guid: 1d5a2e9607cc447489d115ecad84bc4e, type: 3}
-  - {fileID: 7303057915124088266, guid: d45a50a2bc2dba643ae73feed5b2ca15, type: 3}
-  - {fileID: 6262536320255261274, guid: 39ef10756309b9f4d949cd9747b87db5, type: 3}
-  - {fileID: 6734006669806001138, guid: d81acedb0bacb6449a34ccee825bd216, type: 3}
+  medicalSupplies: []
   stepAmount: 0
   treatmentAtStep: []
   manager: {fileID: 0}

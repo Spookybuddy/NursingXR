@@ -11,7 +11,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     [Tooltip("Center of manipulated object.")]
     [SerializeField] private Transform center;
-
+    
     [HideInInspector] public Transform[] meshCorners;
 
     [Tooltip("Render meshes.")]
@@ -31,25 +31,45 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     //Mesh 
     private Mesh mesh;
-    private Vector3[] vertices = new Vector3[5];
 
     //Fixed values for mesh creation
+    private readonly Vector3[] vertices = new Vector3[13];
     private readonly int[] Tris = new int[] {
-        0, 1, 2,
-        0, 2, 4,
-        0, 4, 3,
-        0, 3, 1
+        3, 0, 1,
+        3, 1, 6,
+        3, 6, 5,
+        3, 5, 0,
+        4, 1, 2,
+        4, 2, 7,
+        4, 7, 6,
+        4, 6, 1,
+        8, 5, 6,
+        8, 6, 11,
+        8, 11, 10,
+        8, 10, 5,
+        9, 6, 7,
+        9, 7, 12,
+        9, 12, 11,
+        9, 11, 6
     };
     private readonly Vector2[] UVs = new Vector2[] {
-        new(0.5f, 0.5f),
         Vector2.up,
+        new(0.5f, 1),
         Vector2.one,
+        new(0.25f, 0.75f),
+        new(0.75f, 0.75f),
+        new(0, 0.5f),
+        new(0.5f, 0.5f),
+        new(1, 0.5f),
+        new(0.25f, 0.25f),
+        new(0.75f, 0.25f),
         Vector2.zero,
+        new(0.5f, 0),
         Vector2.right
     };
 
     //Fixed values for cavity creation
-    private Vector3[] Cav_vertices = new Vector3[17];
+    private readonly Vector3[] Cav_vertices = new Vector3[17];
     private readonly int[] Cav_Tris = new int[] {
         0, 1, 2,
         0, 2, 3,
@@ -104,11 +124,10 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     public void OnManipulationStart()
     {
         //If the scenario is not editing, do nothing. Editing enum is missing?
-        if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
+        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
 
-        //Returns mesh to quad shape for easier visualization while adjusting
-        for (int i = 0; i < meshCorners.Length; i++) vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
-        UpdateOverlay();
+        //Reset mesh to quad for easy visualization while moving
+        assetData.meshVersion.runtimeData.Value = false;
     }
 
     public void OnManipulationEnd()
@@ -116,19 +135,15 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         //If the scenario is not editing, do nothing. Editing enum is missing?
         //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
 
-        //Finds the normals of the surface and snaps to it, then finding the normals from the corners and adjusting those as well
-        if (Physics.Raycast(center.position, center.forward, out RaycastHit hit, raycastRange, spatialLayer)) {
-            center.SetPositionAndRotation(hit.point, Quaternion.LookRotation(-hit.normal));
+        //Update mesh to surface by raycasting vertices
+        assetData.meshVersion.runtimeData.Value = true;
+    }
 
-            //Generate overlay or cavity
-            if (indentation) {
-                GenerateCavity();
-                UpdateCavity();
-            } else {
-                GenerateOverlay();
-                UpdateOverlay();
-            }
-        }
+    //Reset to quad shape
+    private void ResetMesh()
+    {
+        for (int i = 0; i < meshCorners.Length; i++) vertices[i] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
+        UpdateOverlay();
     }
 
     //Warp the corners to the surface
@@ -140,8 +155,8 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             Debug.DrawRay(meshCorners[i].position, inward * raycastRange, Color.cyan, 5);
 
             //If surface is not found resort to original position
-            if (Physics.Raycast(meshCorners[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) vertices[i + 1] = center.InverseTransformPoint(surface.point);
-            else vertices[i + 1] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
+            if (Physics.Raycast(meshCorners[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) vertices[i] = center.InverseTransformPoint(surface.point);
+            else vertices[i] = new Vector3(meshCorners[i].localPosition.x, meshCorners[i].localPosition.y, 0);
         }
     }
 
@@ -176,23 +191,29 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             Cav_UVs[i + meshHoles.Length + 1] = new Vector2(0.5f + x + meshHoles[i].localPosition.x, 0.5f + y + meshHoles[i].localPosition.y);
         }
     }
-    /*
-    //Detect changes in the networked variable, and update the mesh client-side (Position should be already networked)
-    [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.updateMesh))]
-    private void OnUpdateMeshChanged(AssetPropertyChangeEventArgs args)
-    {
-        Debug.LogWarning("Value has changed");
 
+    //Detect changes in the networked variable, and update the mesh client-side (Position should be already networked)
+    [RegisterPropertyChange(nameof(SurfaceMappingFieldAssetData.meshVersion))]
+    private void OnMeshVersionChanged(AssetPropertyChangeEventArgs args)
+    {
         if (!IsInitialized) return;
 
-        Mesh newValue = (Mesh)args.AssetPropertyValue;
+        bool version = (bool)args.AssetPropertyValue;
 
-        //Directly update mesh filter and collider (to avoid feedback loops I think)
-        meshFilter.mesh = newValue;
-        Debug.Log("Networked mesh update");
-        if (TryGetComponent<MeshCollider>(out MeshCollider collider)) collider.sharedMesh = newValue;
+        //Directly update mesh filter and collider (to avoid feedback loops I think) based on version value
+        if (version) {
+            if (indentation) {
+                GenerateCavity();
+                UpdateCavity();
+            } else {
+                GenerateOverlay();
+                UpdateOverlay();
+            }
+        } else {
+            ResetMesh();
+        }
     }
-    */
+
     //Update mesh
     private void UpdateOverlay()
     {

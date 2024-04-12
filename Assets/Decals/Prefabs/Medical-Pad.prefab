@@ -220,7 +220,7 @@ MonoBehaviour:
     position:
       designTimeData:
         isEditableByAuthor: 1
-        defaultValue: {x: 0, y: 0, z: 0}
+        defaultValue: {x: -0.15, y: 0, z: -0.5}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []

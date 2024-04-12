@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4784665882566590740}
-  - component: {fileID: 7790994191417673280}
   - component: {fileID: 4352641023753863626}
   - component: {fileID: 3634878124425222509}
   - component: {fileID: 5885427013916990785}
+  - component: {fileID: 7790994191417673280}
   - component: {fileID: 7727898930610999385}
   - component: {fileID: 2576234721414018680}
   - component: {fileID: 8132884328371727150}
@@ -35,52 +35,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5797515491271079103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7790994191417673280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797515491271079103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ac3eee99f17b24e9ee98b0e92e39ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-  center: {fileID: 0}
-  meshCorners:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  meshFilter: {fileID: 0}
-  raycastRange: 0.5
-  spatialLayer:
-    serializedVersion: 2
-    m_Bits: 2147483648
-  indentation: 0
-  meshHoles: []
-  holeDepth: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &4352641023753863626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetTypeId: test-decal
-  presetAssetId: 
+  presetAssetId: test-decal
   assetTypeDependencyIds: []
   version: 0
 --- !u!114 &5885427013916990785
@@ -142,7 +104,7 @@ MonoBehaviour:
         isEditableByAuthor: 1
         defaultValue: 1
       runtimeData:
-        sharedValue: 0
+        sharedValue: 1
         stageAssetProperties:
         - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
           useShared: 1
@@ -183,6 +145,52 @@ MonoBehaviour:
           useShared: 1
           resetValueOnStageChange: 0
           localValue: 0
+--- !u!114 &7790994191417673280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797515491271079103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ac3eee99f17b24e9ee98b0e92e39ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+  center: {fileID: 0}
+  meshCorners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  meshFilter: {fileID: 0}
+  raycastRange: 0.4
+  spatialLayer:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  indentation: 0
+  meshHoles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  holeDepth: 0.03
 --- !u!114 &7727898930610999385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,26 +305,26 @@ MonoBehaviour:
     authority:
       designTimeData:
         isEditableByAuthor: 1
-        defaultValue: 0
+        defaultValue: 1
       runtimeData:
-        sharedValue: 0
+        sharedValue: 1
         stageAssetProperties:
         - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: 0
+          localValue: 1
         - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: 0
+          localValue: 1
         - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: 0
+          localValue: 1
         - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: 0
+          localValue: 1
     authoritySet:
       designTimeData:
         isEditableByAuthor: 0
@@ -369,7 +377,7 @@ MonoBehaviour:
         value: 
     isManipulating:
       designTimeData:
-        isEditableByAuthor: 0
+        isEditableByAuthor: 1
         defaultValue: 0
       runtimeData:
         sharedValue: 0
@@ -467,27 +475,27 @@ MonoBehaviour:
         value: 
     rotation:
       designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: {x: 0, y: 0, z: 0, w: 1}
+        isEditableByAuthor: 1
+        defaultValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
       runtimeData:
         sharedValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
         stageAssetProperties:
         - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 0, y: 0, z: 0, w: 1}
+          localValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
         - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 0, y: 0, z: 0, w: 1}
+          localValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
         - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 0, y: 0, z: 0, w: 1}
+          localValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
         - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 0, y: 0, z: 0, w: 1}
+          localValue: {x: 0, y: 1, z: 0, w: -0.00000004371139}
 --- !u!114 &6720922142267006416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,34 +512,34 @@ MonoBehaviour:
   assetData:
     name:
       designTimeData:
-        defaultValue: Scale
+        defaultValue: 
       runtimeData:
         value: 
     description:
       designTimeData:
-        defaultValue: The start scale of the interactable.
+        defaultValue: 
       runtimeData:
         value: 
     scale:
       designTimeData:
-        isEditableByAuthor: 1
-        defaultValue: {x: 1, y: 1, z: 1}
+        isEditableByAuthor: 0
+        defaultValue: {x: 0, y: 0, z: 0}
       runtimeData:
-        sharedValue: {x: 1, y: 1, z: 1}
+        sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties:
         - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 1, y: 1, z: 1}
+          localValue: {x: 0, y: 0, z: 0}
         - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 1, y: 1, z: 1}
+          localValue: {x: 0, y: 0, z: 0}
         - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 1, y: 1, z: 1}
+          localValue: {x: 0, y: 0, z: 0}
         - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
           useShared: 1
           resetValueOnStageChange: 0
-          localValue: {x: 1, y: 1, z: 1}
+          localValue: {x: 0, y: 0, z: 0}

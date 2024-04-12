@@ -14,7 +14,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
     //Manager specific variables
     [HideInInspector] public int arraySize;
 
-    [HideInInspector] public GameObject[] medicalSupplies;
+    private GameObject[] medicalSupplies;
 
     [HideInInspector] public int stepAmount;
 
@@ -46,14 +46,33 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
 
     protected override void Setup()
     {
-        for (int i = 0; i < medicalSupplies.Length; i++) {
-            Debug.LogError(medicalSupplies[i].name);
-            
+        if (isManager) {
+            medicalSupplies = GameObject.FindGameObjectsWithTag("Supplies");
+            for (int i = 0; i < medicalSupplies.Length; i++) {
+                Debug.LogWarning(medicalSupplies[i].name);
+            }
+        } else {
+            manager = GameObject.FindWithTag("GameController").GetComponent<ProcedureFieldAssetTypeComponent>();
         }
     }
 
     protected override void Teardown()
     {
 
+    }
+
+    private void CheckStep()
+    {
+        if (!isManager) {
+
+        }
+    }
+
+    [RegisterPropertyChange(nameof(ProcedureFieldAssetData.step))]
+    private void OnStepChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized) return;
+
+        
     }
 }

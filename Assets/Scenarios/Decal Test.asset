@@ -175,7 +175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assetData:
     m_keys:
-    - test-decal
     - spray
     - ointment
     - pad
@@ -189,8 +188,8 @@ MonoBehaviour:
     - pressure-2
     - pressure-3
     - pressure-4
+    - test-decal
     m_values:
-    - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}
     - {fileID: 9209711686215667436, guid: b9ae112f8357d3044bfeb97e84c8989a, type: 3}
     - {fileID: 8582347905454388894, guid: 039f200eb5756bc4f88440530c802b0e, type: 3}
     - {fileID: 5380544011129482111, guid: 8c2446b8d91c4f34d9bf81f155057677, type: 3}
@@ -204,3 +203,4 @@ MonoBehaviour:
     - {fileID: 4007472503196490181, guid: 4e3e3c8f5ff37494086b4b6024dde41d, type: 3}
     - {fileID: 5916926067955406621, guid: 3fb39458377c63240ba6317fe1b54e32, type: 3}
     - {fileID: 237391676015655065, guid: 8c93aef6bfb5f9441a3585bf2feecbac, type: 3}
+    - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}

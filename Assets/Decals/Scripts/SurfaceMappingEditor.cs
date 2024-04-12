@@ -5,7 +5,7 @@ using UnityEngine;
 [CanEditMultipleObjects]
 public class SurfaceMappingEditor : Editor
 {
-    private Transform[] _meshCorners = new Transform[4];
+    private Transform[] _meshCorners = new Transform[13];
     private Transform[] _meshHoles = new Transform[8];
     private float _holeDepth;
 
@@ -15,7 +15,7 @@ public class SurfaceMappingEditor : Editor
     private readonly GUIContent[] _displays = new GUIContent[] {
         new GUIContent("Vertex Count", "Number of vertices that form the hole."),
         new GUIContent("Transforms", "The transforms of the hole, in a clockwise order."),
-        new GUIContent("Transforms", "The transforms of the corners of the mesh, in a Z shape."),
+        new GUIContent("Transforms", "The transforms of the mesh, from left to right."),
         new GUIContent("Hole Depth", "The depth of the indent."),
         new GUIContent("Vertex Position", "The positions of vertices.")
     };
