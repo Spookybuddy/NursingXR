@@ -132,10 +132,9 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
 
     public void OnManipulationEnd()
     {
-        //If the scenario is not editing, do nothing. Editing enum is missing?
-        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
-
-        //Update mesh to surface by raycasting vertices
+        //Teleports to surface before updating
+        if (Physics.Raycast(center.position, center.forward, out RaycastHit hit, raycastRange, spatialLayer)) center.SetPositionAndRotation(hit.point, Quaternion.LookRotation(-hit.normal));
+        
         assetData.meshVersion.runtimeData.Value = true;
     }
 
