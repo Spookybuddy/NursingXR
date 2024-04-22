@@ -11,15 +11,17 @@ public class ProcedureEditor : Editor
     private string[] _methods = new string[] { "Nothing", "Touch", "Spray", "Ointment", "Stay", "Exit" };
     private bool _isInUse;
     private bool _onCorrectStep;
-
-    private bool foldout;
+    private Vector3 _raycastScale;
+    private float _raycastDistance;
 
     private readonly GUIContent[] _displays = new GUIContent[] {
         new GUIContent("Manager Object", "The manager object that networks the steps."),
         new GUIContent("Used On Step", "Which step the object is to be used on."),
         new GUIContent("Object Use", "How the object is to be used."),
         new GUIContent("Is In Use", "The object is currently being manipulated."),
-        new GUIContent("On Correct Step", "Used On Step matches the manager's step.")
+        new GUIContent("On Correct Step", "Used On Step matches the manager's step."),
+        new GUIContent("Boxcast Scale", "The Vector3 representing the scale of the boxcast."),
+        new GUIContent("Raycast Range", "The distance the ray will travel.")
     };
 
     public override void OnInspectorGUI()
@@ -35,6 +37,8 @@ public class ProcedureEditor : Editor
             if (script.usedBy != 0) _usedBy = script.usedBy;
             if (script.isInUse) _isInUse = true;
             if (script.onCorrectStep) _onCorrectStep = true;
+            if (script.raycastScale != Vector3.zero) _raycastScale = script.raycastScale;
+            if (script.raycastDistance != 0) _raycastDistance = script.raycastDistance;
 
             //Manager object
             EditorGUI.BeginChangeCheck();
@@ -60,6 +64,16 @@ public class ProcedureEditor : Editor
             EditorGUI.BeginChangeCheck();
             _onCorrectStep = EditorGUILayout.Toggle(_displays[4], _onCorrectStep);
             if (EditorGUI.EndChangeCheck()) script.onCorrectStep = _onCorrectStep;
+
+            //Boxcast scale
+            EditorGUI.BeginChangeCheck();
+            _raycastScale = EditorGUILayout.Vector3Field(_displays[5], _raycastScale);
+            if (EditorGUI.EndChangeCheck()) script.raycastScale = _raycastScale;
+
+            //Raycast range
+            EditorGUI.BeginChangeCheck();
+            _raycastDistance = EditorGUILayout.FloatField(_displays[6], _raycastDistance);
+            if (EditorGUI.EndChangeCheck()) script.raycastDistance = _raycastDistance;
         }
     }
 }

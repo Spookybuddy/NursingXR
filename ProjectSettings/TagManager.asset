@@ -7,7 +7,6 @@ TagManager:
   - CalibrationRoot
   - Supplies
   - Overlay
-  - SprayArea
   layers:
   - Default
   - TransparentFX
@@ -16,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Avatar
-  - 
+  - Interact
   - 
   - 
   - 
