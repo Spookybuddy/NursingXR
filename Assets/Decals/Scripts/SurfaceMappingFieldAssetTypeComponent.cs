@@ -3,6 +3,7 @@ using GIGXR.Platform.Scenarios;
 using GIGXR.Platform.Scenarios.Data;
 using GIGXR.Platform.Scenarios.GigAssets;
 using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
+using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 
 public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<SurfaceMappingFieldAssetData>
@@ -98,6 +99,8 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     };
     private readonly Vector2[] Cav_UVs = new Vector2[17];
 
+    public ObjectManipulator manipulation;
+
     private IScenarioManager scenarioManager;
 
     [InjectDependencies]
@@ -114,6 +117,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     protected override void Setup()
     {
         mesh = new Mesh();
+        manipulation = transform.GetChild(0).GetChild(0).GetComponent<ObjectManipulator>();
     }
 
     protected override void Teardown()
@@ -121,21 +125,28 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         mesh.Clear();
     }
 
+    /*
+    private void Update()
+    {
+        if (center.gameObject.activeSelf) {
+            if (manipulation != null && scenarioManager != null) {
+                manipulation.enabled = (scenarioManager.ScenarioStatus != ScenarioStatus.Playing);
+            }
+        }
+    }
+    */
+
     public void OnManipulationStart()
     {
-        //If the scenario is not editing, do nothing. Editing enum is missing?
-        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
-
         //Reset mesh to quad for easy visualization while moving
         assetData.meshVersion.runtimeData.Value = false;
     }
 
     public void OnManipulationEnd()
     {
-        //If the scenario is not editing, do nothing. Editing enum is missing?
-        //if (scenarioManager.ScenarioStatus == ScenarioStatus.Playing) return;
-
-        //Update mesh to surface by raycasting vertices
+        //Teleports to surface before updating
+        if (Physics.Raycast(center.position, center.forward, out RaycastHit hit, raycastRange, spatialLayer)) center.SetPositionAndRotation(hit.point, Quaternion.LookRotation(-hit.normal));
+        
         assetData.meshVersion.runtimeData.Value = true;
     }
 
@@ -217,28 +228,26 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     //Update mesh
     private void UpdateOverlay()
     {
-        mesh.Clear();
-        meshFilter.mesh = mesh;
-        mesh.vertices = vertices;
-        mesh.uv = UVs;
-        mesh.triangles = Tris;
-        mesh.RecalculateNormals();
-
-        //If a mesh collider property exists assign the mesh to it
-        if (TryGetComponent(out MeshCollider collider)) collider.sharedMesh = mesh;
+        UpdateMesh(vertices, UVs, Tris);
     }
 
     //Update mesh with hole
     private void UpdateCavity()
     {
+        UpdateMesh(Cav_vertices, Cav_UVs, Cav_Tris);
+    }
+
+    private void UpdateMesh(Vector3[] V, Vector2[] U, int[] T)
+    {
         mesh.Clear();
         meshFilter.mesh = mesh;
-        mesh.vertices = Cav_vertices;
-        mesh.uv = Cav_UVs;
-        mesh.triangles = Cav_Tris;
+        mesh.vertices = V;
+        mesh.uv = U;
+        mesh.triangles = T;
         mesh.RecalculateNormals();
 
         //If a mesh collider property exists assign the mesh to it
-        if (TryGetComponent(out MeshCollider collider)) collider.sharedMesh = mesh;
+        if (meshFilter.transform.TryGetComponent(out MeshCollider collider)) collider.sharedMesh = mesh;
+        if (meshFilter.transform.GetComponentInChildren<MeshCollider>() != null) meshFilter.transform.GetComponentInChildren<MeshCollider>().sharedMesh = mesh;
     }
 }
