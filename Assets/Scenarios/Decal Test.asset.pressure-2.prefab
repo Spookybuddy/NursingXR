@@ -169,6 +169,29 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
+    meshVersion:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
   center: {fileID: 0}
   meshCorners:
   - {fileID: 0}
@@ -191,6 +214,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   holeDepth: 0.03
+  manipulation: {fileID: 0}
 --- !u!114 &1356761883462348462
 MonoBehaviour:
   m_ObjectHideFlags: 0

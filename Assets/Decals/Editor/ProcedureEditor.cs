@@ -68,7 +68,7 @@ public class ProcedureEditor : Editor
             //Boxcast scale
             EditorGUI.BeginChangeCheck();
             _raycastScale = EditorGUILayout.Vector3Field(_displays[5], _raycastScale);
-            if (EditorGUI.EndChangeCheck()) script.raycastScale = _raycastScale;
+            if (EditorGUI.EndChangeCheck() && _raycastScale != Vector3.zero) script.raycastScale = _raycastScale;
 
             //Raycast range
             EditorGUI.BeginChangeCheck();

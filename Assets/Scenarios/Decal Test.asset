@@ -157,6 +157,24 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: c036bf45-cd01-46d1-8207-26594986a875
     assetData: 
+  - presetAssetId: abd
+    assetTypePrefabReference:
+      m_AssetGUID: 6a13db3a2e155cd4e9556e508dc8497e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 79ea381d-477f-477c-a357-34aec8d438f9
+    assetData: 
+  - presetAssetId: gauze
+    assetTypePrefabReference:
+      m_AssetGUID: 32bd8e60426a0fc44b488b5b4809cd61
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 885720b7-32f1-4a64-bf97-ef6845881a2c
+    assetData: 
   assetDataPrefabReferences: {fileID: 3547594671840072246}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
@@ -189,6 +207,7 @@ MonoBehaviour:
     - pressure-3
     - pressure-4
     - test-decal
+    - abd
     m_values:
     - {fileID: 9209711686215667436, guid: b9ae112f8357d3044bfeb97e84c8989a, type: 3}
     - {fileID: 8582347905454388894, guid: 039f200eb5756bc4f88440530c802b0e, type: 3}
@@ -204,3 +223,4 @@ MonoBehaviour:
     - {fileID: 5916926067955406621, guid: 3fb39458377c63240ba6317fe1b54e32, type: 3}
     - {fileID: 237391676015655065, guid: 8c93aef6bfb5f9441a3585bf2feecbac, type: 3}
     - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}
+    - {fileID: 1086339737267076821, guid: 9d747832b3b22bb46942658b7646635f, type: 3}

@@ -73,6 +73,14 @@ MonoBehaviour:
     m_Address: pressure-4
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6a13db3a2e155cd4e9556e508dc8497e
+    m_Address: abd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32bd8e60426a0fc44b488b5b4809cd61
+    m_Address: gauze
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

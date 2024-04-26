@@ -207,6 +207,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   isManager: 0
   arraySize: 0
   manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
@@ -218,7 +225,7 @@ MonoBehaviour:
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &3284942818043010057
 MonoBehaviour:
   m_ObjectHideFlags: 0

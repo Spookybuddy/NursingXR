@@ -40,7 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8060525292726801041}
-  m_Layer: 0
+  - component: {fileID: 6710484244036086061}
+  m_Layer: 7
   m_Name: Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,14 +55,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2675194421943454950}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7721900796235000785}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!65 &6710484244036086061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675194421943454950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.03, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7721900796235000784
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +394,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   isManager: 0
   arraySize: 0
   manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
@@ -387,11 +408,11 @@ MonoBehaviour:
   usedBy: 3
   isInUse: 0
   raycastScale: {x: 0, y: 0, z: 0}
-  raycastDistance: 0
+  raycastDistance: 0.015
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &7721900797302777147
 MonoBehaviour:
   m_ObjectHideFlags: 0

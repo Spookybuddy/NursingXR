@@ -144,6 +144,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   isManager: 0
   arraySize: 0
   manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
@@ -155,7 +162,7 @@ MonoBehaviour:
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &4884884204820181193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +579,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3039541405851374496}
-  m_Layer: 0
+  - component: {fileID: 2652494337510057840}
+  m_Layer: 7
   m_Name: Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,6 +602,19 @@ Transform:
   m_Father: {fileID: 4884884205010021988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2652494337510057840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786127914967178755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7807063806447341413
 GameObject:
   m_ObjectHideFlags: 0
