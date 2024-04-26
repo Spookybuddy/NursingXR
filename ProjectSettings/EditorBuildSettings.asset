@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HMD.unity
+    path: Assets/Scenes/Decal_HMD.unity
     guid: 900a0d42e5655db4882efc2a7fd98f13
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 542a143fe99923345a95f9e8709e304d,

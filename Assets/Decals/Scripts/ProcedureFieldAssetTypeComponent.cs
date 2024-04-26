@@ -82,8 +82,11 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
                 }
             } else StartCoroutine(RetryFindManager());
 
+            //Grab components on start
             raycastOrigin = transform.FindChildOrGrandchild("Raycast");
             particles = transform.FindChildOrGrandchild("Particle").gameObject;
+
+            usedOnStep = assetData.usedOnStep.runtimeData.Value;
         }
     }
 

@@ -174,16 +174,25 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: -1
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   isManager: 1
   arraySize: 8
-  medicalSupplies: []
-  stepAmount: 0
-  treatmentAtStep: []
   manager: {fileID: 0}
   usedOnStep: 0
   usedBy: 0
   isInUse: 0
+  raycastScale: {x: 0, y: 0, z: 0}
+  raycastDistance: 0
   onCorrectStep: 0
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &-5827647803779150039
 MonoBehaviour:
   m_ObjectHideFlags: 0
