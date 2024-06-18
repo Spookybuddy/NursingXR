@@ -67,7 +67,7 @@
             }
 
             // Allows us to reset the animations by disabling the component
-            _animator.keepAnimatorControllerStateOnDisable = false;
+            _animator.keepAnimatorStateOnDisable = false;
         }
 
         private void OnDestroy()
