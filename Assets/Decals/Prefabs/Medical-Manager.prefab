@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: spray
+  assetTypeId: manager
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0

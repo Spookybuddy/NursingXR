@@ -24,7 +24,8 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     [Tooltip("Raycast check against only these layers. \nInclude layer of spatial awareness (31)")]
     [SerializeField] private LayerMask spatialLayer;
 
-    [Tooltip("Should the mesh physically have a hole?")] public bool indentation;
+    [Tooltip("Should the mesh physically have a hole?")]
+    public bool indentation;
 
     [HideInInspector] public Transform[] meshHoles;
 
@@ -70,7 +71,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     };
 
     //Fixed values for cavity creation
-    private readonly Vector3[] Cav_vertices = new Vector3[17];
+    private readonly Vector3[] Cav_vertices = new Vector3[25];
     private readonly int[] Cav_Tris = new int[] {
         0, 1, 2,
         0, 2, 3,
@@ -95,9 +96,36 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
         16, 8, 7,
         7, 15, 16,
         9, 1, 8,
-        8, 16, 9
+        8, 16, 9,
+        //Additional surrounding skin
+        18, 10, 9,
+        9, 17, 18,
+        19, 11, 10,
+        10, 18, 19,
+        20, 12, 11,
+        11, 19, 20,
+        21, 13, 12,
+        12, 20, 21,
+        22, 14, 13,
+        13, 21, 22,
+        23, 15, 14,
+        14, 22, 23,
+        24, 16, 15,
+        15, 23, 24,
+        17, 9, 16,
+        16, 24, 17
     };
-    private readonly Vector2[] Cav_UVs = new Vector2[17];
+    private readonly Vector2[] Cav_UVs = new Vector2[25];
+    private readonly Vector2[] UV_Circle = new Vector2[] {
+        new (0.5f, 1),
+        Vector2.one,
+        new (1, 0.5f),
+        Vector2.right,
+        new (0.5f, 0),
+        Vector2.zero,
+        new (0, 0.5f),
+        Vector2.up
+    };
 
     public ObjectManipulator manipulation;
 
@@ -176,23 +204,30 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
     {
         //Center in hole
         Vector3 middle = new Vector3(0, 0, holeDepth);
-        Cav_vertices[0] = 1.5f * middle;
+        Cav_vertices[0] = 1.3f * middle;
         Cav_UVs[0] = new Vector2(0.5f, 0.5f);
 
         //Update vertex and uv positions based off of transform list
-        for (int i = 0; i < meshHoles.Length; i++)
-        {
+        for (int i = 0; i < meshHoles.Length; i++) {
             //Positions
             Cav_vertices[i + 1] = meshHoles[i].localPosition + middle;
             Cav_vertices[i + meshHoles.Length + 1] = meshHoles[i].localPosition;
+            int index = i + 2 * meshHoles.Length + 1;
+            Cav_vertices[index] = Vector3.Scale(meshHoles[i].localPosition, new Vector3(1.35f, 1.35f, 1));
 
             //Raycast to surface
             Vector3 inward = center.forward - (meshHoles[i].localPosition.x * center.right) - (meshHoles[i].localPosition.y * center.up);
             Debug.DrawRay(meshHoles[i].position, inward * raycastRange, Color.cyan, 5);
 
+            //Cavity walls
             if (Physics.Raycast(meshHoles[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) {
                 Cav_vertices[i + 1] = center.InverseTransformPoint(surface.point) + middle;
                 Cav_vertices[i + meshHoles.Length + 1] = center.InverseTransformPoint(surface.point);
+            }
+
+            //Outer rim
+            if (Physics.Raycast(Cav_vertices[index], inward, out RaycastHit rim, raycastRange, spatialLayer)) {
+                Cav_vertices[index] = center.InverseTransformPoint(rim.point);
             }
 
             //UVs
@@ -200,6 +235,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             float x = Mathf.Sign(meshHoles[i].localPosition.x) * holeDepth;
             float y = Mathf.Sign(meshHoles[i].localPosition.y) * holeDepth;
             Cav_UVs[i + meshHoles.Length + 1] = new Vector2(0.5f + x + meshHoles[i].localPosition.x, 0.5f + y + meshHoles[i].localPosition.y);
+            Cav_UVs[index] = UV_Circle[i];
         }
     }
 

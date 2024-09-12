@@ -81,6 +81,22 @@ MonoBehaviour:
     m_Address: gauze
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8eea82e4b7b1013418cd1e497555c871
+    m_Address: burn-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6575d880b3e63247a0842c5a4057906
+    m_Address: burn-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40509620f9cd87f49bae012d1d3cc0ee
+    m_Address: burn-3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 285618ef15a04bd4ea67f4a30be14e49
+    m_Address: IV
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

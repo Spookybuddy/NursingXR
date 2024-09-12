@@ -16,9 +16,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
     [SerializeField] public bool isManager;
 
     //Manager specific variables
-    [HideInInspector] public int arraySize;
-
-    private ProcedureFieldAssetTypeComponent[] medicalSupplies;
+    public ProcedureFieldAssetTypeComponent[] medicalSupplies;
 
     //Non-Manager variables
     [HideInInspector] public ProcedureFieldAssetTypeComponent manager;
@@ -33,7 +31,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
 
     [HideInInspector] public float raycastDistance;
 
-    private int onStep;
+    public int onStep;
 
     [HideInInspector] public bool onCorrectStep;
 
@@ -68,12 +66,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
 
     protected override void Setup()
     {
-        if (isManager) {
-            //Manager finds all supplies and gets their procedure scripts for communication later
-            GameObject[] supplies = GameObject.FindGameObjectsWithTag("Supplies");
-            medicalSupplies = new ProcedureFieldAssetTypeComponent[supplies.Length];
-            for (int i = 0; i < supplies.Length; i++) medicalSupplies[i] = supplies[i].GetComponent<ProcedureFieldAssetTypeComponent>();
-        } else {
+        if (!isManager) {
             //Non-manager supplies finds the manager script
             GameObject managerObject = GameObject.FindWithTag("GameController");
             if (managerObject != null) {
@@ -131,6 +124,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
     //Executes different code for each use case
     private void ProcedureFunctionSelection()
     {
+        Debug.LogWarning(counter);
         switch (usedBy) {
             case 0:
                 //Nothing

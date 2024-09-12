@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6707897389784687127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b32bd8f995ea44a9236bcfa3a3ff53, type: 3}
+  m_Name: Runtime Data
+  m_EditorClassIdentifier: 
+  assetData:
+    m_keys:
+    - 1-burn
+    - 2-burn
+    - 3-burn
+    m_values:
+    - {fileID: 8912415378885890779, guid: 552f04c5de19f1a44b9467623af157f1, type: 3}
+    - {fileID: 352659017886769434, guid: 2e1eb1c40025f594fa25a871d5453b25, type: 3}
+    - {fileID: 7327678146153026762, guid: 3ce95785adc07b34885804e3320d8b36, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
+  m_Name: Burn
+  m_EditorClassIdentifier: 
+  presetScenarioName: 
+  presetStages:
+  - presetStageId: First
+    stage:
+      stageId: 63902c70-6925-41ee-ac78-631411fb2dbc
+      stageTitle: First
+  - presetStageId: Second
+    stage:
+      stageId: 3d3a4ccc-a16a-4f98-92ba-8f757789367d
+      stageTitle: Second
+  - presetStageId: Third
+    stage:
+      stageId: f853c229-566a-45e1-91b3-d6fb5c609459
+      stageTitle: Third
+  presetAssets:
+  - presetAssetId: 1-burn
+    assetTypePrefabReference:
+      m_AssetGUID: 8eea82e4b7b1013418cd1e497555c871
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 7391a6ae-2825-45d1-b85b-87e11631ba52
+    assetData: 
+  - presetAssetId: 2-burn
+    assetTypePrefabReference:
+      m_AssetGUID: e6575d880b3e63247a0842c5a4057906
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: d44d2f9c-3f31-40f1-a931-38c15d3e32e0
+    assetData: 
+  - presetAssetId: 3-burn
+    assetTypePrefabReference:
+      m_AssetGUID: 40509620f9cd87f49bae012d1d3cc0ee
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: a1e63978-40dd-4da9-8f0b-ca0d90e1bd2e
+    assetData: 
+  assetDataPrefabReferences: {fileID: -6707897389784687127}
+  presetAssetTypeLoadBundles: []
+  presetRuleIds: []
+  pathwayData: []

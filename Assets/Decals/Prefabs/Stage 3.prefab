@@ -75,7 +75,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3b921edd705d8b46a39911bd16ae618, type: 2}
+  - {fileID: 2100000, guid: 8b350eda01c51614881b2511cdb284aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1471,6 +1471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
+  executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
 --- !u!114 &1702931195981537189
