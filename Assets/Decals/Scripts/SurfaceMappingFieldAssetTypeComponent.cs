@@ -213,7 +213,7 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             Cav_vertices[i + 1] = meshHoles[i].localPosition + middle;
             Cav_vertices[i + meshHoles.Length + 1] = meshHoles[i].localPosition;
             int index = i + 2 * meshHoles.Length + 1;
-            Cav_vertices[index] = Vector3.Scale(meshHoles[i].localPosition, new Vector3(1.35f, 1.35f, 1));
+            Cav_vertices[index] = Vector3.Scale(meshHoles[i].localPosition, new Vector3(0.3f, 0.3f, 0));
 
             //Raycast to surface
             Vector3 inward = center.forward - (meshHoles[i].localPosition.x * center.right) - (meshHoles[i].localPosition.y * center.up);
@@ -223,11 +223,9 @@ public class SurfaceMappingFieldAssetTypeComponent : BaseAssetTypeComponent<Surf
             if (Physics.Raycast(meshHoles[i].position, inward, out RaycastHit surface, raycastRange, spatialLayer)) {
                 Cav_vertices[i + 1] = center.InverseTransformPoint(surface.point) + middle;
                 Cav_vertices[i + meshHoles.Length + 1] = center.InverseTransformPoint(surface.point);
-            }
-
-            //Outer rim
-            if (Physics.Raycast(Cav_vertices[index], inward, out RaycastHit rim, raycastRange, spatialLayer)) {
-                Cav_vertices[index] = center.InverseTransformPoint(rim.point);
+                Cav_vertices[index] += center.InverseTransformPoint(surface.point);
+            } else {
+                Cav_vertices[index] = Vector3.Scale(meshHoles[i].localPosition, new Vector3(1.3f, 1.3f, 1));
             }
 
             //UVs
