@@ -90,6 +90,9 @@ namespace GIGXR.Platform.Core
         {
             originalTargetEnvironment = profileManager.authenticationProfile.TargetEnvironmentalDetails;
 
+            // Inject into MonoBehaviours.
+            injector = new DependencyInjector(dependencyProvider);
+
             dependencyProvider
                 // MonoBehaviour and ScriptableObjects needed by the plain C# classes.
                 .RegisterSingleton<ProfileManager>(_ => profileManager)
@@ -141,8 +144,6 @@ namespace GIGXR.Platform.Core
             // Specific hardware such as Mobile or HMD may call this method to inject their own singletons into the dependencyProvider
             BuildExtraDependencies();
 
-            // Inject into MonoBehaviours.
-            injector = new DependencyInjector(dependencyProvider);
             // Since this is the initial injection, do not await so that scripts are constructed during this awake method
             injector.InjectIntoMonoBehaviours();
         }
@@ -186,9 +187,6 @@ namespace GIGXR.Platform.Core
                 // Scenarios. In DDD terms this means Scenario would be an aggregate. The main defining
                 // characteristic of an owned resource is "is this ever accessed outside of the scope
                 // of a Scenario (or whatever the Aggregate is)?"
-                //
-                // Rules for example, don't make sense outside of a Scenario and is a very clear example
-                // that it should be new-ed up here.
                 //
                 // Assets are not currently used outside of a Scenario, but it could be argued they
                 // could be used on their own, so it would be a reasonable refactor to elevate the

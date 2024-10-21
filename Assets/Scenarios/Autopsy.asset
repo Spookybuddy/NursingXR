@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-887181123054497794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b32bd8f995ea44a9236bcfa3a3ff53, type: 3}
+  m_Name: Runtime Data
+  m_EditorClassIdentifier: 
+  assetData:
+    m_keys:
+    - head-outer
+    - autopsy-scale
+    m_values:
+    - {fileID: 4779845785466914783, guid: eb86d12512121a24397340198939132b, type: 3}
+    - {fileID: 1416261171713702834, guid: 8591e6ede9abd4f42b5743fb8a5924dd, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f5649a5aba429eb7ed9cc947e19394, type: 3}
+  m_Name: Autopsy
+  m_EditorClassIdentifier: 
+  presetScenarioName: Autopsy
+  presetStages: []
+  presetAssets:
+  - presetAssetId: head-outer
+    assetTypePrefabReference:
+      m_AssetGUID: 4c02306595ba55540998b654e8b8abf5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 4d6fcac3-4546-496a-9eb6-70d8f84d8544
+    assetData: 
+  - presetAssetId: autopsy-scale
+    assetTypePrefabReference:
+      m_AssetGUID: 9b16eab672634c042af50a920a6f8ad9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: f1bcc642-ca4c-405c-971b-92f032f9e649
+    assetData: 
+  - presetAssetId: autopsy-organizer
+    assetTypePrefabReference:
+      m_AssetGUID: 4a5cd3c13d34e284fbbb605417539ea3
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: d87fda70-73d1-448e-9d7f-7b9d90228b3f
+    assetData: 
+  assetDataPrefabReferences: {fileID: -887181123054497794}
+  presetAssetTypeLoadBundles: []
+  presetRuleIds: []
+  pathwayData: []

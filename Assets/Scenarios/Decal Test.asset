@@ -173,7 +173,7 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
-    assetId: 885720b7-32f1-4a64-bf97-ef6845881a2c
+    assetId: c1421df3-f445-4c37-a799-de3336816836
     assetData: 
   assetDataPrefabReferences: {fileID: 3547594671840072246}
   presetAssetTypeLoadBundles: []
@@ -208,6 +208,7 @@ MonoBehaviour:
     - pressure-4
     - test-decal
     - abd
+    - gauze
     m_values:
     - {fileID: 9209711686215667436, guid: b9ae112f8357d3044bfeb97e84c8989a, type: 3}
     - {fileID: 8582347905454388894, guid: 039f200eb5756bc4f88440530c802b0e, type: 3}
@@ -224,3 +225,4 @@ MonoBehaviour:
     - {fileID: 237391676015655065, guid: 8c93aef6bfb5f9441a3585bf2feecbac, type: 3}
     - {fileID: 5797515491271079103, guid: 2fb83e13690603c4fa60034a9c2c0ac7, type: 3}
     - {fileID: 1086339737267076821, guid: 9d747832b3b22bb46942658b7646635f, type: 3}
+    - {fileID: 8529775337804424077, guid: 3329ebde8899b2f49a568b8354efe7da, type: 3}

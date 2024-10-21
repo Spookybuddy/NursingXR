@@ -226,7 +226,7 @@
             throw new NotImplementedException();
         }
 
-        public UniTask ReloadStagesAndAssetsAsync(IEnumerable<Stage> stagesToReload, IEnumerable<Asset> assetsToReload, Guid currentStageId)
+        public UniTask ReloadStagesAndAssetsAsync(object scenarioData, Guid currentStageId)
         {
             throw new NotImplementedException();
         }

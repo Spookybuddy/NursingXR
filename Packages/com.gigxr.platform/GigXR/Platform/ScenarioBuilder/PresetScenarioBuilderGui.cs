@@ -1,33 +1,26 @@
-﻿namespace GIGXR.Platform.ScenarioBuilder
-{
-    using Core.DependencyInjection;
-    using Cysharp.Threading.Tasks;
-    using GIGXR.Platform.Core.FeatureManagement;
-    using GIGXR.Platform.Scenarios.Data;
-    using Newtonsoft.Json;
-    using Scenarios;
-    using System.IO;
-    using System.Linq;
-    using UnityEngine;
+﻿using GIGXR.Platform.Core.DependencyInjection;
+using Cysharp.Threading.Tasks;
+using GIGXR.Platform.Core.FeatureManagement;
+using GIGXR.Platform.Scenarios.Data;
+using GIGXR.Platform.Scenarios;
+using System.Linq;
+using UnityEngine;
 
+namespace GIGXR.Platform.ScenarioBuilder
+{
     /// <summary>
     /// A basic GUI for editing limited Scenario values.
     /// </summary>
     public class PresetScenarioBuilderGui : MonoBehaviour
     {
-        private Rect windowRect = new Rect
-            (
-                20,
-                20,
-                200,
-                50
-            );
+        private Rect windowRect = new Rect(20, 20, 200, 50);
 
         private int stageSelectionGridIndex;
 
         private PresetScenarioBuilderComponent presetScenarioBuilderComponent;
         private IScenarioManager ScenarioManager { get; set; }
         private IFeatureManager FeatureManager { get; set; }
+        private Scenario LastSavedScenario => (Scenario)ScenarioManager.LastSavedScenario;
 
         [InjectDependencies]
         public void Construct(IScenarioManager scenarioManager, IFeatureManager featureManager)
@@ -43,8 +36,8 @@
             ScenarioManager.ScenarioLoaded -= ScenarioManager_ScenarioLoaded;
 
             // Default to the first option in the list per design
-            if (ScenarioManager.LastSavedScenario.pathways != null)
-                ScenarioManager.SetPathway(ScenarioManager.LastSavedScenario.pathways.FirstOrDefault(), true);
+            if (LastSavedScenario.pathways != null)
+                ScenarioManager.SetPathway(LastSavedScenario.pathways.FirstOrDefault(), true);
             else
                 ScenarioManager.SetPathway(PathwayData.DefaultPathway(), true);
         }
@@ -61,9 +54,9 @@
             {
                 // The name of the Scenario is the window title.
                 var scenarioName = string.IsNullOrWhiteSpace
-                    (ScenarioManager.LastSavedScenario.scenarioName)
+                    (LastSavedScenario.scenarioName)
                     ? "<Untitled>"
-                    : ScenarioManager.LastSavedScenario.scenarioName;
+                    : LastSavedScenario.scenarioName;
 
                 windowRect = GUILayout.Window
                     (
@@ -121,7 +114,7 @@
 
             if (GUILayout.Button(pathwayButtonText))
             {
-                presetScenarioBuilderComponent.PromptScenarioPathway(ScenarioManager.LastSavedScenario.pathways);
+                presetScenarioBuilderComponent.PromptScenarioPathway(LastSavedScenario.pathways);
 
                 return;
             }

@@ -1,6 +1,6 @@
 {
 	"name": "com.gigxr.platform",
-	"version": "0.4.4",
+	"version": "0.4.5",
 	"displayName": "GigXR Platform",
 	"description": "Tools and samples for utilizing the GigXR Platform in your project. Import this package to your own project, then duplicate the provided scenes and prefabs as needed to extend and modify to fit your needs.",
 	"unity": "2020.3",

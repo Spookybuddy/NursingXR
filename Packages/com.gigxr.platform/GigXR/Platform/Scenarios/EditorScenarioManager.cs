@@ -4,6 +4,7 @@
     using Data;
     using EventArgs;
     using GigAssets;
+    using Newtonsoft.Json.Linq;
     using Stages;
     using System;
     using System.Threading;
@@ -13,10 +14,7 @@
     /// </summary>
     public class EditorScenarioManager : IScenarioManager
     {
-        public EditorScenarioManager
-        (
-            IGigAssetManager assetManager
-        )
+        public EditorScenarioManager(IGigAssetManager assetManager)
         {
             AssetManager = assetManager;
         }
@@ -49,6 +47,10 @@
 
         public CancellationToken CurrentScenarioPlayCancellationToken => throw new NotImplementedException();
 
+        public Type ScenarioClassType => throw new NotImplementedException();
+
+        IScenarioData IScenarioManager.LastSavedScenario => throw new NotImplementedException();
+
         public event EventHandler<ScenarioStatusChangedEventArgs> ScenarioStatusChanged;
         public event EventHandler<ScenarioUnloadedEventArgs> ScenarioUnloaded;
         public event EventHandler<ScenarioLoadingEventArgs> ScenarioLoading;
@@ -74,6 +76,11 @@
         }
 
         public UniTask<bool> LoadScenarioAsync(Scenario scenario, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UniTask<bool> LoadScenarioAsync(JObject scenarioData, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -129,6 +136,16 @@
         }
 
         public UniTask<bool> UnloadScenarioAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        UniTask<IScenarioData> IScenarioManager.ExportScenarioAsync(bool includeRuntimeAssets)
+        {
+            throw new NotImplementedException();
+        }
+
+        UniTask<IScenarioData> IScenarioManager.SaveScenarioAsync(bool saveAssetData)
         {
             throw new NotImplementedException();
         }

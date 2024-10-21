@@ -12,6 +12,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using Object = UnityEngine.Object;
 using Logger = GIGXR.Platform.Utilities.Logger;
+using GIGXR.Platform.Scenarios.Data;
 
 namespace GIGXR.Platform.Core.Audio
 {
@@ -114,12 +115,15 @@ namespace GIGXR.Platform.Core.Audio
 
         private void InitializeAudioDatabase(object sender, ScenarioLoadedEventArgs e)
         {
+            var scenario = (Scenario)scenarioManager.LastSavedScenario;
+
             Logger.Debug
             (
-                $"Trying to initialize new scenario with new scenario name {scenarioManager.LastSavedScenario.scenarioName}",
+                $"Trying to initialize new scenario with new scenario name {scenario.scenarioName}",
                 "AudioManager"
             );
-            AudioDatabase.InitializeAudioDatabase(scenarioManager.LastSavedScenario.scenarioName);
+
+            AudioDatabase.InitializeAudioDatabase(scenario.scenarioName);
         }
 
         /// <summary>

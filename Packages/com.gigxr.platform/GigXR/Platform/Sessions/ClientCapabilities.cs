@@ -324,9 +324,9 @@ namespace GIGXR.Platform.Sessions
                     return;
                 }
 
-                var scenario = ephemeralData.EphemeralData.ToObject<Scenario>(DefaultNewtonsoftJsonConfiguration.JsonSerializer);
+                var scenario = ephemeralData.EphemeralData.ToObject(ScenarioManager.ScenarioClassType, DefaultNewtonsoftJsonConfiguration.JsonSerializer);
 
-                await SessionManager.ScenarioManager.AssetManager.ReloadStagesAndAssetsAsync(scenario.stages, scenario.assets, @event.StageId)
+                await SessionManager.ScenarioManager.AssetManager.ReloadStagesAndAssetsAsync(scenario, @event.StageId)
                     .ContinueWith(async () => 
                     {
                         try

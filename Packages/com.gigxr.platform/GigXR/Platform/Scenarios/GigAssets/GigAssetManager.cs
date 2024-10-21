@@ -24,6 +24,7 @@
     using Microsoft.MixedReality.Toolkit.UI;
     using GIGXR.Platform.Core.Settings;
     using GIGXR.Platform.Core.FeatureManagement;
+    using GIGXR.Platform.Scenarios.Data;
 
     public class GigAssetManager : IGigAssetManager, IDisposable
     {
@@ -793,10 +794,11 @@
             await InstantiateAssetsAsync(assetsToInstantiate, cancellationToken);
         }
 
-        public async UniTask ReloadStagesAndAssetsAsync(IEnumerable<Stage> stagesToReload, IEnumerable<Asset> assetsToReload,
-            Guid currentStageId)
+        public async UniTask ReloadStagesAndAssetsAsync(object scenarioData, Guid currentStageId)
         {
-            List<Stage> stages = stagesToReload?.ToList() ?? new List<Stage>();
+            var scenario = (Scenario)scenarioData;
+
+            List<Stage> stages = scenario.stages?.ToList() ?? new List<Stage>();
 
             if (stages.Count > 0)
             {
@@ -815,7 +817,7 @@
             StageManager.SwitchToStage(currentStageId == Guid.Empty ? stages.First().StageId : currentStageId);
 
             // Do not cancel when reloading
-            await InstantiateAssetsAsync(assetsToReload, CancellationToken.None, true);
+            await InstantiateAssetsAsync(scenario.assets, CancellationToken.None, true);
         }
 
         public void UpdateAssetProperty(Guid assetId, string propertyName, object value)

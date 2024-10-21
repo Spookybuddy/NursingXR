@@ -1,29 +1,30 @@
+using Cysharp.Threading.Tasks;
+using GIGXR.Platform.AppEvents.Events.UI;
+using GIGXR.Platform.Core.DependencyInjection;
+using GIGXR.Platform.Core.DependencyValidator;
+using GIGXR.Platform.HMD.AppEvents.Events.UI;
+using GIGXR.Platform.HMD.UI;
+using GIGXR.Platform.Interfaces;
+using GIGXR.Platform.Managers;
+using GIGXR.Platform.Scenarios;
+using GIGXR.Platform.Scenarios.Data;
+using GIGXR.Platform.Scenarios.EventArgs;
+using GIGXR.Platform.Sessions;
+using GIGXR.Platform.UI;
+using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using TMPro;
+using UnityEngine;
+
 namespace GIGXR.Platform.Core.UI
 {
-    using Cysharp.Threading.Tasks;
-    using GIGXR.Platform.AppEvents.Events.UI;
-    using GIGXR.Platform.Core.DependencyInjection;
-    using GIGXR.Platform.Core.DependencyValidator;
-    using GIGXR.Platform.HMD.AppEvents.Events.UI;
-    using GIGXR.Platform.HMD.UI;
-    using GIGXR.Platform.Interfaces;
-    using GIGXR.Platform.Managers;
-    using GIGXR.Platform.Scenarios;
-    using GIGXR.Platform.Scenarios.Data;
-    using GIGXR.Platform.Scenarios.EventArgs;
-    using GIGXR.Platform.Sessions;
-    using GIGXR.Platform.UI;
-    using Microsoft.MixedReality.Toolkit.UI;
-    using Microsoft.MixedReality.Toolkit.Utilities;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading;
-    using TMPro;
-    using UnityEngine;
-
     /// <summary>
-    /// 
+    /// Displays the information related to the Scenario. There are two tabs, one that shows the controls for the scenario and the 
+    /// other that shows the 'Description' data of the scenario.
     /// </summary>
     public class ScenarioScreenObject : BaseUiObject, IScrollInput
     {
@@ -72,6 +73,7 @@ namespace GIGXR.Platform.Core.UI
 
         private IScenarioManager _scenarioManager;
         private ISessionManager _sessionManager;
+        private Scenario LastSavedScenario => (Scenario)_scenarioManager.LastSavedScenario;
         string[] lastReceivedStagesList;
 
         [InjectDependencies]
@@ -109,7 +111,7 @@ namespace GIGXR.Platform.Core.UI
 
         private void OnScenarioLoaded(object sender, ScenarioLoadedEventArgs e)
         {
-            SetAboutText(_scenarioManager.LastSavedScenario.scenarioName);
+            SetAboutText(LastSavedScenario.scenarioName);
             UnlockAllStages();
         }
 
@@ -249,7 +251,7 @@ namespace GIGXR.Platform.Core.UI
         {
             BringDownPlayModePrompt();
 
-            PromptScenarioPathway(_scenarioManager.LastSavedScenario.pathways, scenarioPathwayPromptData);
+            PromptScenarioPathway(LastSavedScenario.pathways, scenarioPathwayPromptData);
         }
 
         /// <summary>

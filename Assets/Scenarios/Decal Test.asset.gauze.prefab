@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &114056478990398404
+--- !u!1 &8529775337804424077
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,18 +8,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8396063080695243702}
-  - component: {fileID: 1481599387671556173}
-  - component: {fileID: 4843717381461167497}
-  - component: {fileID: 8291177371966451923}
-  - component: {fileID: 2941616560671958203}
-  - component: {fileID: 5066357006919051112}
-  - component: {fileID: 6598473580991806711}
-  - component: {fileID: 4766403212503013052}
-  - component: {fileID: 3006665273223132326}
-  - component: {fileID: 4570813726400302010}
-  - component: {fileID: 1719881690381417361}
-  - component: {fileID: 3715749186724052961}
+  - component: {fileID: 4653557583386742775}
+  - component: {fileID: 7172861974012996609}
+  - component: {fileID: 6453176065995148672}
+  - component: {fileID: 3854614053402932741}
+  - component: {fileID: 4332867857994889173}
+  - component: {fileID: 8790983841141258078}
+  - component: {fileID: 2483812432728231226}
+  - component: {fileID: 7693907002525119270}
+  - component: {fileID: 8957544395499129669}
+  - component: {fileID: 8242839478712193276}
+  - component: {fileID: 6720182903262102576}
+  - component: {fileID: 555199418597176791}
   m_Layer: 0
   m_Name: Decal Test.asset.gauze
   m_TagString: Supplies
@@ -27,13 +27,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8396063080695243702
+--- !u!4 &4653557583386742775
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1481599387671556173
+--- !u!114 &7172861974012996609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -58,29 +58,29 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &4843717381461167497
+--- !u!114 &6453176065995148672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: ruler
-  presetAssetId: ruler
+  assetTypeId: gauze
+  presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &8291177371966451923
+--- !u!114 &3854614053402932741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -144,13 +144,13 @@ MonoBehaviour:
           useShared: 1
           resetValueOnStageChange: 0
           localValue: 0
---- !u!114 &2941616560671958203
+--- !u!114 &4332867857994889173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d17ce617dc6ab7747bd28c1e5b3a3c94, type: 3}
@@ -227,13 +227,13 @@ MonoBehaviour:
   interactionLayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &5066357006919051112
+--- !u!114 &8790983841141258078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -246,17 +246,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 6598473580991806711}
+  - {fileID: 2483812432728231226}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6598473580991806711
+--- !u!114 &2483812432728231226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -266,13 +266,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &4766403212503013052
+--- !u!114 &7693907002525119270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -295,7 +295,7 @@ MonoBehaviour:
         isEditableByAuthor: 1
         defaultValue: {x: 0.05, y: 0, z: -0.5}
       runtimeData:
-        sharedValue: {x: 0.05, y: 0, z: -0.5}
+        sharedValue: {x: 0.05, y: 0, z: 0.2}
         stageAssetProperties:
         - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
           useShared: 1
@@ -313,13 +313,13 @@ MonoBehaviour:
           useShared: 1
           resetValueOnStageChange: 0
           localValue: {x: 0.05, y: 0, z: -0.5}
---- !u!114 &3006665273223132326
+--- !u!114 &8957544395499129669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -387,13 +387,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4570813726400302010
+--- !u!114 &8242839478712193276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}
@@ -445,13 +445,13 @@ MonoBehaviour:
   OnManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1719881690381417361
+--- !u!114 &6720182903262102576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -462,13 +462,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &3715749186724052961
+--- !u!114 &555199418597176791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114056478990398404}
+  m_GameObject: {fileID: 8529775337804424077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}

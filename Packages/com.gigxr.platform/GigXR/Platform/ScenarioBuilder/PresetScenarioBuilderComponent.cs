@@ -120,7 +120,7 @@ namespace GIGXR.Platform.ScenarioBuilder
             try
             {
                 var scenario = presetScenario.BuildScenario();
-                await ScenarioManager.LoadScenarioAsync(scenario, new CancellationToken());
+                await ScenarioManager.LoadScenarioAsync(JObject.FromObject(scenario), new CancellationToken());
 
                 SessionManager.AddSessionCapability(new CreatorCapabilities());
 
@@ -341,7 +341,8 @@ namespace GIGXR.Platform.ScenarioBuilder
             // Export JSON session plan and show folder containing saved scenario data
             else if ((Input.GetKey(KeyCode.LeftControl) || (Input.GetKey(KeyCode.RightControl))) && Input.GetKeyDown(KeyCode.Backspace))
             {
-                ExportScenarioToJson(ScenarioManager.LastSavedScenario.scenarioName + ".json");
+                var scenario = (Scenario)ScenarioManager.LastSavedScenario;
+                ExportScenarioToJson(scenario.scenarioName + ".json");
             }
             // Stop the Scenario
             else if (Input.GetKeyDown(KeyCode.Escape))

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 778376708029185286}
   - component: {fileID: 71072488805208227}
   - component: {fileID: 3526087056676555304}
+  - component: {fileID: 2660840666841456738}
   m_Layer: 0
   m_Name: Decal Test.asset.spray
   m_TagString: Untagged
@@ -509,3 +510,52 @@ MonoBehaviour:
           useShared: 1
           resetValueOnStageChange: 0
           localValue: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &2660840666841456738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209711686215667436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d8345224dab02a4188d17586daf17a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    activateSpray:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+  sprayButtonInteractible: {fileID: 0}
+  sprayParticles: {fileID: 0}

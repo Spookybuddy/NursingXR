@@ -144,14 +144,22 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   isManager: 0
-  arraySize: 0
+  medicalSupplies: []
   manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
   usedOnStep: 0
   usedBy: 1
   isInUse: 0
   raycastScale: {x: 0, y: 0, z: 0}
   raycastDistance: 0
+  onStep: 0
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
@@ -324,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
+  executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
 --- !u!114 &1191142003540944771
@@ -518,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 1191142004104477788}
+  hostTransform: {fileID: 1191142003540944790}
   manipulationType: 3
   twoHandedManipulationType: 3
   allowFarManipulation: 1

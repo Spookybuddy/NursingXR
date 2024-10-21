@@ -97,6 +97,18 @@ MonoBehaviour:
     m_Address: IV
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4c02306595ba55540998b654e8b8abf5
+    m_Address: head-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b16eab672634c042af50a920a6f8ad9
+    m_Address: autopsy-scale
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4a5cd3c13d34e284fbbb605417539ea3
+    m_Address: autopsy-organizer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3284942818043010062}
   - component: {fileID: 3284942818043010061}
-  - component: {fileID: 3284942818043010060}
+  - component: {fileID: -4278438616804234722}
   - component: {fileID: 3284942818043010059}
   - component: {fileID: 3284942818043010058}
   - component: {fileID: 3284942818043010057}
@@ -122,7 +122,7 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &3284942818043010060
+--- !u!114 &-4278438616804234722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: ruler
-  presetAssetId: ruler
+  assetTypeId: gauze
+  presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
 --- !u!114 &3284942818043010059
@@ -215,13 +215,14 @@ MonoBehaviour:
         sharedValue: 0
         stageAssetProperties: []
   isManager: 0
-  arraySize: 0
+  medicalSupplies: []
   manager: {fileID: 6262536320255261266, guid: 916f5963e74be784191b34adfa6f4d29, type: 3}
   usedOnStep: 0
   usedBy: 0
   isInUse: 0
   raycastScale: {x: 0, y: 0, z: 0}
   raycastDistance: 0
+  onStep: 0
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
@@ -394,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
+  executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
 --- !u!114 &3284942818043010067
@@ -557,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 3284942818484296752}
+  hostTransform: {fileID: 3284942818043010062}
   manipulationType: 3
   twoHandedManipulationType: 3
   allowFarManipulation: 1

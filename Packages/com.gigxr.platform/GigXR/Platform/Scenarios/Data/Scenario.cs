@@ -6,8 +6,15 @@ namespace GIGXR.Platform.Scenarios.Data
     using System;
     using System.Collections.Generic;
 
+    /// <summary>
+    /// No common methods or data for any scenario data, just essentially acts as a compile-time marker.
+    /// </summary>
+    public interface IScenarioData
+    {
+    }
+
     [Serializable]
-    public class Scenario
+    public class Scenario : IScenarioData
     {
         public string scenarioName;
         public List<Stage> stages;

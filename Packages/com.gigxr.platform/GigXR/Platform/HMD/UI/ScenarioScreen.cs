@@ -1,21 +1,21 @@
+using GIGXR.Platform.AppEvents.Events.Session;
+using GIGXR.Platform.Core.DependencyInjection;
+using GIGXR.Platform.Core.DependencyValidator;
+using GIGXR.Platform.HMD.AppEvents.Events.UI;
+using GIGXR.Platform.HMD.UI;
+using GIGXR.Platform.Scenarios;
+using GIGXR.Platform.Scenarios.Data;
+using GIGXR.Platform.Scenarios.EventArgs;
+using GIGXR.Platform.Scenarios.Stages.Data;
+using GIGXR.Platform.Scenarios.Stages.EventArgs;
+using GIGXR.Platform.Sessions;
+using System;
+using System.Linq;
+using TMPro;
+using UnityEngine;
+
 namespace GIGXR.Platform.Core.UI
 {
-    using GIGXR.Platform.AppEvents.Events.Session;
-    using GIGXR.Platform.Core.DependencyInjection;
-    using GIGXR.Platform.Core.DependencyValidator;
-    using GIGXR.Platform.HMD.AppEvents.Events.UI;
-    using GIGXR.Platform.HMD.UI;
-    using GIGXR.Platform.Scenarios;
-    using GIGXR.Platform.Scenarios.Data;
-    using GIGXR.Platform.Scenarios.EventArgs;
-    using GIGXR.Platform.Scenarios.Stages.Data;
-    using GIGXR.Platform.Scenarios.Stages.EventArgs;
-    using GIGXR.Platform.Sessions;
-    using System;
-    using System.Linq;
-    using TMPro;
-    using UnityEngine;
-
     /// <summary>
     /// Class to interface between the scenario screen buttons and the scenario manager without cross referencing between the two prefabs.
     /// </summary>
@@ -43,6 +43,7 @@ namespace GIGXR.Platform.Core.UI
         private GameObject scenarioScreenObjectPrefab;
 
         private IScenarioManager _scenarioManager;
+        private Scenario LastSavedScenario => (Scenario)_scenarioManager.LastSavedScenario;
         private ISessionManager _sessionManager;
 
         [RequireDependency, SerializeField] private GameObject stageButtonPrefab;
@@ -133,8 +134,8 @@ namespace GIGXR.Platform.Core.UI
                 if (string.IsNullOrEmpty(_sessionManager.PathwayInfo))
                 {
                     // Default to the first option in the list per design
-                    if (_scenarioManager.LastSavedScenario.pathways != null)
-                        _scenarioManager.SetPathway(_scenarioManager.LastSavedScenario.pathways.FirstOrDefault(), true);
+                    if (LastSavedScenario.pathways != null)
+                        _scenarioManager.SetPathway(LastSavedScenario.pathways.FirstOrDefault(), true);
                     else
                         _scenarioManager.SetPathway(PathwayData.DefaultPathway(), true);
                 }

@@ -215,13 +215,14 @@ MonoBehaviour:
           resetValueOnStageChange: 0
           localValue: 0
   isManager: 0
-  arraySize: 0
+  medicalSupplies: []
   manager: {fileID: 0}
   usedOnStep: 0
   usedBy: 0
   isInUse: 0
   raycastScale: {x: 0, y: 0, z: 0}
   raycastDistance: 0
+  onStep: 0
   onCorrectStep: 0
   interactionLayer:
     serializedVersion: 2
@@ -458,6 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
+  executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
 --- !u!114 &2865232896608576603

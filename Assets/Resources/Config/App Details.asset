@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: App Details
   m_EditorClassIdentifier: 
   appName: FSU
-  AppIcon: {fileID: 0}
+  AppIcon: {fileID: 21300000, guid: 331716d3edd17944cb8ec8ffb15159f0, type: 3}
   AppVersion:
     m_keys: 00000000010000000200000003000000
     m_values: 00000000010000000000000000000000

@@ -191,16 +191,42 @@ MonoBehaviour:
           useShared: 1
           resetValueOnStageChange: 0
           localValue: 0
+    usedOnStep:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties:
+        - stageId: a92fde16-b81e-456a-96f8-6a4bc3cc8f99
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+        - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
   isManager: 0
-  arraySize: 0
   medicalSupplies: []
-  stepAmount: 0
-  treatmentAtStep: []
   manager: {fileID: 0}
   usedOnStep: 0
   usedBy: 0
   isInUse: 0
+  raycastScale: {x: 0, y: 0, z: 0}
+  raycastDistance: 0
+  onStep: 0
   onCorrectStep: 0
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &3479045851364082848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
+  executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
 --- !u!114 &6647446503786421827

@@ -123,7 +123,7 @@
 
         UniTask LoadStagesAndInstantiateAssetsAsync(IEnumerable<Stage> stagesToLoad, IEnumerable<Asset> assetsToInstantiate, CancellationToken cancellationToken);
 
-        UniTask ReloadStagesAndAssetsAsync(IEnumerable<Stage> stagesToReload, IEnumerable<Asset> assetsToReload, Guid currentStageId);
+        UniTask ReloadStagesAndAssetsAsync(object scenarioData, Guid currentStageId);
 
         /// <summary>
         /// Updates an Asset Property run time data immediately

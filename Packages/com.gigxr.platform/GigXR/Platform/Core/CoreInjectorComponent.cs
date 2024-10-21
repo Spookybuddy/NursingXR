@@ -1,3 +1,4 @@
+using GIGXR.Platform.Core.DependencyInjection;
 using UnityEngine;
 
 namespace GIGXR.Platform.Core
@@ -9,8 +10,42 @@ namespace GIGXR.Platform.Core
     /// the default classes.
     /// </summary>
     [RequireComponent(typeof(GIGXRCore))]
-    public abstract class CoreInjectorComponent<T> : MonoBehaviour
+    [DefaultExecutionOrder(-50)]
+    public abstract class CoreInjectorComponent<T> : MonoBehaviour where T : class
     {
+        public bool NewSingleton = false;
+
+        public void Awake()
+        {
+            if (NewSingleton)
+            {
+                DependencyProvider.RegisterSingleton<T>(_ => GetSingleton());
+            }
+        }
+
         public abstract T GetSingleton();
+
+        public IDependencyProvider DependencyProvider
+        {
+            get
+            {
+                return Core.DependencyProvider;
+            }
+        }
+
+        private GIGXRCore Core
+        {
+            get
+            {
+                if (_core == null)
+                {
+                    _core = GetComponent<GIGXRCore>();
+                }
+
+                return _core;
+            }
+        }
+
+        private GIGXRCore _core;
     }
 }

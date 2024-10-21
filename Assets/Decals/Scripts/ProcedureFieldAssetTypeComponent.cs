@@ -110,7 +110,6 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
     public void OnManipulationEnd()
     {
         isInUse = false;
-        if (particles != null) particles.SetActive(false);
         counter = 0;
     }
 
@@ -143,7 +142,7 @@ public class ProcedureFieldAssetTypeComponent : BaseAssetTypeComponent<Procedure
                     counter += Time.fixedDeltaTime;
                     if (counter > SprayTimer) UpdateStep(usedOnStep + 1);
                 } else {
-                    particles.SetActive(false);
+
                 }
                 return;
             case 3:

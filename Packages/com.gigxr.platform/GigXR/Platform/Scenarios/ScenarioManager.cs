@@ -1,23 +1,24 @@
-﻿namespace GIGXR.Platform.Scenarios
-{
-    using Cysharp.Threading.Tasks;
-    using Cysharp.Threading.Tasks.Linq;
-    using Data;
-    using GIGXR.Platform.Scenarios.EventArgs;
-    using GigAssets;
-    using GigAssets.Data;
-    using GigAssets.EventArgs;
-    using GIGXR.Platform.Core.FeatureManagement;
-    using GIGXR.Platform.Core.Settings;
-    using Stages;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using UnityEngine;
-    using GIGXR.Platform.Utilities;
-    using System.Threading;
-    using System.ComponentModel;
+﻿using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Linq;
+using GIGXR.Platform.Scenarios.Data;
+using GIGXR.Platform.Scenarios.EventArgs;
+using GIGXR.Platform.Scenarios.GigAssets;
+using GIGXR.Platform.Scenarios.GigAssets.Data;
+using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
+using GIGXR.Platform.Core.FeatureManagement;
+using GIGXR.Platform.Scenarios.Stages;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using GIGXR.Platform.Utilities;
+using System.Threading;
+using GIGXR.Utilities;
+using Newtonsoft.Json.Linq;
+using System.ComponentModel;
 
+namespace GIGXR.Platform.Scenarios
+{
     public enum ScenarioControlTypes
     {
         Automated,
@@ -78,7 +79,8 @@
 
         public IGigAssetManager AssetManager { get; }
         public IStageManager StageManager { get; }
-        public Scenario LastSavedScenario { get; private set; }
+        public IScenarioData LastSavedScenario => LastSavedScenarioData;
+        public Scenario LastSavedScenarioData { get; private set; }
 
         private readonly IFeatureManager FeatureManager;
 
@@ -112,6 +114,8 @@
 
         public ScenarioControlTypes SelectedPlayMode => _selectedPlayMode;
 
+        public Type ScenarioClassType => typeof(Scenario);
+
         // TODO Might want to refactor sync stuff into a new class to use
         private int? lastSyncTimeStamp = null;
 
@@ -135,12 +139,14 @@
             GIGXR.Platform.Utilities.Logger.AddTaggedLogger(nameof(ScenarioManager), "Scenario Console");
         }
 
-        public async UniTask<bool> LoadScenarioAsync(Scenario scenario, CancellationToken cancellationToken)
+        public async UniTask<bool> LoadScenarioAsync(JObject scenarioData, CancellationToken cancellationToken)
         {
             if (LastSavedScenario != null)
             {
                 return false;
             }
+
+            var scenario = scenarioData.ToObject<Scenario>(DefaultNewtonsoftJsonConfiguration.JsonSerializer);
 
             GIGXR.Platform.Utilities.Logger.Info($"Scenario data for {scenario.scenarioName} is now being loaded.", nameof(ScenarioManager));
 
@@ -149,7 +155,7 @@
             ScenarioStatus = ScenarioStatus.Loading;
             ScenarioLoading?.InvokeSafely(this, new ScenarioLoadingEventArgs());
 
-            LastSavedScenario      = scenario;
+            LastSavedScenarioData  = scenario;
             Physics.autoSimulation = false;
 
             AssetManager.HideAll(HideAssetReasons.Loading);
@@ -199,7 +205,7 @@
 
                 IsSwitchingStatus = false;
 
-                LastSavedScenario      = null;
+                LastSavedScenarioData  = null;
                 Physics.autoSimulation = true;
 
                 throw;
@@ -209,8 +215,8 @@
 
             AssetManager.AssetInstantiated += OnRuntimeInstantiationDuringScenarioLoad;
 
-            await AssetManager.LoadStagesAndInstantiateAssetsAsync(LastSavedScenario.stages, 
-                                                                   LastSavedScenario.assets, 
+            await AssetManager.LoadStagesAndInstantiateAssetsAsync(LastSavedScenarioData.stages,
+                                                                   LastSavedScenarioData.assets, 
                                                                    cancellationToken);
 
             AssetManager.AssetInstantiated -= OnRuntimeInstantiationDuringScenarioLoad;
@@ -220,9 +226,9 @@
             ScenarioStatus = ScenarioStatus.Loaded;
 
             ScenarioLoaded?.InvokeSafely(this,
-                                         new ScenarioLoadedEventArgs(LastSavedScenario.stages, 
-                                                                     LastSavedScenario.assets, 
-                                                                     LastSavedScenario.pathways));
+                                         new ScenarioLoadedEventArgs(LastSavedScenarioData.stages,
+                                                                     LastSavedScenarioData.assets,
+                                                                     LastSavedScenarioData.pathways));
 
             // Instantiation is complete, show the assets, due to the content marker, wait a second
             // so they overlap and the assets don't 'flash' in front of the host
@@ -280,7 +286,7 @@
             await AssetManager.AssetTypeLoader.UnloadAllAssetTypesAsync();
             await AssetManager.AddressablesGameObjectLoader.UnloadAllAddressableGameObjectsAsync();
 
-            LastSavedScenario      = null;
+            LastSavedScenarioData  = null;
             Physics.autoSimulation = true;
 
             lastSyncTimeStamp = null;
@@ -421,16 +427,16 @@
             await AssetManager.DisableInteractivityForAllAssetsAsync();
 
             // Reset Scenario back to last saved state.
-            _ = AssetManager.ReloadStagesAndAssetsAsync(LastSavedScenario.stages, LastSavedScenario.assets, Guid.Empty);
+            _ = AssetManager.ReloadStagesAndAssetsAsync(LastSavedScenarioData, Guid.Empty);
 
             // TODO Do not need to reload Rules because they are immutable at this time.
 
             ScenarioReset?.InvokeSafely(this, new ScenarioResetEventArgs());
         }
 
-        public async UniTask<Scenario> SaveScenarioAsync(bool saveAssetData = true)
+        public async UniTask<IScenarioData> SaveScenarioAsync(bool saveAssetData = true)
         {
-            if (LastSavedScenario == null)
+            if (LastSavedScenarioData == null)
             {
                 GIGXR.Platform.Utilities.Logger.Warning($"Cannot save scenario since {nameof(LastSavedScenario)} is null", nameof(ScenarioManager));
                 return null;
@@ -438,21 +444,21 @@
 
             IsSavingScenario = true;
 
-            LastSavedScenario.stages = AssetManager.StageManager.Stages.ToList();
+            LastSavedScenarioData.stages = AssetManager.StageManager.Stages.ToList();
 
             // Only save the asset data when specified (e.g. only in Edit mode)
             if(saveAssetData)
             {
                 var serializedAssetList = await AssetManager.SerializeToAssetDataAsync(false);
-                LastSavedScenario.assets = serializedAssetList;
+                LastSavedScenarioData.assets = serializedAssetList;
             }
 
             IsSavingScenario = false;
 
-            return LastSavedScenario;
+            return LastSavedScenarioData;
         }
 
-        public async UniTask<Scenario> ExportScenarioAsync(bool includeRuntimeAssets)
+        public async UniTask<IScenarioData> ExportScenarioAsync(bool includeRuntimeAssets)
         {
             List<Asset> serializedAssetList = await AssetManager.SerializeToAssetDataAsync(includeRuntimeAssets);
 
@@ -462,8 +468,8 @@
                 assets = serializedAssetList,
 
                 // These are immutable after Session creation (for now).
-                presetStageMappings = LastSavedScenario.presetStageMappings,
-                presetAssetMappings = LastSavedScenario.presetAssetMappings,
+                presetStageMappings = LastSavedScenarioData.presetStageMappings,
+                presetAssetMappings = LastSavedScenarioData.presetAssetMappings,
             };
         }
 

@@ -1,47 +1,45 @@
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Linq;
+using GIGXR.GMS.Clients;
+using GIGXR.GMS.Models.Accounts.Responses;
+using GIGXR.GMS.Models.Sessions;
+using GIGXR.GMS.Models.Sessions.Requests;
+using GIGXR.GMS.Models.Sessions.Responses;
+using GIGXR.Platform.AppEvents;
+using GIGXR.Platform.AppEvents.Events;
+using GIGXR.Platform.AppEvents.Events.Calibration;
+using GIGXR.Platform.AppEvents.Events.Scenarios;
+using GIGXR.Platform.AppEvents.Events.Session;
+using GIGXR.Platform.Core.DependencyInjection;
+using GIGXR.Platform.Core.FeatureManagement;
+using GIGXR.Platform.Core.Settings;
+using GIGXR.Platform.Core.User;
+using GIGXR.Platform.Data;
+using GIGXR.Platform.GMS;
+using GIGXR.Platform.Interfaces;
+using GIGXR.Platform.Networking.EventBus.Events;
+using GIGXR.Platform.Networking.EventBus.Events.Connection;
+using GIGXR.Platform.Networking.EventBus.Events.InRoom;
+using GIGXR.Platform.Networking.EventBus.Events.Matchmaking;
+using GIGXR.Platform.Networking.EventBus.Events.Sessions;
+using GIGXR.Platform.Networking.EventBus.Events.Stages;
+using GIGXR.Platform.Scenarios.EventArgs;
+using GIGXR.Platform.Scenarios.GigAssets;
+using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
+using GIGXR.Platform.GMS.Exceptions;
+using GIGXR.Platform.Networking;
+using GIGXR.Platform.Networking.EventBus.Events.Scenarios;
+using Newtonsoft.Json.Linq;
+using GIGXR.Platform.Scenarios;
+using GIGXR.Platform.Scenarios.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using UnityEngine;
+
 namespace GIGXR.Platform.Sessions
 {
-    using Cysharp.Threading.Tasks;
-    using Cysharp.Threading.Tasks.Linq;
-    using GIGXR.GMS.Clients;
-    using GIGXR.GMS.Models.Accounts.Responses;
-    using GIGXR.GMS.Models.Sessions;
-    using GIGXR.GMS.Models.Sessions.Requests;
-    using GIGXR.GMS.Models.Sessions.Responses;
-    using GIGXR.Platform.AppEvents;
-    using GIGXR.Platform.AppEvents.Events;
-    using GIGXR.Platform.AppEvents.Events.Calibration;
-    using GIGXR.Platform.AppEvents.Events.Scenarios;
-    using GIGXR.Platform.AppEvents.Events.Session;
-    using GIGXR.Platform.Core.DependencyInjection;
-    using GIGXR.Platform.Core.FeatureManagement;
-    using GIGXR.Platform.Core.Settings;
-    using GIGXR.Platform.Core.User;
-    using GIGXR.Platform.Data;
-    using GIGXR.Platform.GMS;
-    using GIGXR.Platform.Interfaces;
-    using GIGXR.Platform.Networking.EventBus.Events;
-    using GIGXR.Platform.Networking.EventBus.Events.Connection;
-    using GIGXR.Platform.Networking.EventBus.Events.InRoom;
-    using GIGXR.Platform.Networking.EventBus.Events.Matchmaking;
-    using GIGXR.Platform.Networking.EventBus.Events.Sessions;
-    using GIGXR.Platform.Networking.EventBus.Events.Stages;
-    using GIGXR.Platform.Scenarios.EventArgs;
-    using GIGXR.Platform.Scenarios.GigAssets;
-    using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
-    using GIGXR.Utilities;
-    using GMS.Exceptions;
-    using Microsoft.MixedReality.Toolkit;
-    using Networking;
-    using Networking.EventBus.Events.Scenarios;
-    using Newtonsoft.Json.Linq;
-    using Scenarios;
-    using Scenarios.Data;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading;
-    using UnityEngine;
-
     /// <summary>
     /// Responsible for connecting the various systems together to make a cohesive session. This class works with the other manager classes
     /// to enable a session to be networked, allowing users to interact with assets, stage, and session data to teach other users in the virtual environment.
@@ -457,9 +455,7 @@ namespace GIGXR.Platform.Sessions
             try
             {
                 // Load and start Scenario
-                var scenario = session.HmdJson.ToObject<Scenario>(DefaultNewtonsoftJsonConfiguration.JsonSerializer);
-
-                await ScenarioManager.LoadScenarioAsync(scenario, cancellationToken);
+                await ScenarioManager.LoadScenarioAsync(session.HmdJson, cancellationToken);
             }
             catch (OperationCanceledException)
             {
@@ -1032,12 +1028,10 @@ namespace GIGXR.Platform.Sessions
                             // Since we can't await on the SaveScenarioAsync, use the bool value to delay this task until complete
                             await UniTask.WaitUntil(() => !ScenarioManager.IsSavingScenario);
 
-                            ActiveSession.HmdJson = JObject.FromObject
-                                (ScenarioManager.LastSavedScenario);
+                            ActiveSession.HmdJson = JObject.FromObject(ScenarioManager.LastSavedScenario);
 
                             // Save the current session to the GMS
-                            await ApiClient.SessionsApi.UpdateSessionAsync
-                                (ActiveSession.SessionId, new UpdateSessionRequest(ActiveSession));
+                            await ApiClient.SessionsApi.UpdateSessionAsync(ActiveSession.SessionId, new UpdateSessionRequest(ActiveSession));
 
                             SessionFinishedSave?.Invoke(this, new SessionSavedArgs(markSessionAsSaved));
                         }

@@ -5,6 +5,7 @@
     using EventArgs;
     using GigAssets;
     using GIGXR.Platform.Scenarios.Stages;
+    using Newtonsoft.Json.Linq;
     using System;
     using System.Threading;
 
@@ -14,6 +15,8 @@
     /// </summary>
     public interface IScenarioManager
     {
+        Type ScenarioClassType { get; }
+
         ScenarioTimer ActiveScenarioTimer { get; }
 
         public event EventHandler<ScenarioStatusChangedEventArgs> ScenarioStatusChanged;
@@ -39,7 +42,7 @@
 
         IGigAssetManager AssetManager { get; }
         IStageManager StageManager { get; }
-        Scenario LastSavedScenario { get; }
+        IScenarioData LastSavedScenario { get; }
 
         PathwayData SelectedPathway { get; }
 
@@ -51,14 +54,14 @@
 
         CancellationToken CurrentScenarioPlayCancellationToken { get; }
 
-        UniTask<bool> LoadScenarioAsync(Scenario scenario, CancellationToken cancellationToken);
+        UniTask<bool> LoadScenarioAsync(JObject scenarioData, CancellationToken cancellationToken);
         UniTask<bool> UnloadScenarioAsync();
         UniTask<bool> PlayScenarioAsync();
         UniTask<bool> PauseScenarioAsync();
         UniTask<bool> StopScenarioAsync();
         UniTask ResetScenario();
-        UniTask<Scenario> SaveScenarioAsync(bool saveAssetData = true);
-        UniTask<Scenario> ExportScenarioAsync(bool includeRuntimeAssets);
+        UniTask<IScenarioData> SaveScenarioAsync(bool saveAssetData = true);
+        UniTask<IScenarioData> ExportScenarioAsync(bool includeRuntimeAssets);
 
         UniTask TrySyncScenarioAsync(int currentServerTime, ScenarioSyncData syncData);
         void SyncScenarioTimer(int totalMillisecondsInSimulation, int totalMillisecondsInScenario, int totalMillisecondsInCurrentStage, int millisecondSyncOffset);
