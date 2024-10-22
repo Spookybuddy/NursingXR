@@ -109,6 +109,66 @@ MonoBehaviour:
     m_Address: autopsy-organizer
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 24e99503c84849d41a2b8173952aa604
+    m_Address: torso-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ec3cd7853587de4f8a527f16f47a07f
+    m_Address: leftarm-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b03131adf34330d43ab1efb689769f35
+    m_Address: rightarm-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e08aa805d40ed784a82472061a169a5f
+    m_Address: leftleg-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe12227442cf40e458d1bf143e00dbe9
+    m_Address: rightleg-outer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c57dd7419b5775428d12a6abf4feba5
+    m_Address: head-inner1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e5ac7bc59cdf74f4891c11b96174f3cc
+    m_Address: leftarm-inner1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd12db3d48af3c04897b19c566e4be03
+    m_Address: rightarm-inner1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a1bc54892e30484583dd5225d613443
+    m_Address: leftleg-inner1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3584199f09389004996b7d53a915127b
+    m_Address: rightleg-inner1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11d34748b28c62f4ab7b24bd2d861031
+    m_Address: torso-inner2-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a9034abf9fab3024a97612a4d51a661c
+    m_Address: torso-inner2-21
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a237e74fbdd96724a8308f4dddffc652
+    m_Address: torso-inner2-22
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86348258f5956d545addef7e6c580e31
+    m_Address: torso-inner2-23
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce8d5e42da8ef014bab97f40e54114ca
+    m_Address: torso-inner2-24
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

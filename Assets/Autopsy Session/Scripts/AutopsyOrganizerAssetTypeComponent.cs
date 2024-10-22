@@ -16,6 +16,10 @@ public enum BodySection { Head, Torso, LeftArm, RightArm, LeftLeg, RightLeg, All
 
 public enum BodySystem { Outer, Inner1, Inner2 };
 
+//----------------------------------------------------------------------------------------------------------
+// NOTE: THE OBJECT ORGANIZER MUST ALWAYS BE THE LAST OBJECT IN THE PRESET ASSET LIST IN THE PRESET SCENARIO
+//----------------------------------------------------------------------------------------------------------
+
 public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<AutopsyOrganizerAssetData>
 {
     public static readonly BodySystem[] ALL_BODY_SYSTEMS = { BodySystem.Outer,
@@ -81,6 +85,13 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
         {
             allBodyParts = GameObject.FindObjectsByType<AutopsyBodyPartAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         } while (allBodyParts.Length == 0);
+
+        Debug.Log("Number of Body Parts: " + allBodyParts.Length);
+
+        foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
+        {
+            Debug.Log("Body Part: " + bodyPart.GetBodySection() + " " + bodyPart.GetBodySystem());
+        }
 
         //Set up layers for the body systems
         foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)

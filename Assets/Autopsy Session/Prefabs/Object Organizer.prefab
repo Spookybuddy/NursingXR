@@ -923,7 +923,7 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
-  objectManipulator: {fileID: 0}
+  objectManipulator: {fileID: 6836885235166578761}
   boundsControl: {fileID: 0}
   manageBoundsControlEnabledState: 0
   manipulationCollider: {fileID: 0}
@@ -3190,7 +3190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1176577281405128327
 Transform:
   m_ObjectHideFlags: 0
@@ -19077,6 +19077,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03, y: 0.18, z: 0.005}
   m_Center: {x: -0.007, y: 0, z: 0}
+--- !u!114 &2171265914966356908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634025554150869533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTetherWhenManipulating: 0
+  IsBoundsHandles: 0
 --- !u!1001 &2505084338320640220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19199,6 +19213,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoConstraintSelection: 1
   selectedConstraints: []
+--- !u!114 &2868285403504002433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474689030989837824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTetherWhenManipulating: 0
+  IsBoundsHandles: 0
 --- !u!114 &6836885235166578761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19242,20 +19270,6 @@ MonoBehaviour:
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2868285403504002433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474689030989837824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTetherWhenManipulating: 0
-  IsBoundsHandles: 0
 --- !u!4 &1474689030990326304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3942053967791973116, guid: 59e23c09211c299469144947f5c1eaae,

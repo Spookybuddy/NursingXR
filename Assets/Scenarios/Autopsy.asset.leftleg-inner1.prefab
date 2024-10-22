@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7648392311809428387
+--- !u!1 &3708794358125858803
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,32 +8,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8781251872178583150}
-  - component: {fileID: 3672882740424413515}
-  - component: {fileID: 1682027379513972031}
-  - component: {fileID: 2125039891888914728}
-  - component: {fileID: 8717757001357837120}
-  - component: {fileID: 2941520461765181173}
-  - component: {fileID: 5358965798991369416}
-  - component: {fileID: 8591342331618108816}
-  - component: {fileID: 6324673684346658896}
-  - component: {fileID: 3550077579154828027}
-  - component: {fileID: 2257903734229688353}
-  - component: {fileID: 7034814420577499961}
+  - component: {fileID: 1858033698152350872}
+  - component: {fileID: 3340652138998139972}
+  - component: {fileID: 7945698887156675870}
+  - component: {fileID: 6929596076752486023}
+  - component: {fileID: 545253237261987143}
+  - component: {fileID: 1822475535538262015}
+  - component: {fileID: 8431255491239925248}
+  - component: {fileID: 1815614109180713287}
+  - component: {fileID: 5885283802501430412}
+  - component: {fileID: 6455871274918513580}
+  - component: {fileID: 9034571751443135832}
+  - component: {fileID: 7034221491578471257}
   m_Layer: 0
-  m_Name: Autopsy.asset.autopsy-organizer
+  m_Name: Autopsy.asset.leftleg-inner1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8781251872178583150
+--- !u!4 &1858033698152350872
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3672882740424413515
+--- !u!114 &3340652138998139972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -58,29 +58,29 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &1682027379513972031
+--- !u!114 &7945698887156675870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: autopsy-organizer
+  assetTypeId: leftleg-inner1
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &2125039891888914728
+--- !u!114 &6929596076752486023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -112,55 +112,16 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
---- !u!114 &8717757001357837120
+--- !u!114 &545253237261987143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 2941520461765181173}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &2941520461765181173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 1
-  m_UseLocal: 1
---- !u!114 &5358965798991369416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
+  m_Script: {fileID: 11500000, guid: 885a6c2d09c2495488f2f1fa584683ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 0
@@ -175,20 +136,118 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
-    position:
+    bodySection:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: {x: 0, y: 0.4, z: 0}
+        defaultValue: 4
       runtimeData:
-        sharedValue: {x: 0, y: 0.4, z: 0}
+        sharedValue: 4
         stageAssetProperties: []
---- !u!114 &8591342331618108816
+    bodySystem:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 1
+      runtimeData:
+        sharedValue: 1
+        stageAssetProperties: []
+    systemLayer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 1
+      runtimeData:
+        sharedValue: 1
+        stageAssetProperties: []
+    weight:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 6.33
+      runtimeData:
+        sharedValue: 6.33
+        stageAssetProperties: []
+    inGravityZone:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+--- !u!114 &1822475535538262015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 1
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 8431255491239925248}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8431255491239925248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708794358125858803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
+--- !u!114 &1815614109180713287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708794358125858803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: Position
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: The start position of the interactable.
+      runtimeData:
+        value: 
+    position:
+      designTimeData:
+        isEditableByAuthor: 1
+        defaultValue: {x: -0.7, y: 0, z: -0.075}
+      runtimeData:
+        sharedValue: {x: -0.7, y: 0, z: -0.075}
+        stageAssetProperties: []
+--- !u!114 &5885283802501430412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -199,13 +258,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &6324673684346658896
+--- !u!114 &6455871274918513580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -230,60 +289,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
         stageAssetProperties: []
---- !u!114 &3550077579154828027
+--- !u!114 &9034571751443135832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20b9efc6095eca499e23e2ef0edff49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-  resetAllButtonInteractible: {fileID: 0}
-  resetActiveButtonInteractible: {fileID: 0}
-  viewSystemsButtonInteractible: {fileID: 0}
-  viewSectionsButtonInteractible: {fileID: 0}
-  incrementLayerButtonInteractible: {fileID: 0}
-  decrementLayerButtonInteractible: {fileID: 0}
-  bodySystemButtonInteractibles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  bodySectionButtonInteractibles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  curSystemLabel: {fileID: 0}
-  curLayerLabel: {fileID: 0}
-  curSectionLabel: {fileID: 0}
-  systemsUI: {fileID: 0}
-  sectionsUI: {fileID: 0}
---- !u!114 &2257903734229688353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -319,13 +331,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7034814420577499961
+--- !u!114 &7034221491578471257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7648392311809428387}
+  m_GameObject: {fileID: 3708794358125858803}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}

@@ -16,9 +16,39 @@ MonoBehaviour:
     m_keys:
     - head-outer
     - autopsy-scale
+    - torso-outer
+    - leftarm-outer
+    - rightarm-outer
+    - leftleg-outer
+    - rightleg-outer
+    - head-inner1
+    - leftarm-inner1
+    - rightarm-inner1
+    - leftleg-inner1
+    - rightleg-inner1
+    - torso-inner2
+    - torso-inner2-21
+    - torso-inner2-22
+    - torso-inner2-23
+    - torso-inner2-24
     m_values:
     - {fileID: 4779845785466914783, guid: eb86d12512121a24397340198939132b, type: 3}
     - {fileID: 1416261171713702834, guid: 8591e6ede9abd4f42b5743fb8a5924dd, type: 3}
+    - {fileID: 3328437826604849066, guid: e9f6a8379b42b4046a8e1f2a467aef1e, type: 3}
+    - {fileID: 435584844621445170, guid: e6c49c440f25ac24abc3e794fbbb309b, type: 3}
+    - {fileID: 474093089658255719, guid: cd57e0090bde818448e8fb3c4bd09906, type: 3}
+    - {fileID: 1216462868960094757, guid: 80813c7c0c0983d488be92637a4f41c4, type: 3}
+    - {fileID: 4398804531052391488, guid: 126af85ef64dd61479a7c5d3178761dd, type: 3}
+    - {fileID: 7677603592063656640, guid: a9320d00fe995464aaa53eda73a22013, type: 3}
+    - {fileID: 3846851704114117066, guid: d1b1f0c170b8201459cdcca71530d059, type: 3}
+    - {fileID: 5165994426923733766, guid: 99bf9e5be90e178488fad3ebb75033d9, type: 3}
+    - {fileID: 3708794358125858803, guid: a314aae39a2860649bd5db58de0caa88, type: 3}
+    - {fileID: 249295213482296602, guid: aa2758a079a17ee4ab161845b045fd29, type: 3}
+    - {fileID: 8086334064559511220, guid: 6160ee41e87fd1346a952f0cdde665df, type: 3}
+    - {fileID: 7262441707578107126, guid: 5f448b89b8aa63142aba66d17b93d737, type: 3}
+    - {fileID: 152383869529106323, guid: 56e00ab9c1e14e14896b7af15aa47498, type: 3}
+    - {fileID: 5816566104894826222, guid: 8620a5f0e7f5d99428aa2b08bece785a, type: 3}
+    - {fileID: 6637838585525888362, guid: 6263f5a3d8567104d85404b6c2ed8ae4, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +82,141 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: f1bcc642-ca4c-405c-971b-92f032f9e649
     assetData: 
+  - presetAssetId: rightleg-outer
+    assetTypePrefabReference:
+      m_AssetGUID: fe12227442cf40e458d1bf143e00dbe9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: d87fda70-73d1-448e-9d7f-7b9d90228b3f
+    assetData: 
+  - presetAssetId: torso-outer
+    assetTypePrefabReference:
+      m_AssetGUID: 24e99503c84849d41a2b8173952aa604
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 4fbb9742-a2d5-41f3-b584-0b2fe01c72a4
+    assetData: 
+  - presetAssetId: leftarm-outer
+    assetTypePrefabReference:
+      m_AssetGUID: 9ec3cd7853587de4f8a527f16f47a07f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: c2129765-bd78-4535-bd7c-7bdbe18f4bc8
+    assetData: 
+  - presetAssetId: rightarm-outer
+    assetTypePrefabReference:
+      m_AssetGUID: b03131adf34330d43ab1efb689769f35
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 7dce86fe-4149-45a1-a7e1-3b9681a3ebcf
+    assetData: 
+  - presetAssetId: leftleg-outer
+    assetTypePrefabReference:
+      m_AssetGUID: e08aa805d40ed784a82472061a169a5f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: e84a51b3-d68e-46a4-ad37-fb5911abe0a9
+    assetData: 
+  - presetAssetId: head-inner1
+    assetTypePrefabReference:
+      m_AssetGUID: 6c57dd7419b5775428d12a6abf4feba5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 710ef691-e0ce-4a05-8c7c-8eaa7d350dce
+    assetData: 
+  - presetAssetId: leftarm-inner1
+    assetTypePrefabReference:
+      m_AssetGUID: e5ac7bc59cdf74f4891c11b96174f3cc
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: b68fd594-11da-407b-a93a-e5439843e97f
+    assetData: 
+  - presetAssetId: rightarm-inner1
+    assetTypePrefabReference:
+      m_AssetGUID: fd12db3d48af3c04897b19c566e4be03
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 607dd5ff-030b-4ffa-a9e1-3417cdd57aaf
+    assetData: 
+  - presetAssetId: leftleg-inner1
+    assetTypePrefabReference:
+      m_AssetGUID: 3a1bc54892e30484583dd5225d613443
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: e7b45046-c0bf-4b95-8fe0-a46da84ebcd4
+    assetData: 
+  - presetAssetId: rightleg-inner1
+    assetTypePrefabReference:
+      m_AssetGUID: 3584199f09389004996b7d53a915127b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 56ae85db-85e8-49f9-9efd-cfae02a489ef
+    assetData: 
+  - presetAssetId: torso-inner2
+    assetTypePrefabReference:
+      m_AssetGUID: 11d34748b28c62f4ab7b24bd2d861031
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: fee29baa-8fc7-4df1-88f4-c9159efc6a49
+    assetData: 
+  - presetAssetId: torso-inner2-21
+    assetTypePrefabReference:
+      m_AssetGUID: a9034abf9fab3024a97612a4d51a661c
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 62e336ba-4d89-45b5-b838-44d5d419c181
+    assetData: 
+  - presetAssetId: torso-inner2-22
+    assetTypePrefabReference:
+      m_AssetGUID: a237e74fbdd96724a8308f4dddffc652
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: c3e7cd59-5f43-4a91-b509-ace1e56bfbf3
+    assetData: 
+  - presetAssetId: torso-inner2-23
+    assetTypePrefabReference:
+      m_AssetGUID: 86348258f5956d545addef7e6c580e31
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 81a6e6d0-50b3-4600-abf9-b13aa3bb35de
+    assetData: 
+  - presetAssetId: torso-inner2-24
+    assetTypePrefabReference:
+      m_AssetGUID: ce8d5e42da8ef014bab97f40e54114ca
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 958255d4-ba3f-42bf-b54c-a4c6ede69c97
+    assetData: 
   - presetAssetId: autopsy-organizer
     assetTypePrefabReference:
       m_AssetGUID: 4a5cd3c13d34e284fbbb605417539ea3
@@ -59,7 +224,7 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
-    assetId: d87fda70-73d1-448e-9d7f-7b9d90228b3f
+    assetId: 6e86ef2d-e99d-4647-a154-2d7906636f55
     assetData: 
   assetDataPrefabReferences: {fileID: -887181123054497794}
   presetAssetTypeLoadBundles: []
