@@ -254,6 +254,15 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
+    testAssetData:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: {fileID: 7275164613134977609, guid: 9b16eab672634c042af50a920a6f8ad9,
+          type: 3}
+      runtimeData:
+        sharedValue: {fileID: 7275164613134977609, guid: 9b16eab672634c042af50a920a6f8ad9,
+          type: 3}
+        stageAssetProperties: []
   resetAllButtonInteractible: {fileID: 0}
   resetActiveButtonInteractible: {fileID: 0}
   viewSystemsButtonInteractible: {fileID: 0}

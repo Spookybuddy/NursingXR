@@ -41,6 +41,8 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
     [SerializeField] private Interactable[] bodySectionButtonInteractibles;
     [SerializeField] private TMP_Text curSystemLabel, curLayerLabel, curSectionLabel;
     [SerializeField] private GameObject systemsUI, sectionsUI;
+    // Indices need to correspond to the BodySystems
+    [SerializeField] private GameObject[] systemButtonBackplates, systemButtonSelectedBackplates;
 
     private AutopsyBodyPartAssetTypeComponent[] allBodyParts;
     private AutopsyScaleAssetTypeComponent scaleBehavior;
@@ -130,6 +132,17 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
         activeSystems.Add(BodySystem.Inner1);
         activeSystems.Add(BodySystem.Inner2);
 
+        for(int i = 0; i < systemButtonSelectedBackplates.Length; i++)
+        {
+            if (i == 0)
+            {
+                systemButtonBackplates[i].SetActive(false);
+            }
+            else
+            {
+                systemButtonSelectedBackplates[i].SetActive(false);
+            }
+        }
         sectionsUI.SetActive(false);
     }
 
@@ -199,6 +212,12 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
     {
         curSystem = BodySystem.Outer;
         curSystemLabel.text = "Outer System";
+        systemButtonBackplates[0].SetActive(false);
+        systemButtonBackplates[1].SetActive(true);
+        systemButtonBackplates[2].SetActive(true);
+        systemButtonSelectedBackplates[0].SetActive(true);
+        systemButtonSelectedBackplates[1].SetActive(false);
+        systemButtonSelectedBackplates[2].SetActive(false);
         UpdateLayerLabel();
     }
 
@@ -206,6 +225,12 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
     {
         curSystem = BodySystem.Inner1;
         curSystemLabel.text = "Inner 1 System";
+        systemButtonBackplates[0].SetActive(true);
+        systemButtonBackplates[1].SetActive(false);
+        systemButtonBackplates[2].SetActive(true);
+        systemButtonSelectedBackplates[0].SetActive(false);
+        systemButtonSelectedBackplates[1].SetActive(true);
+        systemButtonSelectedBackplates[2].SetActive(false);
         UpdateLayerLabel();
     }
 
@@ -213,6 +238,12 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
     {
         curSystem = BodySystem.Inner2;
         curSystemLabel.text = "Inner 2 System";
+        systemButtonBackplates[0].SetActive(true);
+        systemButtonBackplates[1].SetActive(true);
+        systemButtonBackplates[2].SetActive(false);
+        systemButtonSelectedBackplates[0].SetActive(false);
+        systemButtonSelectedBackplates[1].SetActive(false);
+        systemButtonSelectedBackplates[2].SetActive(true);
         UpdateLayerLabel();
     }
 
