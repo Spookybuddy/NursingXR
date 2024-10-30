@@ -4,6 +4,7 @@ using GIGXR.Platform.Scenarios;
 using GIGXR.Platform.Scenarios.GigAssets;
 using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
 using Microsoft.MixedReality.Toolkit.UI;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -46,12 +47,15 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
 
     private AutopsyBodyPartAssetTypeComponent[] allBodyParts;
     private AutopsyScaleAssetTypeComponent scaleBehavior;
-    private BodySystem curSystem = BodySystem.Outer;
-    private BodySection curSection = BodySection.All;
+
     private List<BodySystem> activeSystems;
 
     // Indices need to correspond to the BodySystems
-    private int[] activeLayers = new int[3] { 0, 0, 0 }, totalLayers = new int[3];
+    // DO NOT UPDATE DIRECTLY! This variable will be updated when the corresponding asset data is updated!
+    private int[] activeLayers = new int[3];
+
+    // Indices need to correspond to the BodySystems
+    private int[] totalLayers = new int[3];
 
     private IScenarioManager scenarioManager;
 
@@ -103,6 +107,7 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
                 totalLayers[(int)(bodyPart.GetBodySystem())] = bodyPart.GetSystemLayer();
             }
         }
+
         for (int i = 0; i < totalLayers.Length; i++)
         {
             activeLayers[i] = totalLayers[i];
@@ -146,6 +151,14 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
         sectionsUI.SetActive(false);
     }
 
+    IEnumerator DelayedLayerNumberAssignment()
+    {
+        yield return new WaitForEndOfFrame();
+        assetData.outerLayer.runtimeData.Value = totalLayers[0];
+        assetData.inner1Layer.runtimeData.Value = totalLayers[1];
+        assetData.inner2Layer.runtimeData.Value = totalLayers[2];
+    }
+
     protected override void Teardown()
     {
         resetAllButtonInteractible.OnClick.RemoveListener(ResetAllObjects);
@@ -173,35 +186,27 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
     // Resets the position and rotation of all body parts
     public void ResetAllObjects()
     {
-        foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
-        {
-                bodyPart.ResetObject();
-        }
+        assetData.toggleResetAll.runtimeData.Value = !assetData.toggleResetAll.runtimeData.Value;
     }
 
     // Resets the position and rotation of only the active body parts
     public void ResetActiveObjects()
     {
-        foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
-        {
-            if ((curSection == BodySection.All || curSection == bodyPart.GetBodySection())
-                && activeSystems.Contains(bodyPart.GetBodySystem()))
-            {
-                bodyPart.ResetObject();
-            }
-        }
+        assetData.toggleResetActive.runtimeData.Value = !assetData.toggleResetActive.runtimeData.Value;
     }
 
     #endregion
 
     #region Menu Navigation
 
+    //Intentionally made to not network sync
     public void ViewSystems()
     {
         sectionsUI.SetActive(false);
         systemsUI.SetActive(true);
     }
 
+    //Intentionally made to not network sync
     public void ViewSections()
     {
         systemsUI.SetActive(false);
@@ -210,41 +215,17 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
 
     public void ChangeSystemToOuter()
     {
-        curSystem = BodySystem.Outer;
-        curSystemLabel.text = "Outer System";
-        systemButtonBackplates[0].SetActive(false);
-        systemButtonBackplates[1].SetActive(true);
-        systemButtonBackplates[2].SetActive(true);
-        systemButtonSelectedBackplates[0].SetActive(true);
-        systemButtonSelectedBackplates[1].SetActive(false);
-        systemButtonSelectedBackplates[2].SetActive(false);
-        UpdateLayerLabel();
+        assetData.curSystem.runtimeData.Value = BodySystem.Outer;
     }
 
     public void ChangeSystemToInner1()
     {
-        curSystem = BodySystem.Inner1;
-        curSystemLabel.text = "Inner 1 System";
-        systemButtonBackplates[0].SetActive(true);
-        systemButtonBackplates[1].SetActive(false);
-        systemButtonBackplates[2].SetActive(true);
-        systemButtonSelectedBackplates[0].SetActive(false);
-        systemButtonSelectedBackplates[1].SetActive(true);
-        systemButtonSelectedBackplates[2].SetActive(false);
-        UpdateLayerLabel();
+        assetData.curSystem.runtimeData.Value = BodySystem.Inner1;
     }
 
     public void ChangeSystemToInner2()
     {
-        curSystem = BodySystem.Inner2;
-        curSystemLabel.text = "Inner 2 System";
-        systemButtonBackplates[0].SetActive(true);
-        systemButtonBackplates[1].SetActive(true);
-        systemButtonBackplates[2].SetActive(false);
-        systemButtonSelectedBackplates[0].SetActive(false);
-        systemButtonSelectedBackplates[1].SetActive(false);
-        systemButtonSelectedBackplates[2].SetActive(true);
-        UpdateLayerLabel();
+        assetData.curSystem.runtimeData.Value = BodySystem.Inner2;
     }
 
     #endregion
@@ -253,80 +234,306 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
 
     public void ChangeSectionToHead()
     {
-        curSection = (BodySection)0;
-        curSectionLabel.text = "Head";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)0;
     }
 
     public void ChangeSectionToTorso()
     {
-        curSection = (BodySection)1;
-        curSectionLabel.text = "Torso";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)1;
     }
 
     public void ChangeSectionToLeftArm()
     {
-        curSection = (BodySection)2;
-        curSectionLabel.text = "Left Arm";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)2;
     }
 
     public void ChangeSectionToRightArm()
     {
-        curSection = (BodySection)3;
-        curSectionLabel.text = "Right Arm";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)3;
     }
 
     public void ChangeSectionToLeftLeg()
     {
-        curSection = (BodySection)4;
-        curSectionLabel.text = "Left Leg";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)4;
     }
 
     public void ChangeSectionToRightLeg()
     {
-        curSection = (BodySection)5;
-        curSectionLabel.text = "Right Leg";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)5;
     }
 
     public void ChangeSectionToAll()
     {
-        curSection = (BodySection)6;
-        curSectionLabel.text = "All Sections";
-        UpdateInteractibleObjects();
+        assetData.curSection.runtimeData.Value = (BodySection)6;
     }
 
     public void IncrementCurrentLayer()
     {
-        if (activeLayers[(int)curSystem] < totalLayers[(int)curSystem])
+        if (assetData.notSetLayers.runtimeData.Value)
         {
-            if (activeLayers[(int)curSystem]++ == 0)
-            {
-                activeSystems.Add(curSystem);
-            }
-            UpdateLayerLabel();
+            assetData.outerLayer.runtimeData.Value = totalLayers[0];
+            assetData.inner1Layer.runtimeData.Value = totalLayers[1];
+            assetData.inner2Layer.runtimeData.Value = totalLayers[2];
+            assetData.notSetLayers.runtimeData.Value = false;
         }
-        UpdateInteractibleObjects();
+        switch (assetData.curSystem.runtimeData.Value)
+        {
+            case BodySystem.Outer:
+                if (assetData.outerLayer.runtimeData.Value < totalLayers[0])
+                {
+                    if (assetData.outerLayer.runtimeData.Value == 0)
+                    {
+                        activeSystems.Add(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.outerLayer.runtimeData.Value += 1;
+                    Debug.Log("Detected Change outer is now " + assetData.outerLayer.runtimeData.Value);
+                }
+                break;
+            case BodySystem.Inner1:
+                if (assetData.inner1Layer.runtimeData.Value < totalLayers[1])
+                {
+                    if (assetData.inner1Layer.runtimeData.Value == 0)
+                    {
+                        activeSystems.Add(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.inner1Layer.runtimeData.Value++;
+                }
+                break;
+            case BodySystem.Inner2:
+                if (assetData.inner2Layer.runtimeData.Value < totalLayers[2])
+                {
+                    if (assetData.inner2Layer.runtimeData.Value == 0)
+                    {
+                        activeSystems.Add(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.inner2Layer.runtimeData.Value++;
+                }
+                break;
+        }
     }
 
     public void DecrementCurrentLayer()
     {
-        if (activeLayers[(int)curSystem] > 0)
+        if (assetData.notSetLayers.runtimeData.Value)
         {
-            if (--activeLayers[(int)curSystem] == 0)
-            {
-                activeSystems.Remove(curSystem);
-            }
-            UpdateLayerLabel();
+            assetData.outerLayer.runtimeData.Value = totalLayers[0];
+            assetData.inner1Layer.runtimeData.Value = totalLayers[1];
+            assetData.inner2Layer.runtimeData.Value = totalLayers[2];
+            assetData.notSetLayers.runtimeData.Value = false;
+        }
+        switch (assetData.curSystem.runtimeData.Value)
+        {
+            case BodySystem.Outer:
+                if (assetData.outerLayer.runtimeData.Value > 0)
+                {
+                    if (assetData.outerLayer.runtimeData.Value == 1)
+                    {
+                        activeSystems.Remove(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.outerLayer.runtimeData.Value -= 1;
+                    Debug.Log("Detected Change outer is now " + assetData.outerLayer.runtimeData.Value);
+                }
+                break;
+            case BodySystem.Inner1:
+                if (assetData.inner1Layer.runtimeData.Value > 0)
+                {
+                    if (assetData.inner1Layer.runtimeData.Value == 1)
+                    {
+                        activeSystems.Remove(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.inner1Layer.runtimeData.Value--;
+                }
+                break;
+            case BodySystem.Inner2:
+                if (assetData.inner2Layer.runtimeData.Value > 0)
+                {
+                    if (assetData.inner2Layer.runtimeData.Value == 1)
+                    {
+                        activeSystems.Remove(assetData.curSystem.runtimeData.Value);
+                    }
+                    assetData.inner2Layer.runtimeData.Value--;
+                }
+                break;
+        }
+    }
+
+    #endregion
+
+    #region Property Change Handlers
+
+
+    //[RegisterPropertyChange] makes the function a listener for when a certain specified property changes
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.curSystem))]
+    private void OnCurrentSystemChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        BodySystem newSystem = (BodySystem)args.AssetPropertyValue;
+        if (newSystem == BodySystem.Outer)
+        {
+            curSystemLabel.text = "Outer System";
+            systemButtonBackplates[0].SetActive(false);
+            systemButtonBackplates[1].SetActive(true);
+            systemButtonBackplates[2].SetActive(true);
+            systemButtonSelectedBackplates[0].SetActive(true);
+            systemButtonSelectedBackplates[1].SetActive(false);
+            systemButtonSelectedBackplates[2].SetActive(false);
+        }
+        else if (newSystem == BodySystem.Inner1)
+        {
+            curSystemLabel.text = "Inner 1 System";
+            systemButtonBackplates[0].SetActive(true);
+            systemButtonBackplates[1].SetActive(false);
+            systemButtonBackplates[2].SetActive(true);
+            systemButtonSelectedBackplates[0].SetActive(false);
+            systemButtonSelectedBackplates[1].SetActive(true);
+            systemButtonSelectedBackplates[2].SetActive(false);
+        }
+        else if (newSystem == BodySystem.Inner2)
+        {
+            curSystemLabel.text = "Inner 2 System";
+            systemButtonBackplates[0].SetActive(true);
+            systemButtonBackplates[1].SetActive(true);
+            systemButtonBackplates[2].SetActive(false);
+            systemButtonSelectedBackplates[0].SetActive(false);
+            systemButtonSelectedBackplates[1].SetActive(false);
+            systemButtonSelectedBackplates[2].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("An error occurred.");
+            curSystemLabel.text = "An error occurred.";
+        }
+        UpdateLayerLabel();
+    }
+
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.curSection))]
+    private void OnCurrentSectionChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        BodySection newSection = (BodySection)args.AssetPropertyValue;
+        if (newSection == BodySection.Head)
+        {
+            curSectionLabel.text = "Head";
+        }
+        else if (newSection == BodySection.Torso)
+        {
+            curSectionLabel.text = "Torso";
+        }
+        else if (newSection == BodySection.LeftArm)
+        {
+            curSectionLabel.text = "Left Arm";
+        }
+        else if (newSection == BodySection.RightArm)
+        {
+            curSectionLabel.text = "Right Arm";
+        }
+        else if (newSection == BodySection.LeftLeg)
+        {
+            curSectionLabel.text = "Left Leg";
+        }
+        else if (newSection == BodySection.RightLeg)
+        {
+            curSectionLabel.text = "Right Leg";
+        }
+        else if (newSection == BodySection.All)
+        {
+            curSectionLabel.text = "All Sections";
+        }
+        else
+        {
+            Debug.Log("An error occurred.");
+            curSystemLabel.text = "An error occurred.";
         }
         UpdateInteractibleObjects();
     }
 
-    #endregion
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.outerLayer))]
+    public void OnOuterLayerChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        if (!assetData.notSetLayers.runtimeData.Value)
+        {
+            int newValue = (int)args.AssetPropertyValue;
+            Debug.Log("Detected change in outer layer");
+            activeLayers[0] = newValue;
+            UpdateLayerLabel();
+            UpdateInteractibleObjects();
+        }
+    }
+
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.inner1Layer))]
+    public void OnInner1LayerChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        if (!assetData.notSetLayers.runtimeData.Value)
+        {
+            int newValue = (int)args.AssetPropertyValue;
+            Debug.Log("Detected change in inner1 layer");
+            activeLayers[1] = newValue;
+            UpdateLayerLabel();
+            UpdateInteractibleObjects();
+        }
+    }
+
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.inner2Layer))]
+    public void OnInner2LayerChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        if (!assetData.notSetLayers.runtimeData.Value)
+        {
+            int newValue = (int)args.AssetPropertyValue;
+            Debug.Log("Detected change in inner2 layer");
+            activeLayers[2] = newValue;
+            UpdateLayerLabel();
+            UpdateInteractibleObjects();
+        }
+    }
+    
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.toggleResetAll))]
+    public void OnToggleResetAllChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
+        {
+            bodyPart.ResetObject();
+        }
+    }
+
+    [RegisterPropertyChange(nameof(AutopsyOrganizerAssetData.toggleResetActive))]
+    public void OnToggleResetActiveChanged(AssetPropertyChangeEventArgs args)
+    {
+        if (!IsInitialized)
+        {
+            return;
+        }
+        foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
+        {
+            if ((assetData.curSection.runtimeData.Value == BodySection.All ||
+                 assetData.curSection.runtimeData.Value == bodyPart.GetBodySection())
+                && activeSystems.Contains(bodyPart.GetBodySystem()))
+            {
+                bodyPart.ResetObject();
+            }
+        }
+    }
 
     // Updates the visibility and interactibility of body parts based on the active body
     // systems and body section.
@@ -335,7 +542,8 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
         foreach (AutopsyBodyPartAssetTypeComponent bodyPart in allBodyParts)
         {
             if (!bodyPart.gameObject.GetComponent<IsEnabledAssetTypeComponent>().AssetData.isEnabled.runtimeData.Value &&
-                (curSection == BodySection.All || curSection == bodyPart.GetBodySection()) &&
+                (assetData.curSection.runtimeData.Value == BodySection.All ||
+                 assetData.curSection.runtimeData.Value == bodyPart.GetBodySection()) &&
                 activeSystems.Contains(bodyPart.GetBodySystem()) &&
                 activeLayers[(int)(bodyPart.GetBodySystem())] >= bodyPart.GetSystemLayer())
             {
@@ -346,8 +554,8 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
                 }
                 bodyPart.gameObject.GetComponent<IsEnabledAssetTypeComponent>().AssetData.isEnabled.runtimeData.Value = true;
             }
-            else if (bodyPart.gameObject.activeSelf && !((curSection == BodySection.All ||
-                     curSection == bodyPart.GetBodySection()) &&
+            else if (bodyPart.gameObject.activeSelf && !((assetData.curSection.runtimeData.Value == BodySection.All ||
+                     assetData.curSection.runtimeData.Value == bodyPart.GetBodySection()) &&
                      activeSystems.Contains(bodyPart.GetBodySystem()) &&
                      activeLayers[(int)(bodyPart.GetBodySystem())] >= bodyPart.GetSystemLayer()))
             {
@@ -363,6 +571,9 @@ public class AutopsyOrganizerAssetTypeComponent : BaseAssetTypeComponent<Autopsy
 
     public void UpdateLayerLabel()
     {
-        curLayerLabel.text = "Layer: " + activeLayers[(int)curSystem] + "/" + totalLayers[(int)curSystem];
+        curLayerLabel.text = "Layer: " + activeLayers[(int)(assetData.curSystem.runtimeData.Value)] +
+                             "/" + totalLayers[(int)(assetData.curSystem.runtimeData.Value)];
     }
+
+    #endregion
 }

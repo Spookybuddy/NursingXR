@@ -171,7 +171,6 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
-  manipulationAssetTypeComponent: {fileID: 7054979479127577686}
 --- !u!114 &6163513104444406154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -254,14 +254,47 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
-    testAssetData:
+    curSystem:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: {fileID: 7275164613134977609, guid: 9b16eab672634c042af50a920a6f8ad9,
-          type: 3}
+        defaultValue: 0
       runtimeData:
-        sharedValue: {fileID: 7275164613134977609, guid: 9b16eab672634c042af50a920a6f8ad9,
-          type: 3}
+        sharedValue: 0
+        stageAssetProperties: []
+    curSection:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 6
+      runtimeData:
+        sharedValue: 6
+        stageAssetProperties: []
+    outerLayer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    inner1Layer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    inner2Layer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    notSetLayers:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 1
+      runtimeData:
+        sharedValue: 1
         stageAssetProperties: []
   resetAllButtonInteractible: {fileID: 0}
   resetActiveButtonInteractible: {fileID: 0}
@@ -286,6 +319,14 @@ MonoBehaviour:
   curSectionLabel: {fileID: 0}
   systemsUI: {fileID: 0}
   sectionsUI: {fileID: 0}
+  systemButtonBackplates:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  systemButtonSelectedBackplates:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &2257903734229688353
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ using UnityEngine;
 
 public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyBodyPartAssetData>
 {
+    [SerializeField] private Transform startingOrientation;
+
     private Rigidbody rb;
     private Collider hitBox;
     private GameObject bodyPartObject;
@@ -92,8 +94,8 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
 
     public void ResetObject()
     {
-        bodyPartObject.transform.localPosition = Vector3.zero;
-        bodyPartObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        transform.localPosition = startingOrientation.localPosition;
+        transform.localRotation = startingOrientation.localRotation;
         hitBox.isTrigger = true;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;

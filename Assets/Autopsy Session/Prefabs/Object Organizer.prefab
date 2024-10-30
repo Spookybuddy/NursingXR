@@ -828,6 +828,48 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
+    curSystem:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    curSection:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 6
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    outerLayer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    inner1Layer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    inner2Layer:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    notSetLayers:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 1
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   resetAllButtonInteractible: {fileID: 4482360865403552691}
   resetActiveButtonInteractible: {fileID: 5646307791825083610}
   viewSystemsButtonInteractible: {fileID: 8502065983434099371}
