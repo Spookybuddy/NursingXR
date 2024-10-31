@@ -96,6 +96,8 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     {
         transform.localPosition = startingOrientation.localPosition;
         transform.localRotation = startingOrientation.localRotation;
+        bodyPartObject.transform.localPosition = Vector3.zero;
+        bodyPartObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
         hitBox.isTrigger = true;
         rb.useGravity = false;
         rb.velocity = Vector3.zero;

@@ -296,6 +296,20 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 1
         stageAssetProperties: []
+    toggleResetAll:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    toggleResetActive:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
   resetAllButtonInteractible: {fileID: 0}
   resetActiveButtonInteractible: {fileID: 0}
   viewSystemsButtonInteractible: {fileID: 0}
