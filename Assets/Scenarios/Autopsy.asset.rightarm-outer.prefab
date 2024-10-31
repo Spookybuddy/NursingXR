@@ -171,6 +171,7 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+  startingOrientation: {fileID: 0}
 --- !u!114 &3038627603949178815
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -140,7 +140,7 @@ MonoBehaviour:
         - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
           useShared: 0
           resetValueOnStageChange: 1
-          localValue: 1
+          localValue: 0
         - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
           useShared: 0
           resetValueOnStageChange: 1

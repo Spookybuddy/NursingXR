@@ -513,7 +513,7 @@ MonoBehaviour:
     isEnabledHostOnly:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: 1
+        defaultValue: 0
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []

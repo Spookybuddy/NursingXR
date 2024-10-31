@@ -144,7 +144,7 @@ MonoBehaviour:
         - stageId: 36024261-a469-49db-8f79-0d1bf78f3b02
           useShared: 0
           resetValueOnStageChange: 1
-          localValue: 1
+          localValue: 0
 --- !u!114 &3660948413984014872
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6005,8 +6005,8 @@ MonoBehaviour:
         stageAssetProperties: []
     isEnabledHostOnly:
       designTimeData:
-        isEditableByAuthor: 1
-        defaultValue: 1
+        isEditableByAuthor: 0
+        defaultValue: 0
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []

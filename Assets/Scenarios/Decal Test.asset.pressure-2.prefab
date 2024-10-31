@@ -136,7 +136,7 @@ MonoBehaviour:
         - stageId: 85ee0c91-bb63-44c3-b8b3-2e9fdc506aaa
           useShared: 0
           resetValueOnStageChange: 1
-          localValue: 1
+          localValue: 0
         - stageId: c25e8cc7-e9f2-4276-baf1-a07c1e3aa131
           useShared: 0
           resetValueOnStageChange: 1
