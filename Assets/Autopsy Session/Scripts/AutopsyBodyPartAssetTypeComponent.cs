@@ -37,7 +37,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
 
     public override void SetEditorValues()
     {
-        
+
     }
 
     protected override void Setup()
@@ -112,7 +112,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     // Called when the object is selected by the user
     public void OnSelection()
     {
-        ObeyPhysics(false);
+        assetData.obeyPhysics.runtimeData.Value = false;
     }
 
     // Called when the object is released by the user
@@ -135,17 +135,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     IEnumerator DelayObeyPhysics(bool isObeying)
     {
         yield return new WaitForEndOfFrame();
-        ObeyPhysics(isObeying);
-    }
-
-    public void ObeyPhysics(bool isObeying)
-    {
-        hitBox.isTrigger = !isObeying;
-        rb.useGravity = isObeying;
-        if (!isObeying)
-        {
-            rb.velocity = Vector3.zero;
-        }
+        assetData.obeyPhysics.runtimeData.Value = isObeying;
     }
 
     #endregion
@@ -166,7 +156,52 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     {
         assetData.inGravityZone.runtimeData.Value = false;
         autopsyScaleAssetTypeComponent.RemoveObjectFromScale(this);
-        ObeyPhysics(false);
+        assetData.obeyPhysics.runtimeData.Value = false;
+    }
+
+    #endregion
+
+    #region Property Change Handlers
+
+    [RegisterPropertyChange(nameof(AutopsyBodyPartAssetData.obeyPhysics))]
+    private void OnObeyPhysicsChanged(AssetPropertyChangeEventArgs args)
+    {
+        Debug.Log("Validate Happens and Property Change Registered.");
+        bool shouldObey = (bool)args.AssetPropertyValue;
+        ObeyPhysics(shouldObey);
+    }
+
+    public void ObeyPhysics(bool isObeying)
+    {
+        hitBox.isTrigger = !isObeying;
+        rb.useGravity = isObeying;
+        if (!isObeying)
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
+
+    #endregion
+
+    #region Asset Property Validators
+
+    //Object returned is the update value, bool returned indicates if we want to allow the property change
+    [RegisterPropertyValidator(nameof(AutopsyBodyPartAssetData.obeyPhysics))]
+    public (object, bool) ValidateCurrentValue(object value)
+    {
+        if (!IsInitialized)
+        {
+            return (value, true);
+        }
+
+        bool boolValue = (bool)value;
+        
+        if (boolValue == assetData.obeyPhysics.runtimeData.Value)
+        {
+            return (boolValue, false);
+        }
+
+        return (boolValue, true);
     }
 
     #endregion

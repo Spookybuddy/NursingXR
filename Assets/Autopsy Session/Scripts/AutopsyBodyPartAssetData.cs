@@ -9,5 +9,5 @@ public class AutopsyBodyPartAssetData : BaseAssetData
     public AssetPropertyDefinition<BodySystem> bodySystem;
     public AssetPropertyDefinition<int> systemLayer;
     public AssetPropertyDefinition<float> weight;
-    public AssetPropertyDefinition<bool> inGravityZone;
+    public AssetPropertyDefinition<bool> inGravityZone, obeyPhysics;
 }

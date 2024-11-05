@@ -139,8 +139,6 @@ PlayerSettings:
   bundleVersion: 0.1.3
   preloadedAssets:
   - {fileID: 11400000, guid: ec48dde2543734b4c8d110f743fa0c7e, type: 2}
-  - {fileID: -1371512812919909265, guid: 6c5b383c8a187b8469ed80d8bcc93e90, type: 2}
-  - {fileID: 8171166876655343367, guid: 5aff81c87e4cd7040bd60b15c7b27d50, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -844,7 +842,7 @@ PlayerSettings:
     iPhone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: com.unity.fsu-nursingxr10312024v2
+  metroPackageName: com.unity.fsu-nursingxr11042024
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
