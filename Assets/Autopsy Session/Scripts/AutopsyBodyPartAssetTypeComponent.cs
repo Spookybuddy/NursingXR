@@ -48,6 +48,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
         bodyPartObject = rb.gameObject;
         manipulationAssetTypeComponent.OnManipulationStarted.AddListener(OnSelection);
         manipulationAssetTypeComponent.OnManipulationEnded.AddListener(OnRelease);
+        ResetObject();
     }
 
     protected override void Teardown()

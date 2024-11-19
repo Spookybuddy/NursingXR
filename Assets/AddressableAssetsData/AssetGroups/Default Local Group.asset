@@ -173,6 +173,58 @@ MonoBehaviour:
     m_Address: test-rotational
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4f079814cef25334fa71da661478b236
+    m_Address: hand-detector
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e7bd1afb9ac953a4096c522083401e95
+    m_Address: heart-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dfc15ce4f15be5d459e95e5b4ebcd475
+    m_Address: large-intestine-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8636d75fde4e98144bf477bacdf10d2e
+    m_Address: liver-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9179771bc3610e649a3046408052cc5f
+    m_Address: lungs-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acb354d7022af264a9e8d750f1ffd79e
+    m_Address: pancreas-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 57dd5dfc0e54edf4695923c8b7bfe7b8
+    m_Address: small-intestine-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64ef09bbad22bea42a2d6f61a5d40268
+    m_Address: spleen-inner2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aca96645afd04e844991b41b5a618ea8
+    m_Address: test-chlorhexadine
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 230f251ce16bf9f4aa8f37049132803a
+    m_Address: step-manager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32c3498c7f916604885c9d2c45c5c7f9
+    m_Address: cld-arm-placeholder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 341a6ed2b2b2a4e4fb6996ea9dfebc58
+    m_Address: test-tegaderm
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e4625d693f05dc4594dcb6118636477
+    m_Address: test-eye-tracker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

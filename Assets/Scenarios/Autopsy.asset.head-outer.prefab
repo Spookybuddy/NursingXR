@@ -171,6 +171,14 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
+    obeyPhysics:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+  startingOrientation: {fileID: 0}
 --- !u!114 &6163513104444406154
 MonoBehaviour:
   m_ObjectHideFlags: 0

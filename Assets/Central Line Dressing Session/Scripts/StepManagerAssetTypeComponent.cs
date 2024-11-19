@@ -61,7 +61,7 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
 
     public void CheckStep1()
     {
-        assetData.stepChecks.runtimeData.Value[1] = true;
+        assetData.stepChecks.runtimeData.Value[1] = false;
     }
     
     public void CheckStep2()
@@ -76,7 +76,7 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
 
     public void CheckStep4()
     {
-        assetData.stepChecks.runtimeData.Value[4] = true;
+        assetData.stepChecks.runtimeData.Value[4] = false;
     }
 
     public void CheckStep5()
@@ -118,6 +118,7 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         }
     }
 
+    //Currently not used due to structure of stepChecks, but here in case stepChecks structure changes
     public void AddNextOrder1()
     {
         int i;
@@ -178,6 +179,7 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         }
     }
 
+    //Currently not used due to structure of stepChecks, but here in case stepChecks structure changes
     public void AddNextOrder4()
     {
         int i;
@@ -235,6 +237,26 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         if (i < assetData.attemptedOrder.runtimeData.Value.Length)
         {
             assetData.attemptedOrder.runtimeData.Value[i] = 6;
+        }
+    }
+
+    public void AddNextOrder7()
+    {
+        int i;
+        for (i = 0; i < assetData.attemptedOrder.runtimeData.Value.Length; i++)
+        {
+            if (assetData.attemptedOrder.runtimeData.Value[i] == 7)
+            {
+                return;
+            }
+            if (assetData.attemptedOrder.runtimeData.Value[i] == -1)
+            {
+                break;
+            }
+        }
+        if (i < assetData.attemptedOrder.runtimeData.Value.Length)
+        {
+            assetData.attemptedOrder.runtimeData.Value[i] = 7;
         }
     }
 

@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: autopsy-organizer
+  assetTypeId: step-manager
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
@@ -703,14 +703,14 @@ MonoBehaviour:
     stepChecks:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: 0000000001000000
+        defaultValue: 0001000001000000
       runtimeData:
         sharedValue: 
         stageAssetProperties: []
     attemptedOrder:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        defaultValue: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
       runtimeData:
         sharedValue: 
         stageAssetProperties: []

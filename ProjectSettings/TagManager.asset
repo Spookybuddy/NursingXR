@@ -9,6 +9,7 @@ TagManager:
   - Overlay
   - GravityZone
   - Scale
+  - FindObjectName
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7256400166825473481
+--- !u!1 &7662303837157573037
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,17 +8,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8641507614503931876}
-  - component: {fileID: 9030580705377446608}
-  - component: {fileID: 2455172260148053408}
-  - component: {fileID: 8734782191956822402}
-  - component: {fileID: 6587492860985761426}
-  - component: {fileID: 6560297926380350542}
-  - component: {fileID: 4757200240354500725}
-  - component: {fileID: 9141508219453274435}
-  - component: {fileID: 6264815909020869187}
-  - component: {fileID: 8027459064010516146}
-  - component: {fileID: 1854938377456901230}
+  - component: {fileID: 3627381563801215258}
+  - component: {fileID: 214397385882727954}
+  - component: {fileID: 5796208069024324450}
+  - component: {fileID: 4165300913102426449}
+  - component: {fileID: 5661774773233484051}
+  - component: {fileID: 7288615762657334919}
+  - component: {fileID: 475399097653210156}
+  - component: {fileID: 3581479391334249688}
+  - component: {fileID: 3144157034178763582}
+  - component: {fileID: 3034560769332963230}
+  - component: {fileID: 1740512079310597650}
+  - component: {fileID: 8873119675189849656}
   m_Layer: 0
   m_Name: Central Line Dressing.asset.test-rotational
   m_TagString: Untagged
@@ -26,13 +27,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8641507614503931876
+--- !u!4 &3627381563801215258
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9030580705377446608
+--- !u!114 &214397385882727954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -57,13 +58,13 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &2455172260148053408
+--- !u!114 &5796208069024324450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
@@ -73,13 +74,13 @@ MonoBehaviour:
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &8734782191956822402
+--- !u!114 &4165300913102426449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -103,21 +104,29 @@ MonoBehaviour:
         defaultValue: 1
       runtimeData:
         sharedValue: 1
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 1
     isEnabledHostOnly:
       designTimeData:
         isEditableByAuthor: 0
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
---- !u!114 &6587492860985761426
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
+--- !u!114 &5661774773233484051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -130,17 +139,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 6560297926380350542}
+  - {fileID: 7288615762657334919}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6560297926380350542
+--- !u!114 &7288615762657334919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -150,13 +159,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &4757200240354500725
+--- !u!114 &475399097653210156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -180,14 +189,18 @@ MonoBehaviour:
         defaultValue: {x: 0, y: 0, z: 0}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
-        stageAssetProperties: []
---- !u!114 &9141508219453274435
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0}
+--- !u!114 &3581479391334249688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -198,13 +211,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &6264815909020869187
+--- !u!114 &3144157034178763582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -228,14 +241,18 @@ MonoBehaviour:
         defaultValue: {x: 0, y: 0, z: 0, w: 1}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
-        stageAssetProperties: []
---- !u!114 &8027459064010516146
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &3034560769332963230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -260,24 +277,32 @@ MonoBehaviour:
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
     authoritySet:
       designTimeData:
         isEditableByAuthor: 0
         defaultValue: []
       runtimeData:
         sharedValue: []
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: []
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1854938377456901230
+--- !u!114 &1740512079310597650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256400166825473481}
+  m_GameObject: {fileID: 7662303837157573037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}
@@ -301,7 +326,11 @@ MonoBehaviour:
         defaultValue: 0
       runtimeData:
         sharedValue: 0
-        stageAssetProperties: []
+        stageAssetProperties:
+        - stageId: 00000000-0000-0000-0000-000000000000
+          useShared: 1
+          resetValueOnStageChange: 0
+          localValue: 0
   objectManipulator: {fileID: 0}
   boundsControl: {fileID: 0}
   manageBoundsControlEnabledState: 0
@@ -313,3 +342,27 @@ MonoBehaviour:
   OnManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8873119675189849656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7662303837157573037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf858356ef67a648af14397c26116c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 

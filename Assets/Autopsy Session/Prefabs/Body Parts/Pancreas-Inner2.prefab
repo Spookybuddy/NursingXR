@@ -448,7 +448,7 @@ MonoBehaviour:
     position:
       designTimeData:
         isEditableByAuthor: 1
-        defaultValue: {x: 0.031077, y: 0.03669, z: -0.0008388}
+        defaultValue: {x: -0.268923, y: 0.03669, z: -0.0008388}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0}
         stageAssetProperties: []
@@ -496,7 +496,7 @@ MonoBehaviour:
     rotation:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: {x: 0.0033618065, y: 0.061566543, z: 0.054419473, w: 0.9966126}
+        defaultValue: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: -0.49999997}
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 0}
         stageAssetProperties: []
@@ -607,9 +607,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696076160581962412}
-  m_LocalRotation: {x: 0.0033614587, y: 0.061563667, z: 0.05441638, w: 0.996613}
-  m_LocalPosition: {x: 0.031077, y: 0.03669, z: -0.0008388}
-  m_LocalScale: {x: 1.8797836, y: 1.8797836, z: 1.8797836}
+  m_LocalRotation: {x: -0.49305215, y: -0.44199723, z: -0.50019944, w: 0.55797726}
+  m_LocalPosition: {x: -0.26331, y: -0.00083880126, z: 0.031077}
+  m_LocalScale: {x: 1.8797839, y: 1.8797836, z: 1.8797837}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8952441070689296378}

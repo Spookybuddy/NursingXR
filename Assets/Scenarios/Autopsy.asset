@@ -26,11 +26,6 @@ MonoBehaviour:
     - rightarm-inner1
     - leftleg-inner1
     - rightleg-inner1
-    - torso-inner2
-    - torso-inner2-21
-    - torso-inner2-22
-    - torso-inner2-23
-    - torso-inner2-24
     m_values:
     - {fileID: 4779845785466914783, guid: eb86d12512121a24397340198939132b, type: 3}
     - {fileID: 1416261171713702834, guid: 8591e6ede9abd4f42b5743fb8a5924dd, type: 3}
@@ -44,11 +39,6 @@ MonoBehaviour:
     - {fileID: 5165994426923733766, guid: 99bf9e5be90e178488fad3ebb75033d9, type: 3}
     - {fileID: 3708794358125858803, guid: a314aae39a2860649bd5db58de0caa88, type: 3}
     - {fileID: 249295213482296602, guid: aa2758a079a17ee4ab161845b045fd29, type: 3}
-    - {fileID: 8086334064559511220, guid: 6160ee41e87fd1346a952f0cdde665df, type: 3}
-    - {fileID: 7262441707578107126, guid: 5f448b89b8aa63142aba66d17b93d737, type: 3}
-    - {fileID: 152383869529106323, guid: 56e00ab9c1e14e14896b7af15aa47498, type: 3}
-    - {fileID: 5816566104894826222, guid: 8620a5f0e7f5d99428aa2b08bece785a, type: 3}
-    - {fileID: 6637838585525888362, guid: 6263f5a3d8567104d85404b6c2ed8ae4, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,50 +162,68 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 56ae85db-85e8-49f9-9efd-cfae02a489ef
     assetData: 
-  - presetAssetId: torso-inner2
+  - presetAssetId: heart-inner2
     assetTypePrefabReference:
-      m_AssetGUID: 11d34748b28c62f4ab7b24bd2d861031
+      m_AssetGUID: e7bd1afb9ac953a4096c522083401e95
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: fee29baa-8fc7-4df1-88f4-c9159efc6a49
     assetData: 
-  - presetAssetId: torso-inner2-21
+  - presetAssetId: lungs-inner2
     assetTypePrefabReference:
-      m_AssetGUID: a9034abf9fab3024a97612a4d51a661c
+      m_AssetGUID: 9179771bc3610e649a3046408052cc5f
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: 62e336ba-4d89-45b5-b838-44d5d419c181
     assetData: 
-  - presetAssetId: torso-inner2-22
+  - presetAssetId: liver-inner2
     assetTypePrefabReference:
-      m_AssetGUID: a237e74fbdd96724a8308f4dddffc652
+      m_AssetGUID: 8636d75fde4e98144bf477bacdf10d2e
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: c3e7cd59-5f43-4a91-b509-ace1e56bfbf3
     assetData: 
-  - presetAssetId: torso-inner2-23
+  - presetAssetId: large-intestine-inner2
     assetTypePrefabReference:
-      m_AssetGUID: 86348258f5956d545addef7e6c580e31
+      m_AssetGUID: dfc15ce4f15be5d459e95e5b4ebcd475
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: 81a6e6d0-50b3-4600-abf9-b13aa3bb35de
     assetData: 
-  - presetAssetId: torso-inner2-24
+  - presetAssetId: small-intestine-inner2
     assetTypePrefabReference:
-      m_AssetGUID: ce8d5e42da8ef014bab97f40e54114ca
+      m_AssetGUID: 57dd5dfc0e54edf4695923c8b7bfe7b8
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: 958255d4-ba3f-42bf-b54c-a4c6ede69c97
+    assetData: 
+  - presetAssetId: pancreas-inner2
+    assetTypePrefabReference:
+      m_AssetGUID: acb354d7022af264a9e8d750f1ffd79e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 2fbd7fa5-9a08-4503-b627-7b417a3c1fe7
+    assetData: 
+  - presetAssetId: spleen-inner2
+    assetTypePrefabReference:
+      m_AssetGUID: 64ef09bbad22bea42a2d6f61a5d40268
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 2ce26fc8-c975-408a-9f10-066c126a5619
     assetData: 
   - presetAssetId: autopsy-organizer
     assetTypePrefabReference:
@@ -224,7 +232,7 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
-    assetId: 6e86ef2d-e99d-4647-a154-2d7906636f55
+    assetId: b3cd2dbd-0a9c-4d24-9326-7da9509c9ec3
     assetData: 
   assetDataPrefabReferences: {fileID: -887181123054497794}
   presetAssetTypeLoadBundles: []

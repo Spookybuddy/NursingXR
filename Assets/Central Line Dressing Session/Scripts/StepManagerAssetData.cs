@@ -2,14 +2,21 @@ using GIGXR.Platform.Scenarios.GigAssets.Data;
 using System;
 using UnityEngine;
 
+/* Script Dependencies
+ * 
+ * Chlorhexadine relies on StepManager
+ * HandDetector relies on Chlorhexadine
+ * 
+ */
+
 /* STEPS
  * 1. Peel off old tegaderm. Make sure catheter stays secure in doing so.
  * 2. Open supplies package (ensure things stay sterile)
- * 5. Grab chlorhexadine applicator, squeeze "wing" tabs until they release the chlorhexadine into the sponge.
- * 6. Apply chlorhexadine using applicator to area around catheter. DO NOT BLOW ON OR WIPE CLEAN, LET IT AIR DRY!
- * 7. Grab new tegaderm, peel of wrapping on the sticky side.
- * 8. Stick tegaderm over the catheter area.
- * 9. Peel off outline wrapping from tegaderm.
+ * 3. Grab chlorhexadine applicator, squeeze "wing" tabs until they release the chlorhexadine into the sponge.
+ * 4. Apply chlorhexadine using applicator to area around catheter. DO NOT BLOW ON OR WIPE CLEAN, LET IT AIR DRY!
+ * 5. Grab new tegaderm, peel of wrapping on the sticky side.
+ * 6. Stick tegaderm over the catheter area.
+ * 7. Peel off outline wrapping from tegaderm.
  * 
  * 1 check for each part of step 1.
  * 1 check for step 5.
@@ -47,19 +54,18 @@ public class StepManagerAssetData : BaseAssetData
 
     /* THE CHECKS ARE FOR AS FOLLOWS
      * 
-     * [0] Peel off old tegaderm.
-     * [1] Keeping catheter secure while peeling off old tegaderm.
-     * [2] Squeezing "wing" tabs of chlorhexadine applicator until they release the chlorhexadine into the sponge.
-     * [3] Applying chlorhexadine to the area around the catheter.
-     * [4] Letting the chlorhexadine air dry.
-     * [5] Peeling off wrapping covering sticky side of new tegaderm.
-     * [6] Sticking tegaderm to catheter area.
-     * [7] Peeling off outline wrapping from tegaderm.
+     * X[0] Peel off old tegaderm.
+     * X[1] Keeping catheter secure while peeling off old tegaderm.
+     * X[2] Squeezing "wing" tabs of chlorhexadine applicator until they release the chlorhexadine into the sponge.
+     * X[3] Applying chlorhexadine to the area around the catheter.
+     *  [4] Letting the chlorhexadine air dry.
+     * X[5] Peeling off wrapping covering sticky side of new tegaderm.
+     *  [6] Sticking tegaderm to catheter area.
+     * X[7] Peeling off outline wrapping from tegaderm.
      */
     public AssetPropertyDefinition<bool[]> stepChecks;
 
     //Keeps track of the order in which stepChecks were triggered.
-    //Note: stepChecks[4] is skipped over in this array due to its nature.
     /* Order Checks
      * [0] in FAILED_ORDER_TEXT: Doing [3] before [0]
      * [1] in FAILED_ORDER_TEXT: Doing [6] before [0]

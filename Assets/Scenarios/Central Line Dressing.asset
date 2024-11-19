@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5616931355418214897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b32bd8f995ea44a9236bcfa3a3ff53, type: 3}
-  m_Name: Runtime Data
-  m_EditorClassIdentifier: 
-  assetData:
-    m_keys: []
-    m_values: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +15,15 @@ MonoBehaviour:
   presetScenarioName: 
   presetStages: []
   presetAssets:
+  - presetAssetId: step-manager
+    assetTypePrefabReference:
+      m_AssetGUID: 230f251ce16bf9f4aa8f37049132803a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 2594702a-1e49-4a35-bd8c-3363cd51a6a3
+    assetData: 
   - presetAssetId: test-rotational
     assetTypePrefabReference:
       m_AssetGUID: e1977bb904ee02a42ab5eda43326aa4f
@@ -37,9 +31,83 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
-    assetId: e82278a2-df52-40d0-bc98-85b47feb4844
+    assetId: 6e80e8ef-ef23-4298-86f8-e1d5d63a1b52
     assetData: 
-  assetDataPrefabReferences: {fileID: -5616931355418214897}
+  - presetAssetId: test-chlorhexadine
+    assetTypePrefabReference:
+      m_AssetGUID: aca96645afd04e844991b41b5a618ea8
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 1fa3a42a-0097-479a-a9e3-cf28b5f7b9e4
+    assetData: 
+  - presetAssetId: cld-arm-placeholder
+    assetTypePrefabReference:
+      m_AssetGUID: 32c3498c7f916604885c9d2c45c5c7f9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 17c32aaa-d28c-4cf0-9314-cd35de14ee10
+    assetData: 
+  - presetAssetId: hand-detector
+    assetTypePrefabReference:
+      m_AssetGUID: 4f079814cef25334fa71da661478b236
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: fcfd5304-bd46-449d-87b6-895d91237d82
+    assetData: 
+  - presetAssetId: test-tegaderm
+    assetTypePrefabReference:
+      m_AssetGUID: 341a6ed2b2b2a4e4fb6996ea9dfebc58
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: cd097d66-0f10-4a2e-bed7-95205de06db5
+    assetData: 
+  - presetAssetId: test-eye-tracker
+    assetTypePrefabReference:
+      m_AssetGUID: 3e4625d693f05dc4594dcb6118636477
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 647124e7-fece-49b0-88f1-f51620c3b706
+    assetData: 
+  assetDataPrefabReferences: {fileID: 1824212654823097835}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
   pathwayData: []
+--- !u!114 &1824212654823097835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b32bd8f995ea44a9236bcfa3a3ff53, type: 3}
+  m_Name: Runtime Data
+  m_EditorClassIdentifier: 
+  assetData:
+    m_keys:
+    - step-manager
+    - test-rotational
+    - test-chlorhexadine
+    - cld-arm-placeholder
+    - hand-detector
+    - test-tegaderm
+    - test-eye-tracker
+    m_values:
+    - {fileID: 8357224942011288808, guid: 3d543f73d9696114bae23d0679554ca0, type: 3}
+    - {fileID: 7662303837157573037, guid: 7120c33e6859abc4d907b09508aec540, type: 3}
+    - {fileID: 3573080450837221195, guid: ef90081b1ad71c842962ff7e9ecafc5c, type: 3}
+    - {fileID: 5238843932038944942, guid: 4741115069cb1374eb7bf0d883774a88, type: 3}
+    - {fileID: 2546809527825109622, guid: 70a0ace2bcee0fd4b890b07f769a8a5d, type: 3}
+    - {fileID: 4381962451547436872, guid: d22e17586a8f1e74ba5a4e34b09fab85, type: 3}
+    - {fileID: 1588553980866222313, guid: 24de63377aa9ecb40aa244bbc5203f56, type: 3}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6637838585525888362
+--- !u!1 &8357224942011288808
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,32 +8,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3507459375237101561}
-  - component: {fileID: 4834098783018687366}
-  - component: {fileID: 8465651475270830400}
-  - component: {fileID: 2124054639781226098}
-  - component: {fileID: 8831083807937418359}
-  - component: {fileID: 7288443320217827317}
-  - component: {fileID: 8313431921888051129}
-  - component: {fileID: 1400053600154560915}
-  - component: {fileID: 6133877797506055734}
-  - component: {fileID: 5511053816567529106}
-  - component: {fileID: 8713920654822908111}
-  - component: {fileID: 6545869699948419561}
+  - component: {fileID: 1688445315934699430}
+  - component: {fileID: 807390172639779287}
+  - component: {fileID: 8095288175436739734}
+  - component: {fileID: 6604286054306530030}
+  - component: {fileID: 6270688569214111605}
+  - component: {fileID: 6575507491952413197}
+  - component: {fileID: 5436732827373534735}
+  - component: {fileID: 5654454404717706674}
+  - component: {fileID: 6758668581728927092}
+  - component: {fileID: 3151036562929903911}
+  - component: {fileID: 2167627976140232835}
+  - component: {fileID: 2131650880843582186}
   m_Layer: 0
-  m_Name: Autopsy.asset.torso-inner2-24
+  m_Name: Central Line Dressing.asset.step-manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3507459375237101561
+--- !u!4 &1688445315934699430
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4834098783018687366
+--- !u!114 &807390172639779287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -58,29 +58,29 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &8465651475270830400
+--- !u!114 &8095288175436739734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetTypeId: torso-inner2-24
+  assetTypeId: step-manager
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &2124054639781226098
+--- !u!114 &6604286054306530030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -112,72 +112,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
---- !u!114 &8831083807937418359
+--- !u!114 &6270688569214111605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885a6c2d09c2495488f2f1fa584683ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
-  assetData:
-    name:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    description:
-      designTimeData:
-        defaultValue: 
-      runtimeData:
-        value: 
-    bodySection:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 1
-      runtimeData:
-        sharedValue: 1
-        stageAssetProperties: []
-    bodySystem:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 2
-      runtimeData:
-        sharedValue: 2
-        stageAssetProperties: []
-    systemLayer:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 2
-      runtimeData:
-        sharedValue: 2
-        stageAssetProperties: []
-    weight:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 1.56
-      runtimeData:
-        sharedValue: 1.56
-        stageAssetProperties: []
-    inGravityZone:
-      designTimeData:
-        isEditableByAuthor: 0
-        defaultValue: 0
-      runtimeData:
-        sharedValue: 0
-        stageAssetProperties: []
---- !u!114 &7288443320217827317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -190,17 +131,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 8313431921888051129}
+  - {fileID: 6575507491952413197}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8313431921888051129
+--- !u!114 &6575507491952413197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -210,13 +151,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &1400053600154560915
+--- !u!114 &5436732827373534735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -226,28 +167,28 @@ MonoBehaviour:
   assetData:
     name:
       designTimeData:
-        defaultValue: Position
+        defaultValue: 
       runtimeData:
         value: 
     description:
       designTimeData:
-        defaultValue: The start position of the interactable.
+        defaultValue: 
       runtimeData:
         value: 
     position:
       designTimeData:
-        isEditableByAuthor: 1
-        defaultValue: {x: -0.25, y: 0.025, z: 0}
+        isEditableByAuthor: 0
+        defaultValue: {x: 0, y: 0.4, z: 0}
       runtimeData:
-        sharedValue: {x: -0.36, y: 0.025, z: 0}
+        sharedValue: {x: 0, y: 0.4, z: 0}
         stageAssetProperties: []
---- !u!114 &6133877797506055734
+--- !u!114 &5654454404717706674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -258,13 +199,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &5511053816567529106
+--- !u!114 &6758668581728927092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -289,13 +230,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
         stageAssetProperties: []
---- !u!114 &8713920654822908111
+--- !u!114 &3151036562929903911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -331,13 +272,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6545869699948419561
+--- !u!114 &2167627976140232835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6637838585525888362}
+  m_GameObject: {fileID: 8357224942011288808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}
@@ -373,3 +314,58 @@ MonoBehaviour:
   OnManipulationEnded:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2131650880843582186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357224942011288808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c0ce6a99995eb43a0ffd9db51cb025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    stepChecks:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0000000001000000
+      runtimeData:
+        sharedValue: 0000000001000000
+        stageAssetProperties: []
+    attemptedOrder:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      runtimeData:
+        sharedValue: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        stageAssetProperties: []
+    otherMistakes:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0000
+      runtimeData:
+        sharedValue: 0000
+        stageAssetProperties: []
+    mistakeText:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: Congratulations! You didn't make a single mistake.
+      runtimeData:
+        sharedValue: Congratulations! You didn't make a single mistake.
+        stageAssetProperties: []
+  mistakeDisplayText: {fileID: 0}
+  nextPageButton: {fileID: 0}
+  prevPageButton: {fileID: 0}
