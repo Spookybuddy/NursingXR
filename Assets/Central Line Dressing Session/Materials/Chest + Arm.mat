@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CentralLine512_Atlas
+  m_Name: Chest + Arm
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
   - _METALLICSPECGLOSSMAP
@@ -38,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a4a1a2ff84a56ed4ab343ac86331ee3d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7459bcad56d87aa46935045ee810d0a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 9ddb59810c3815641ae9f5300aae818e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 07b5f58c93b26a741b341e7e4b1da7b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -62,15 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a4a1a2ff84a56ed4ab343ac86331ee3d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7459bcad56d87aa46935045ee810d0a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 7c6888af297544943b8532353b2753eb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 83c63c6167012564086d059425504ec2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 64754f7ca99a9d94dbedf5e786b2e2a8, type: 3}
+        m_Texture: {fileID: 2800000, guid: ceba7f0ac78524d4a81b23533a586319, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -110,7 +110,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _OcclusionStrength: 0.85
+    - _OcclusionStrength: 0.8
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
