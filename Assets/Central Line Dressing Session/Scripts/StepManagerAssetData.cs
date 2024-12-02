@@ -5,7 +5,10 @@ using UnityEngine;
 /* Script Dependencies
  * 
  * Chlorhexadine relies on StepManager
- * HandDetector relies on Chlorhexadine
+ * CatheterSite relies on StepManager
+ * HandDetector relies on Chlorhexadine and CatheterSite
+ * Tegaderm Relies on StepManager and CatheterSite
+ * Gauze Relies on StepManager
  * 
  */
 
@@ -58,9 +61,9 @@ public class StepManagerAssetData : BaseAssetData
      * X[1] Keeping catheter secure while peeling off old tegaderm.
      * X[2] Squeezing "wing" tabs of chlorhexadine applicator until they release the chlorhexadine into the sponge.
      * X[3] Applying chlorhexadine to the area around the catheter.
-     *  [4] Letting the chlorhexadine air dry.
+     * X[4] Letting the chlorhexadine air dry.
      * X[5] Peeling off wrapping covering sticky side of new tegaderm.
-     *  [6] Sticking tegaderm to catheter area.
+     * X[6] Sticking tegaderm to catheter area.
      * X[7] Peeling off outline wrapping from tegaderm.
      */
     public AssetPropertyDefinition<bool[]> stepChecks;

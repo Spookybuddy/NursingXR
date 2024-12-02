@@ -3,6 +3,7 @@ using GIGXR.Platform.Core.DependencyInjection;
 using GIGXR.Platform.Scenarios;
 using GIGXR.Platform.Scenarios.GigAssets;
 using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
+using GIGXR.Platform.Scenarios.Data;
 using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
@@ -18,7 +19,7 @@ using UnityEngine.WSA;
 public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSiteAssetData>
 {
     [SerializeField] private GameObject oldTegadermSlider;
-    private bool notCompletedStep0 = true;
+    private bool notCompletedStep0 = true, notCompletedStep1 = true;
     
     private StepManagerAssetTypeComponent stepManager;
 
@@ -75,22 +76,27 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
 
     #region Property Change Handlers
 
-    [RegisterPropertyChange(nameof(TegadermAssetData.fullSideCoverSliderValue))]
-    private void OnFullSideCoverSliderValueChanged(AssetPropertyChangeEventArgs args)
+    [RegisterPropertyChange(nameof(CatheterSiteAssetData.oldTegadermSliderValue))]
+    private void OnOldTegadermSliderValueChanged(AssetPropertyChangeEventArgs args)
     {
-        if (!IsInitialized)
+        if (!IsInitialized || scenarioManager.ScenarioStatus != ScenarioStatus.Playing)
         {
             return;
         }
 
         if (notCompletedStep0)
         {
-            if (assetData.notHoldingDownCatheter.runtimeData.Value)
+            if (assetData.notHoldingDownCatheter.runtimeData.Value && notCompletedStep1)
             {
                 stepManager.CheckStep1();
+                notCompletedStep1 = false;
+            }
+            else
+            {
+                notCompletedStep1 = false;
             }
 
-            if ((float)args.AssetPropertyValue - 1 < .001f && notCompletedStep0)
+            if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep0)
             {
                 oldTegadermSlider.SetActive(false);
                 notCompletedStep0 = false;
@@ -114,6 +120,24 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
         }
 
         if (notCompletedStep0)
+        {
+            return (value, true);
+        }
+
+        return (value, false);
+    }
+
+    [RegisterPropertyValidator(nameof(CatheterSiteAssetData.notHoldingDownCatheter))]
+    public (object, bool) ValidateNotHoldingDownCatheterValue(object value)
+    {
+        if (!IsInitialized)
+        {
+            return (value, true);
+        }
+
+        bool objectValue = (bool)value;
+
+        if (assetData.notHoldingDownCatheter.runtimeData.Value != objectValue)
         {
             return (value, true);
         }

@@ -16,8 +16,9 @@ using UnityEngine.WSA;
 public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerAssetData>
 {
     private int mistakePageNum = 0, totalPages = 0;
+    private bool hasFinished = false;
     [SerializeField] private TMP_Text mistakeDisplayText;
-    [SerializeField] private Interactable nextPageButton, prevPageButton;
+    [SerializeField] private Interactable nextPageButton, prevPageButton, finishButton;
 
     private IScenarioManager scenarioManager;
 
@@ -42,12 +43,14 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
     {
         nextPageButton.OnClick.AddListener(IncrementMistakePageNum);
         prevPageButton.OnClick.AddListener(DecrementMistakePageNum);
+        finishButton.OnClick.AddListener(SetUpMistakeText);
     }
 
     protected override void Teardown()
     {
         nextPageButton.OnClick.RemoveListener(IncrementMistakePageNum);
         prevPageButton.OnClick.RemoveListener(DecrementMistakePageNum);
+        finishButton.OnClick.RemoveListener(SetUpMistakeText);
     }
 
     #endregion
@@ -57,41 +60,49 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
     public void CheckStep0()
     {
         assetData.stepChecks.runtimeData.Value[0] = true;
+        Debug.Log("CheckStep 0");
     }
 
     public void CheckStep1()
     {
         assetData.stepChecks.runtimeData.Value[1] = false;
+        Debug.Log("CheckStep 1");
     }
     
     public void CheckStep2()
     {
         assetData.stepChecks.runtimeData.Value[2] = true;
+        Debug.Log("CheckStep 2");
     }
 
     public void CheckStep3()
     {
         assetData.stepChecks.runtimeData.Value[3] = true;
+        Debug.Log("CheckStep 3");
     }
 
     public void CheckStep4()
     {
         assetData.stepChecks.runtimeData.Value[4] = false;
+        Debug.Log("CheckStep 4");
     }
 
     public void CheckStep5()
     {
         assetData.stepChecks.runtimeData.Value[5] = true;
+        Debug.Log("CheckStep 5");
     }
 
     public void CheckStep6()
     {
         assetData.stepChecks.runtimeData.Value[6] = true;
+        Debug.Log("CheckStep 6");
     }
 
     public void CheckStep7()
     {
         assetData.stepChecks.runtimeData.Value[7] = true;
+        Debug.Log("CheckStep 7");
     }
 
     #endregion
@@ -280,27 +291,24 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
 
     public void SetUpMistakeText()
     {
+        finishButton.gameObject.SetActive(false);
         int mistakesMade = 0;
         string mistakeTextTemp = "";
 
         //Analyze which steps were performed
         for (int i = 0; i < assetData.stepChecks.runtimeData.Value.Length; i++)
         {
-            if (!assetData.stepChecks.runtimeData.Value[i] && i != 4)
+            if (!assetData.stepChecks.runtimeData.Value[i])
             {
-                mistakeTextTemp += StepManagerAssetData.FAILED_CHECK_TEXT[i] + "\n\n";
-                mistakesMade++;
-            }
-
-            if (assetData.stepChecks.runtimeData.Value[i] && i == 4)
-            {
-                if (assetData.otherMistakes.runtimeData.Value[0])
+                if (assetData.otherMistakes.runtimeData.Value[0] && i == 4)
                 {
+                    Debug.Log("Mistakes: " + i);
                     mistakeTextTemp += StepManagerAssetData.FAILED_OTHER_TEXT[0] + "\n\n";
                     mistakesMade++;
                 }
                 else
                 {
+                    Debug.Log("Mistakes: " + i);
                     mistakeTextTemp += StepManagerAssetData.FAILED_CHECK_TEXT[i] + "\n\n";
                     mistakesMade++;
                 }
@@ -349,10 +357,13 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         //Updating Variables
         if (mistakesMade != 0)
         {
-            totalPages = (mistakesMade + 2) / 3;
+            totalPages = (mistakesMade - 1) / 3;
             assetData.mistakeText.runtimeData.Value = mistakeTextTemp;
         }
 
+        Debug.Log("Mistakes Made: " + mistakesMade);
+
+        hasFinished = true;
         DisplayMistakePage();
     }
 
@@ -375,20 +386,26 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
 
     public void IncrementMistakePageNum()
     {
-        if (mistakePageNum < totalPages)
+        if (hasFinished)
         {
-            mistakePageNum++;
+            if (mistakePageNum < totalPages)
+            {
+                mistakePageNum++;
+            }
+            DisplayMistakePage();
         }
-        DisplayMistakePage();
     }
 
     public void DecrementMistakePageNum()
     {
-        if (mistakePageNum > 0)
+        if (hasFinished)
         {
-            mistakePageNum--;
+            if (mistakePageNum > 0)
+            {
+                mistakePageNum--;
+            }
+            DisplayMistakePage();
         }
-        DisplayMistakePage();
     }
 
     public void DisplayMistakePage()
@@ -397,9 +414,9 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
 
         for (curNewlineNum = 0; curNewlineNum < mistakePageNum * 3; curNewlineNum++)
         {
-            pageStartIndex = assetData.mistakeText.runtimeData.Value.Substring(pageStartIndex).IndexOf("\n\n") + 2;
-        }
+            pageStartIndex += assetData.mistakeText.runtimeData.Value.Substring(pageStartIndex).IndexOf("\n\n") + 2;
 
+        }
         pageEndIndex = pageStartIndex;
 
         for (int i = 0; i < 3; i++)
@@ -410,7 +427,7 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
                 break;
             }
 
-            pageEndIndex = assetData.mistakeText.runtimeData.Value.Substring(pageStartIndex).IndexOf("\n\n") + 2;
+            pageEndIndex += assetData.mistakeText.runtimeData.Value.Substring(pageEndIndex).IndexOf("\n\n") + 2;
         }
 
         if (pageEndIndex == -1)

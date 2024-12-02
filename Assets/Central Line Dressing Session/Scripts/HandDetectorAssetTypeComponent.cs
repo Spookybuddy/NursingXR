@@ -20,6 +20,7 @@ public class HandDetectorAssetTypeComponent : BaseAssetTypeComponent<HandDetecto
     [SerializeField] private GameObject leftThumbLocObj, leftIndexLocObj, rightThumbLocObj, rightIndexLocObj;
     
     private ChlorhexadineAssetTypeComponent chlorhexadine;
+    private CatheterSiteAssetTypeComponent catheterArea;
     private MixedRealityPose handPose;
 
     private IScenarioManager scenarioManager;
@@ -49,6 +50,13 @@ public class HandDetectorAssetTypeComponent : BaseAssetTypeComponent<HandDetecto
             tempChlorhexadines = GameObject.FindObjectsByType<ChlorhexadineAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         } while (tempChlorhexadines.Length == 0);
         chlorhexadine = tempChlorhexadines[0];
+
+        CatheterSiteAssetTypeComponent[] tempCatheterAreas = new CatheterSiteAssetTypeComponent[0];
+        do
+        {
+            tempCatheterAreas = GameObject.FindObjectsByType<CatheterSiteAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        } while (tempCatheterAreas.Length == 0);
+        catheterArea = tempCatheterAreas[0];
     }
 
     protected override void Teardown()
@@ -110,6 +118,11 @@ public class HandDetectorAssetTypeComponent : BaseAssetTypeComponent<HandDetecto
     public ChlorhexadineAssetTypeComponent GetChlorhexadine()
     {
         return chlorhexadine;
+    }
+
+    public CatheterSiteAssetTypeComponent GetCatheterArea()
+    {
+        return catheterArea;
     }
 
     #endregion

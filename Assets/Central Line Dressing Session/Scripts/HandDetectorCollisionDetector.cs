@@ -6,8 +6,9 @@ using UnityEngine.Rendering;
 public class HandDetectorCollisionDetector : MonoBehaviour
 {
     [SerializeField] private string jointName;
-    private bool noChlorhexadine = true;
+    private bool noChlorhexadine = true, noCatheterArea = true;
     private ChlorhexadineAssetTypeComponent chlorhexadine;
+    private CatheterSiteAssetTypeComponent catheterArea;
     
     #region Collision & Trigger Functions
 
@@ -21,6 +22,14 @@ public class HandDetectorCollisionDetector : MonoBehaviour
                 noChlorhexadine = false;
             }
         }
+        if (noCatheterArea)
+        {
+            catheterArea = transform.parent.parent.gameObject.GetComponent<HandDetectorAssetTypeComponent>().GetCatheterArea();
+            if (catheterArea != null)
+            {
+                noCatheterArea = false;
+            }
+        }
         if (other.CompareTag("FindObjectName"))
         {
             string objName = other.name;
@@ -31,6 +40,10 @@ public class HandDetectorCollisionDetector : MonoBehaviour
             {
                 chlorhexadine.WingHitBoxTriggered(jointName, objName);
             }
+            else if (objName == "Catheter Hitbox")
+            {
+                catheterArea.SetNotHoldingDownCatheter(false);
+            }
         }
     }
 
@@ -39,10 +52,17 @@ public class HandDetectorCollisionDetector : MonoBehaviour
         if (noChlorhexadine)
         {
             chlorhexadine = transform.parent.parent.gameObject.GetComponent<HandDetectorAssetTypeComponent>().GetChlorhexadine();
-            Debug.Log(transform.parent.parent.gameObject.name);
             if (chlorhexadine != null)
             {
                 noChlorhexadine = false;
+            }
+        }
+        if (noCatheterArea)
+        {
+            catheterArea = transform.parent.parent.gameObject.GetComponent<HandDetectorAssetTypeComponent>().GetCatheterArea();
+            if (catheterArea != null)
+            {
+                noCatheterArea = false;
             }
         }
         if (other.CompareTag("FindObjectName"))
@@ -54,6 +74,10 @@ public class HandDetectorCollisionDetector : MonoBehaviour
                 objName == "Right Wing Hitbox 2")
             {
                 chlorhexadine.WingHitBoxExited(jointName, objName);
+            }
+            else if (objName == "Catheter Hitbox")
+            {
+                catheterArea.SetNotHoldingDownCatheter(true);
             }
         }
     }

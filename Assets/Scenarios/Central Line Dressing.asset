@@ -78,6 +78,15 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 647124e7-fece-49b0-88f1-f51620c3b706
     assetData: 
+  - presetAssetId: test-gauze
+    assetTypePrefabReference:
+      m_AssetGUID: 2440dd601664c60489d599d9775e84b6
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: d7b1c081-eee1-4466-97f0-4be3aecde4d7
+    assetData: 
   assetDataPrefabReferences: {fileID: 1824212654823097835}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
@@ -103,11 +112,13 @@ MonoBehaviour:
     - hand-detector
     - test-tegaderm
     - test-eye-tracker
+    - test-gauze
     m_values:
-    - {fileID: 8357224942011288808, guid: 3d543f73d9696114bae23d0679554ca0, type: 3}
+    - {fileID: 6663259427712631041, guid: 3d543f73d9696114bae23d0679554ca0, type: 3}
     - {fileID: 7662303837157573037, guid: 7120c33e6859abc4d907b09508aec540, type: 3}
     - {fileID: 3573080450837221195, guid: ef90081b1ad71c842962ff7e9ecafc5c, type: 3}
-    - {fileID: 5238843932038944942, guid: 4741115069cb1374eb7bf0d883774a88, type: 3}
+    - {fileID: 1586161235935360297, guid: 4741115069cb1374eb7bf0d883774a88, type: 3}
     - {fileID: 2546809527825109622, guid: 70a0ace2bcee0fd4b890b07f769a8a5d, type: 3}
-    - {fileID: 4381962451547436872, guid: d22e17586a8f1e74ba5a4e34b09fab85, type: 3}
+    - {fileID: 6299981884104790506, guid: d22e17586a8f1e74ba5a4e34b09fab85, type: 3}
     - {fileID: 1588553980866222313, guid: 24de63377aa9ecb40aa244bbc5203f56, type: 3}
+    - {fileID: 3889239742620216212, guid: 8090b7fb299e8884187d514276a29eaf, type: 3}

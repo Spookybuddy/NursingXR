@@ -225,6 +225,10 @@ MonoBehaviour:
     m_Address: test-eye-tracker
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2440dd601664c60489d599d9775e84b6
+    m_Address: test-gauze
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

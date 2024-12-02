@@ -3,7 +3,6 @@ using GIGXR.Platform.Core.DependencyInjection;
 using GIGXR.Platform.Scenarios;
 using GIGXR.Platform.Scenarios.GigAssets;
 using GIGXR.Platform.Scenarios.GigAssets.EventArgs;
-using Microsoft.MixedReality.Toolkit;
 using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
@@ -16,10 +15,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.WSA;
 
-public class EyeTrackerAssetTypeComponent : BaseAssetTypeComponent<EyeTrackerAssetData>
+
+public class GauzeAssetTypeComponent : BaseAssetTypeComponent<GauzeAssetData>
 {
-    [SerializeField] private GameObject gazePositionObj;
-    
+    private StepManagerAssetTypeComponent stepManager;
+
     private IScenarioManager scenarioManager;
 
     #region Dependencies
@@ -41,7 +41,12 @@ public class EyeTrackerAssetTypeComponent : BaseAssetTypeComponent<EyeTrackerAss
 
     protected override void Setup()
     {
-        
+        StepManagerAssetTypeComponent[] tempManagers = new StepManagerAssetTypeComponent[0];
+        do
+        {
+            tempManagers = GameObject.FindObjectsByType<StepManagerAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        } while (tempManagers.Length == 0);
+        stepManager = tempManagers[0];
     }
 
     protected override void Teardown()
@@ -51,10 +56,8 @@ public class EyeTrackerAssetTypeComponent : BaseAssetTypeComponent<EyeTrackerAss
 
     #endregion
 
-    public void Update()
+    public void CheckStep4()
     {
-        //Debug.Log("Eyetracking enabled: " + CoreServices.InputSystem.EyeGazeProvider.IsEyeTrackingEnabledAndValid);
-        gazePositionObj.transform.position = CoreServices.InputSystem.EyeGazeProvider.HitPosition;
+        stepManager.CheckStep4();
     }
-
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6154808404725791282}
   - component: {fileID: 967273023191272732}
   - component: {fileID: 1432792771736940619}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gaze Position Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}

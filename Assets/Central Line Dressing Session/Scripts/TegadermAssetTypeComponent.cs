@@ -18,9 +18,11 @@ using UnityEngine.WSA;
 public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetData>
 {
     private StepManagerAssetTypeComponent stepManager;
+    private CatheterSiteAssetTypeComponent catheterSite;
     [SerializeField] private GameObject fullSideCoverSlider, outlineCoverSlider;
+    [SerializeField] private TegadermCollisionDetector collisionDetector;
 
-    public bool notCompletedStep5 = true, notCompletedStep7 = true;
+    private bool notCompletedStep5 = true, notAddedStep6Order = true, notCompletedStep7 = true;
 
     private IScenarioManager scenarioManager;
 
@@ -49,6 +51,13 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
             tempManagers = GameObject.FindObjectsByType<StepManagerAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         } while (tempManagers.Length == 0);
         stepManager = tempManagers[0];
+
+        CatheterSiteAssetTypeComponent[] tempCatheterSites = new CatheterSiteAssetTypeComponent[0];
+        do
+        {
+            tempCatheterSites = GameObject.FindObjectsByType<CatheterSiteAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        } while (tempCatheterSites.Length == 0);
+        catheterSite = tempCatheterSites[0];
     }
 
     protected override void Teardown()
@@ -63,13 +72,33 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     public void SetFullSideCoverSliderValue(SliderEventData eventData)
     {
         assetData.fullSideCoverSliderValue.runtimeData.Value = eventData.NewValue;
-        Debug.Log("Full Sliderval " + eventData.NewValue);
     }
 
     public void SetOutlineCoverSliderValue(SliderEventData eventData)
     {
         assetData.outlineCoverSliderValue.runtimeData.Value = eventData.NewValue;
-        Debug.Log("Outline Sliderval " + eventData.NewValue);
+    }
+
+    #endregion
+
+    #region Check Step Functions
+
+    public void CheckStep6(Collider other)
+    {
+        if (!notCompletedStep5)
+        {
+            stepManager.CheckStep6();
+            collisionDetector.CompletedStep6();
+            Destroy(GetComponent<ManipulationAssetTypeComponent>());
+            Destroy(gameObject.GetComponentInChildren<ObjectManipulator>());
+            transform.position = other.transform.position;
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 180));
+        }
+        if (notAddedStep6Order)
+        {
+            stepManager.AddNextOrder6();
+            notAddedStep6Order = false;
+        }
     }
 
     #endregion
@@ -79,7 +108,12 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     [RegisterPropertyChange(nameof(TegadermAssetData.fullSideCoverSliderValue))]
     private void OnFullSideCoverSliderValueChanged(AssetPropertyChangeEventArgs args)
     {
-        if ((float)args.AssetPropertyValue - 1 < .001f && notCompletedStep5)
+        if (!IsInitialized)
+        {
+            return;
+        }
+        
+        if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep5)
         {
             fullSideCoverSlider.SetActive(false);
             notCompletedStep5 = false;
@@ -91,9 +125,14 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     [RegisterPropertyChange(nameof(TegadermAssetData.outlineCoverSliderValue))]
     private void OnOutlineCoverSliderValueChanged(AssetPropertyChangeEventArgs args)
     {
-        if ((float)args.AssetPropertyValue - 1 < .001f && notCompletedStep7)
+        if (!IsInitialized)
         {
-            fullSideCoverSlider.SetActive(false);
+            return;
+        }
+
+        if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep7)
+        {
+            outlineCoverSlider.SetActive(false);
             notCompletedStep7 = false;
             stepManager.CheckStep7();
             stepManager.AddNextOrder7();

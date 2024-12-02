@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5238843932038944942
+--- !u!1 &1586161235935360297
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,16 +8,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5795330017465274614}
-  - component: {fileID: 5735117123830033111}
-  - component: {fileID: 7376287559107268841}
-  - component: {fileID: 6885077350800841963}
-  - component: {fileID: 4176177001778147988}
-  - component: {fileID: 7798003932469292842}
-  - component: {fileID: 5770111775514490450}
-  - component: {fileID: 709391337492048519}
-  - component: {fileID: 8781070471805975582}
-  - component: {fileID: 2352127814643818120}
+  - component: {fileID: 1023922695704075450}
+  - component: {fileID: 4972952683252948266}
+  - component: {fileID: 4119137492900578602}
+  - component: {fileID: 1970399693712522520}
+  - component: {fileID: 1759765458828581678}
+  - component: {fileID: 3232257909172260047}
+  - component: {fileID: 3823049035201002739}
+  - component: {fileID: 6982971422118386148}
+  - component: {fileID: 1210924296919076469}
+  - component: {fileID: 6086398707348981043}
   m_Layer: 0
   m_Name: Central Line Dressing.asset.cld-arm-placeholder
   m_TagString: Untagged
@@ -25,13 +25,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5795330017465274614
+--- !u!4 &1023922695704075450
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,13 +40,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5735117123830033111
+--- !u!114 &4972952683252948266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -56,13 +56,13 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &7376287559107268841
+--- !u!114 &4119137492900578602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
@@ -72,13 +72,13 @@ MonoBehaviour:
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &6885077350800841963
+--- !u!114 &1970399693712522520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -110,13 +110,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
---- !u!114 &4176177001778147988
+--- !u!114 &1759765458828581678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -129,17 +129,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 7798003932469292842}
+  - {fileID: 3232257909172260047}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7798003932469292842
+--- !u!114 &3232257909172260047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -149,13 +149,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &5770111775514490450
+--- !u!114 &3823049035201002739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -180,13 +180,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: -0.05, z: 0}
         stageAssetProperties: []
---- !u!114 &709391337492048519
+--- !u!114 &6982971422118386148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -197,13 +197,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &8781070471805975582
+--- !u!114 &1210924296919076469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -228,13 +228,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
         stageAssetProperties: []
---- !u!114 &2352127814643818120
+--- !u!114 &6086398707348981043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238843932038944942}
+  m_GameObject: {fileID: 1586161235935360297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb42243b76a75c44696c4849c7adb18e, type: 3}
@@ -262,8 +262,8 @@ MonoBehaviour:
     notHoldingDownCatheter:
       designTimeData:
         isEditableByAuthor: 0
-        defaultValue: 0
+        defaultValue: 1
       runtimeData:
-        sharedValue: 0
+        sharedValue: 1
         stageAssetProperties: []
   oldTegadermSlider: {fileID: 0}
