@@ -49,7 +49,7 @@ public class StepManagerAssetData : BaseAssetData
         "You did not release the chlorhexadine into the sponge of the applicator before using it.",
         "You did not fully disinfect the area around the catheter before applying the new tegaderm.",
         "You did not remove the paper covering the sticky side of the new tegaderm before trying to apply it.",
-        "You did not apply the new tegaderm before removoing the paper outlining its topside.",};
+        "You did not apply the new tegaderm before removoing the paper outlining its topside."};
 
     public static readonly string[] FAILED_OTHER_TEXT = {
         "You did not allow the chlorhexadine to air dry (don't use the gauze).",

@@ -33,9 +33,9 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 6e80e8ef-ef23-4298-86f8-e1d5d63a1b52
     assetData: 
-  - presetAssetId: test-chlorhexadine
+  - presetAssetId: cld-chlorhexadine
     assetTypePrefabReference:
-      m_AssetGUID: aca96645afd04e844991b41b5a618ea8
+      m_AssetGUID: d8bef6cdfe712c84184e8d9f1579f43a
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
@@ -78,14 +78,32 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 647124e7-fece-49b0-88f1-f51620c3b706
     assetData: 
-  - presetAssetId: test-gauze
+  - presetAssetId: gauze-large
     assetTypePrefabReference:
-      m_AssetGUID: 2440dd601664c60489d599d9775e84b6
+      m_AssetGUID: 5be4c49fcfbf07147b28219ddcaa2a44
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: d7b1c081-eee1-4466-97f0-4be3aecde4d7
+    assetData: 
+  - presetAssetId: gauze-small
+    assetTypePrefabReference:
+      m_AssetGUID: 3c4fa15426af86e49812a77dbbcfd871
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 60aa5ddd-d509-4281-ad00-951d71f8a434
+    assetData: 
+  - presetAssetId: cld-alcohol-swab
+    assetTypePrefabReference:
+      m_AssetGUID: 9bac36db793d75241b2fd02d320f2294
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 1e4595c5-2b0b-4961-9df6-8ed416959e4c
     assetData: 
   assetDataPrefabReferences: {fileID: 1824212654823097835}
   presetAssetTypeLoadBundles: []
@@ -107,18 +125,22 @@ MonoBehaviour:
     m_keys:
     - step-manager
     - test-rotational
-    - test-chlorhexadine
+    - cld-chlorhexadine
     - cld-arm-placeholder
     - hand-detector
     - test-tegaderm
     - test-eye-tracker
-    - test-gauze
+    - gauze-large
+    - gauze-small
+    - cld-alcohol-swab
     m_values:
     - {fileID: 6663259427712631041, guid: 3d543f73d9696114bae23d0679554ca0, type: 3}
     - {fileID: 7662303837157573037, guid: 7120c33e6859abc4d907b09508aec540, type: 3}
-    - {fileID: 3573080450837221195, guid: ef90081b1ad71c842962ff7e9ecafc5c, type: 3}
+    - {fileID: 2195914400085522862, guid: c6d287b48aa1940408a5c0ffb28deaee, type: 3}
     - {fileID: 1586161235935360297, guid: 4741115069cb1374eb7bf0d883774a88, type: 3}
     - {fileID: 2546809527825109622, guid: 70a0ace2bcee0fd4b890b07f769a8a5d, type: 3}
     - {fileID: 6299981884104790506, guid: d22e17586a8f1e74ba5a4e34b09fab85, type: 3}
     - {fileID: 1588553980866222313, guid: 24de63377aa9ecb40aa244bbc5203f56, type: 3}
-    - {fileID: 3889239742620216212, guid: 8090b7fb299e8884187d514276a29eaf, type: 3}
+    - {fileID: 3013781159059500134, guid: e12198e2c87866940ab51cdfa750b956, type: 3}
+    - {fileID: 6507624244211776032, guid: 661064bbb474fc14c8d96d93c45bba17, type: 3}
+    - {fileID: 8322706028687866842, guid: c80ef011eb4d41b49a20a9c06dcd0578, type: 3}

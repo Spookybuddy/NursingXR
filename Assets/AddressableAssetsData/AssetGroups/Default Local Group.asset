@@ -229,6 +229,30 @@ MonoBehaviour:
     m_Address: test-gauze
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d8bef6cdfe712c84184e8d9f1579f43a
+    m_Address: cld-chlorhexadine
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9bac36db793d75241b2fd02d320f2294
+    m_Address: cld-alcohol-swab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5be4c49fcfbf07147b28219ddcaa2a44
+    m_Address: cld-gauze-large
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c4fa15426af86e49812a77dbbcfd871
+    m_Address: cld-gauze-small
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4ee5a877c8e2044aa393bb16a00158f
+    m_Address: cld-info-sticker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 38d48692ef4a1af448007dd773734d41
+    m_Address: cld-tape
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

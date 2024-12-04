@@ -27,6 +27,9 @@ public class ChlorhexadineAssetTypeComponent : BaseAssetTypeComponent<Chlorhexad
 
     private bool[] step3CleanZones = { false, false, false, false };
 
+    [SerializeField] private GameObject lwHit1, lwHit2, rwHit1, rwHit2;
+    [SerializeField] private SkinnedMeshRenderer mesh;
+
     private StepManagerAssetTypeComponent stepManager;
 
     private IScenarioManager scenarioManager;
@@ -144,6 +147,11 @@ public class ChlorhexadineAssetTypeComponent : BaseAssetTypeComponent<Chlorhexad
                 Debug.Log("Checking Step 2");
                 stepManager.CheckStep2();
                 stepManager.AddNextOrder2();
+                lwHit1.SetActive(false);
+                lwHit2.SetActive(false);
+                rwHit1.SetActive(false);
+                rwHit2.SetActive(false);
+                StartCoroutine(CheckStep2Anim());
                 if (notCompletedStep3)
                 {
                     Debug.Log("Resetting Step 3");
@@ -151,6 +159,21 @@ public class ChlorhexadineAssetTypeComponent : BaseAssetTypeComponent<Chlorhexad
                 }
                 notCompletedStep2 = false;
             }
+        }
+    }
+
+    IEnumerator CheckStep2Anim()
+    {
+        for (int i = 1; i <= 15; i++)
+        {
+            mesh.SetBlendShapeWeight(0, 100 * i / 15f);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+
+        for (int i = 15; i >= 0; i--)
+        {
+            mesh.SetBlendShapeWeight(0, 100 * i / 15f);
+            yield return new WaitForSeconds(1 / 60f);
         }
     }
 
