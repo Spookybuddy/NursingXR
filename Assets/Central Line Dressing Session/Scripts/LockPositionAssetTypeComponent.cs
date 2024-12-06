@@ -52,7 +52,7 @@ public class LockPositionAssetTypeComponent : BaseAssetTypeComponent<LockPositio
     #region MonoBehavior Functions
     public void LateUpdate()
     {
-        transform.localPosition = Vector3.zero;
+        transform.localPosition = new Vector3(-0.286799997f, 0.140200004f, -0.315600008f);
     }
 
     #endregion

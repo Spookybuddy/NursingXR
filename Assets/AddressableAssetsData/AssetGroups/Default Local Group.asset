@@ -253,6 +253,14 @@ MonoBehaviour:
     m_Address: cld-tape
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0787d4781390a96408a892af5d5250bf
+    m_Address: cld-chest-arm
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 72b4a159137481a4bb3d576e8a60356b
+    m_Address: cld-catheter
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:

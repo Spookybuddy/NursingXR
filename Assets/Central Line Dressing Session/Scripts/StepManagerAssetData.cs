@@ -41,7 +41,7 @@ public class StepManagerAssetData : BaseAssetData
         "You did not allow the chlorhexadine to air dry.",
         "You did not remove the paper covering the sticky side of the new tegaderm.",
         "You did not apply the new tegaderm to the catheter area.",
-        "You did not remove the paper outlining the topside of the tegaderm.",};
+        "You did not remove the paper outlining the topside of the tegaderm."};
 
     public static readonly string[] FAILED_ORDER_TEXT = {
         "You did not remove the old tegaderm before using the chlorhexadine applicator.",
@@ -53,7 +53,8 @@ public class StepManagerAssetData : BaseAssetData
 
     public static readonly string[] FAILED_OTHER_TEXT = {
         "You did not allow the chlorhexadine to air dry (don't use the gauze).",
-        "You used the alcohol swab to disinfect the catheter area instead of the chlorhexadine applicator." };
+        "You used the alcohol swab to disinfect the catheter area instead of the chlorhexadine applicator.",
+        "You did not remove the old tegaderm before disinfecting the site."};
 
     /* THE CHECKS ARE FOR AS FOLLOWS
      * 

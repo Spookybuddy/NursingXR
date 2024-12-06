@@ -318,7 +318,14 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         //Analyze the order of performed steps
         if (IsStepBeforeOther(3, 0))
         {
-            mistakeTextTemp += StepManagerAssetData.FAILED_ORDER_TEXT[0] + "\n\n";
+            if (assetData.otherMistakes.runtimeData.Value[1])
+            {
+                mistakeTextTemp += StepManagerAssetData.FAILED_OTHER_TEXT[2] + "\n\n";
+            }
+            else
+            {
+                mistakeTextTemp += StepManagerAssetData.FAILED_ORDER_TEXT[0] + "\n\n";
+            }
             mistakesMade++;
         }
         if (IsStepBeforeOther(6, 0))
@@ -328,8 +335,11 @@ public class StepManagerAssetTypeComponent : BaseAssetTypeComponent<StepManagerA
         }
         if (IsStepBeforeOther(3, 2))
         {
-            mistakeTextTemp += StepManagerAssetData.FAILED_ORDER_TEXT[2] + "\n\n";
-            mistakesMade++;
+            if (!assetData.otherMistakes.runtimeData.Value[1])
+            {
+                mistakeTextTemp += StepManagerAssetData.FAILED_ORDER_TEXT[2] + "\n\n";
+                mistakesMade++;
+            }
         }
         if (IsStepBeforeOther(6, 3))
         {

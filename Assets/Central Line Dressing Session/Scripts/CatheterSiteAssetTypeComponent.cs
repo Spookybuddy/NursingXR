@@ -18,10 +18,10 @@ using UnityEngine.WSA;
 
 public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSiteAssetData>
 {
-    [SerializeField] private GameObject oldTegadermSlider;
+    [SerializeField] private GameObject oldTegadermSlider, oldTegaderm;
     private bool notCompletedStep0 = true, notCompletedStep1 = true;
     
-    private StepManagerAssetTypeComponent stepManager;
+      private StepManagerAssetTypeComponent stepManager;
 
     private IScenarioManager scenarioManager;
 
@@ -99,6 +99,7 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
             if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep0)
             {
                 oldTegadermSlider.SetActive(false);
+                oldTegaderm.SetActive(false);
                 notCompletedStep0 = false;
                 stepManager.CheckStep0();
                 stepManager.AddNextOrder0();

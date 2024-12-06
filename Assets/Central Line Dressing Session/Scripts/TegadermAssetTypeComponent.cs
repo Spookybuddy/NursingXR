@@ -92,7 +92,7 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
             Destroy(GetComponent<ManipulationAssetTypeComponent>());
             Destroy(gameObject.GetComponentInChildren<ObjectManipulator>());
             transform.position = other.transform.position;
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 180));
+            transform.localRotation = Quaternion.Euler(new Vector3(290, 90, 180));
         }
         if (notAddedStep6Order)
         {
