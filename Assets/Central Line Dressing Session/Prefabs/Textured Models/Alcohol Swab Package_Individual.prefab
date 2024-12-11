@@ -802,6 +802,16 @@ PrefabInstance:
       propertyPath: bounds.x
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 7307063430008138806, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307063430134822102, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7307063430561165487, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: m_IsActive

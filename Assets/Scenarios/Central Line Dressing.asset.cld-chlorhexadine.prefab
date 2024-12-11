@@ -338,3 +338,8 @@ MonoBehaviour:
         defaultValue: 
       runtimeData:
         value: 
+  lwHit1: {fileID: 0}
+  lwHit2: {fileID: 0}
+  rwHit1: {fileID: 0}
+  rwHit2: {fileID: 0}
+  mesh: {fileID: 0}
