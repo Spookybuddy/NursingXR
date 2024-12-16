@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &93595334175454693
+--- !u!1 &7939125226560274356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,18 +8,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 132720776948025655}
-  - component: {fileID: 704628519122799975}
-  - component: {fileID: 1810539482691203763}
-  - component: {fileID: 3381049451130704256}
-  - component: {fileID: 8482407407557329399}
-  - component: {fileID: 2177082593741012866}
-  - component: {fileID: 6873634985700158459}
-  - component: {fileID: 6678431429055580280}
-  - component: {fileID: 5099861563630839554}
-  - component: {fileID: 5698244781735121058}
-  - component: {fileID: 5688415938053928067}
-  - component: {fileID: 6088452196193932206}
+  - component: {fileID: 8539370544030987304}
+  - component: {fileID: 3408326482147626658}
+  - component: {fileID: 7425748489714643413}
+  - component: {fileID: 3541883064198201657}
+  - component: {fileID: 2229325449387734717}
+  - component: {fileID: 4651449239474052369}
+  - component: {fileID: 5065991935093463352}
+  - component: {fileID: 6068930677417461704}
+  - component: {fileID: 6894631357806203108}
+  - component: {fileID: 6235487337299387820}
+  - component: {fileID: 1665381468180362344}
+  - component: {fileID: 4306702252330989680}
   m_Layer: 0
   m_Name: Autopsy.asset.small-intestine-inner2
   m_TagString: Untagged
@@ -27,13 +27,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &132720776948025655
+--- !u!4 &8539370544030987304
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,13 +42,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &704628519122799975
+--- !u!114 &3408326482147626658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
@@ -58,13 +58,13 @@ MonoBehaviour:
   infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}
---- !u!114 &1810539482691203763
+--- !u!114 &7425748489714643413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
@@ -74,13 +74,13 @@ MonoBehaviour:
   presetAssetId: 
   assetTypeDependencyIds: []
   version: 0
---- !u!114 &3381049451130704256
+--- !u!114 &3541883064198201657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
@@ -112,13 +112,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: 0
         stageAssetProperties: []
---- !u!114 &8482407407557329399
+--- !u!114 &2229325449387734717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885a6c2d09c2495488f2f1fa584683ea, type: 3}
@@ -179,13 +179,13 @@ MonoBehaviour:
         sharedValue: 0
         stageAssetProperties: []
   startingOrientation: {fileID: 0}
---- !u!114 &2177082593741012866
+--- !u!114 &4651449239474052369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -198,17 +198,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 6873634985700158459}
+  - {fileID: 5065991935093463352}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6873634985700158459
+--- !u!114 &5065991935093463352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
@@ -218,13 +218,13 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &6678431429055580280
+--- !u!114 &6068930677417461704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
@@ -245,17 +245,17 @@ MonoBehaviour:
     position:
       designTimeData:
         isEditableByAuthor: 1
-        defaultValue: {x: -0.304, y: -0.2, z: 0.00321}
+        defaultValue: {x: -0.304, y: -0.4, z: 0.00321}
       runtimeData:
-        sharedValue: {x: -0.304, y: -0.2, z: 0.00321}
+        sharedValue: {x: -0.304, y: -0.4, z: 0.00321}
         stageAssetProperties: []
---- !u!114 &5099861563630839554
+--- !u!114 &6894631357806203108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
@@ -266,13 +266,13 @@ MonoBehaviour:
   executionOrder: 0
   constraintOnRotation: 0
   useLocalSpaceForConstraint: 0
---- !u!114 &5698244781735121058
+--- !u!114 &6235487337299387820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4d9adcaad29f6a4982d728d7aee6284, type: 3}
@@ -297,13 +297,13 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: -0.49999997}
         stageAssetProperties: []
---- !u!114 &5688415938053928067
+--- !u!114 &1665381468180362344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755633c70b5dcc3428b45037543e277f, type: 3}
@@ -339,13 +339,13 @@ MonoBehaviour:
   AuthorityStateUpdated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6088452196193932206
+--- !u!114 &4306702252330989680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93595334175454693}
+  m_GameObject: {fileID: 7939125226560274356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ab77563e6fc22d43983926e925cd91d, type: 3}

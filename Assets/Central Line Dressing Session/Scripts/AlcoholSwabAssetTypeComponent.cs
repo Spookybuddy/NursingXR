@@ -26,6 +26,7 @@ public class AlcoholSwabAssetTypeComponent : BaseAssetTypeComponent<AlcoholSwabA
 
 
     [SerializeField] private GameObject packet, swab, reference, slideDirection, tearSlider, manipulationCollider;
+    [SerializeField] private MeshRenderer sliderArrow;
     [SerializeField] private SkinnedMeshRenderer packetMesh;
     
     private StepManagerAssetTypeComponent stepManager;
@@ -67,6 +68,11 @@ public class AlcoholSwabAssetTypeComponent : BaseAssetTypeComponent<AlcoholSwabA
     #endregion
 
     #region Getters & Setters
+
+    public GameObject GetSlider()
+    {
+        return tearSlider;
+    }
 
     public void SetTearSliderValue(SliderEventData eventData)
     {
@@ -143,6 +149,20 @@ public class AlcoholSwabAssetTypeComponent : BaseAssetTypeComponent<AlcoholSwabA
         stepManager.CheckStep3();
         stepManager.AddNextOrder3();
         stepManager.MarkOtherMistake1();
+    }
+
+    #endregion
+
+    #region Slider Arrow Visibility Functions
+
+    public void ShowSliderArrow()
+    {
+        sliderArrow.enabled = true;
+    }
+
+    public void HideSliderArrow()
+    {
+        sliderArrow.enabled = false;
     }
 
     #endregion

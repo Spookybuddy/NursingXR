@@ -14,6 +14,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.WSA;
+using GIGXR.Platform.Mobile.WebView.EventBus.UnityToWebView.Events;
 
 public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetData>
 {
@@ -21,8 +22,12 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     private CatheterSiteAssetTypeComponent catheterSite;
     [SerializeField] private GameObject fullSideCoverSlider, outlineCoverSlider;
     [SerializeField] private TegadermCollisionDetector collisionDetector;
+    [SerializeField] private GameObject tegaderm, deformedTegaderm, deformedOutlineCover;
+    [SerializeField] private SkinnedMeshRenderer tegadermCoverMesh, tegadermOutlineCoverMesh;
+    [SerializeField] private MeshRenderer fullCoverSliderArrow, outlineCoverSliderArrow;
+    private SkinnedMeshRenderer deformedOutlineCoverMesh;
 
-    private bool notCompletedStep5 = true, notAddedStep6Order = true, notCompletedStep7 = true;
+    private bool notCompletedStep5 = true, notCompletedStep6 = true, notAddedStep6Order = true, notCompletedStep7 = true;
 
     private IScenarioManager scenarioManager;
 
@@ -58,6 +63,8 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
             tempCatheterSites = GameObject.FindObjectsByType<CatheterSiteAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         } while (tempCatheterSites.Length == 0);
         catheterSite = tempCatheterSites[0];
+
+        deformedOutlineCoverMesh = deformedOutlineCover.GetComponent<SkinnedMeshRenderer>();
     }
 
     protected override void Teardown()
@@ -68,6 +75,11 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     #endregion
 
     #region Getters & Setters
+
+    public GameObject[] GetSliders()
+    {
+        return new GameObject[2] {fullSideCoverSlider, outlineCoverSlider};
+    }
 
     public void SetFullSideCoverSliderValue(SliderEventData eventData)
     {
@@ -87,12 +99,21 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
     {
         if (!notCompletedStep5)
         {
+            notCompletedStep6 = false;
             stepManager.CheckStep6();
             collisionDetector.CompletedStep6();
             Destroy(GetComponent<ManipulationAssetTypeComponent>());
             Destroy(gameObject.GetComponentInChildren<ObjectManipulator>());
+            tegaderm.SetActive(false);
             transform.position = other.transform.position;
             transform.localRotation = Quaternion.Euler(new Vector3(290, 90, 180));
+            outlineCoverSlider.transform.localPosition = new Vector3(
+                                                        -outlineCoverSlider.transform.localPosition.x,
+                                                         outlineCoverSlider.transform.localPosition.y,
+                                                        -outlineCoverSlider.transform.localPosition.z);
+            outlineCoverSlider.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            deformedTegaderm.SetActive(true);
+            deformedOutlineCover.SetActive(true);
         }
         if (notAddedStep6Order)
         {
@@ -112,14 +133,30 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
         {
             return;
         }
-        
+
+        tegadermCoverMesh.SetBlendShapeWeight(0, (float)args.AssetPropertyValue * 100);
+        tegadermCoverMesh.SetBlendShapeWeight(1, (float)args.AssetPropertyValue * 100);
+        tegadermCoverMesh.SetBlendShapeWeight(2, (float)args.AssetPropertyValue * 100);
+
         if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep5)
         {
             fullSideCoverSlider.SetActive(false);
             notCompletedStep5 = false;
+            StartCoroutine(Step5Anim());
             stepManager.CheckStep5();
             stepManager.AddNextOrder5();
         }
+    }
+
+    IEnumerator Step5Anim()
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            tegadermCoverMesh.SetBlendShapeWeight(3, 10f * i / 60);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        yield return new WaitForSeconds(.25f);
+        tegadermCoverMesh.enabled = false;
     }
 
     [RegisterPropertyChange(nameof(TegadermAssetData.outlineCoverSliderValue))]
@@ -130,13 +167,63 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
             return;
         }
 
+        deformedOutlineCoverMesh.SetBlendShapeWeight(0, (float)args.AssetPropertyValue * 100);
+
+        if (notCompletedStep6)
+        {
+            tegadermOutlineCoverMesh.SetBlendShapeWeight(0, (float)args.AssetPropertyValue * 100);
+        }
+
         if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep7)
         {
             outlineCoverSlider.SetActive(false);
             notCompletedStep7 = false;
+            StartCoroutine(Step7Anim());
+            if (notCompletedStep6)
+            {
+                StartCoroutine(Step7EarlyAnim());
+            }
             stepManager.CheckStep7();
             stepManager.AddNextOrder7();
         }
+    }
+
+    IEnumerator Step7EarlyAnim()
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            tegadermOutlineCoverMesh.SetBlendShapeWeight(1, 100f * i / 30);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        for (int i = 0; i < 30; i++)
+        {
+            tegadermOutlineCoverMesh.SetBlendShapeWeight(2, 100f * i / 30);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        for (int i = 0; i < 30; i++)
+        {
+            tegadermOutlineCoverMesh.SetBlendShapeWeight(3, 10f * i / 30);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        yield return new WaitForSeconds(.25f);
+        tegadermOutlineCoverMesh.enabled = false;
+    }
+
+    IEnumerator Step7Anim()
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            deformedOutlineCoverMesh.SetBlendShapeWeight(1, 100f * i / 60);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        for (int i = 0; i < 30; i++)
+        {
+            deformedOutlineCoverMesh.SetBlendShapeWeight(2, 10f * i / 30);
+            yield return new WaitForSeconds(1 / 60f);
+        }
+        yield return new WaitForSeconds(.25f);
+        deformedOutlineCoverMesh.enabled = false;
+
     }
 
     #endregion
@@ -175,6 +262,31 @@ public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetDa
 
         return (value, false);
     }
+
+    #endregion
+
+    #region Slider Arrow Visibility Functions
+
+    public void ShowFullCoverArrow()
+    {
+        fullCoverSliderArrow.enabled = true;
+    }
+
+    public void HideFullCoverArrow()
+    {
+        fullCoverSliderArrow.enabled = false;
+    }
+
+    public void ShowOutlineCoverArrow()
+    {
+        outlineCoverSliderArrow.enabled = true;
+    }
+
+    public void HideOutlineCoverArrow()
+    {
+        outlineCoverSliderArrow.enabled = false;
+    }
+
 
     #endregion
 

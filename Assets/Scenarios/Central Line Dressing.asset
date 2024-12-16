@@ -60,9 +60,9 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: fcfd5304-bd46-449d-87b6-895d91237d82
     assetData: 
-  - presetAssetId: test-tegaderm
+  - presetAssetId: cld-tegaderm
     assetTypePrefabReference:
-      m_AssetGUID: 341a6ed2b2b2a4e4fb6996ea9dfebc58
+      m_AssetGUID: f53ea15c0cdf6e042979fd04eba07b45
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
@@ -105,6 +105,15 @@ MonoBehaviour:
     assetTypePrefab: {fileID: 0}
     assetId: 1e4595c5-2b0b-4961-9df6-8ed416959e4c
     assetData: 
+  - presetAssetId: supply-packet
+    assetTypePrefabReference:
+      m_AssetGUID: 029b9c8ce34165b49a9ece213294cbd7
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 261c74af-18d0-499e-86cc-5c12ff1508ae
+    assetData: 
   assetDataPrefabReferences: {fileID: 1824212654823097835}
   presetAssetTypeLoadBundles: []
   presetRuleIds: []
@@ -127,20 +136,22 @@ MonoBehaviour:
     - cld-catheter
     - cld-chlorhexadine
     - hand-detector
-    - test-tegaderm
     - test-eye-tracker
     - gauze-large
     - gauze-small
     - cld-alcohol-swab
     - cld-chest-arm
+    - cld-tegaderm
+    - supply-packet
     m_values:
     - {fileID: 6663259427712631041, guid: 3d543f73d9696114bae23d0679554ca0, type: 3}
     - {fileID: 1763711242304640160, guid: 09083c99ba1f9784bb18957ddfbfaa3b, type: 3}
-    - {fileID: 2195914400085522862, guid: c6d287b48aa1940408a5c0ffb28deaee, type: 3}
+    - {fileID: 7500387808878466763, guid: c6d287b48aa1940408a5c0ffb28deaee, type: 3}
     - {fileID: 2546809527825109622, guid: 70a0ace2bcee0fd4b890b07f769a8a5d, type: 3}
-    - {fileID: 6299981884104790506, guid: d22e17586a8f1e74ba5a4e34b09fab85, type: 3}
     - {fileID: 1588553980866222313, guid: 24de63377aa9ecb40aa244bbc5203f56, type: 3}
-    - {fileID: 3013781159059500134, guid: e12198e2c87866940ab51cdfa750b956, type: 3}
-    - {fileID: 6507624244211776032, guid: 661064bbb474fc14c8d96d93c45bba17, type: 3}
-    - {fileID: 8322706028687866842, guid: c80ef011eb4d41b49a20a9c06dcd0578, type: 3}
+    - {fileID: 3098905760946554322, guid: e12198e2c87866940ab51cdfa750b956, type: 3}
+    - {fileID: 7198780371297611034, guid: 661064bbb474fc14c8d96d93c45bba17, type: 3}
+    - {fileID: 4947466173453336239, guid: c80ef011eb4d41b49a20a9c06dcd0578, type: 3}
     - {fileID: 5629344934238882100, guid: 6e274474bf515734884396452bfb8808, type: 3}
+    - {fileID: 6582896583342314571, guid: a2322354b21aeba4aa4c9bf0c491fdcf, type: 3}
+    - {fileID: 5834564793507419053, guid: 018d82bf678a66845bca6cb2d9295bf8, type: 3}

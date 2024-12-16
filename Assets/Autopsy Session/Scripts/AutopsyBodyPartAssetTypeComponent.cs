@@ -13,7 +13,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     [SerializeField] private Transform startingOrientation;
 
     private Rigidbody rb;
-    private Collider hitBox;
+    private BoxCollider hitBox;
     private GameObject bodyPartObject;
     private AutopsyScaleAssetTypeComponent autopsyScaleAssetTypeComponent;
     private PositionAssetTypeComponent positionAssetTypeComponent;
@@ -44,7 +44,7 @@ public class AutopsyBodyPartAssetTypeComponent : BaseAssetTypeComponent<AutopsyB
     {
         manipulationAssetTypeComponent = GetComponent<ManipulationAssetTypeComponent>();
         rb = GetComponentInChildren<Rigidbody>(true);
-        hitBox = GetComponentInChildren<Collider>(true);
+        hitBox = GetComponentInChildren<BoxCollider>(true);
         bodyPartObject = rb.gameObject;
         manipulationAssetTypeComponent.OnManipulationStarted.AddListener(OnSelection);
         manipulationAssetTypeComponent.OnManipulationEnded.AddListener(OnRelease);

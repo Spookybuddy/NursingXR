@@ -19,9 +19,11 @@ using UnityEngine.WSA;
 public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSiteAssetData>
 {
     [SerializeField] private GameObject oldTegadermSlider, oldTegaderm;
+    [SerializeField] private MeshRenderer sliderArrow;
     private bool notCompletedStep0 = true, notCompletedStep1 = true;
     
-      private StepManagerAssetTypeComponent stepManager;
+    private StepManagerAssetTypeComponent stepManager;
+    private SkinnedMeshRenderer oldTegadermMesh;
 
     private IScenarioManager scenarioManager;
 
@@ -50,6 +52,7 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
             tempManagers = GameObject.FindObjectsByType<StepManagerAssetTypeComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         } while (tempManagers.Length == 0);
         stepManager = tempManagers[0];
+        oldTegadermMesh = oldTegaderm.GetComponent<SkinnedMeshRenderer>();
     }
 
     protected override void Teardown()
@@ -95,6 +98,10 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
             {
                 notCompletedStep1 = false;
             }
+
+            oldTegadermMesh.SetBlendShapeWeight(0, (float)args.AssetPropertyValue * 100);
+            oldTegadermMesh.SetBlendShapeWeight(1, (float)args.AssetPropertyValue * 100);
+            oldTegadermMesh.SetBlendShapeWeight(2, (float)args.AssetPropertyValue * 100);
 
             if (Mathf.Abs((float)args.AssetPropertyValue - 1) < .001f && notCompletedStep0)
             {
@@ -144,6 +151,20 @@ public class CatheterSiteAssetTypeComponent : BaseAssetTypeComponent<CatheterSit
         }
 
         return (value, false);
+    }
+
+    #endregion
+
+    #region Slider Arrow Visibility Functions
+
+    public void ShowSliderArrow()
+    {
+        sliderArrow.enabled = true;
+    }
+
+    public void HideSliderArrow()
+    {
+        sliderArrow.enabled = false;
     }
 
     #endregion

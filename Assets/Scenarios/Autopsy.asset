@@ -26,6 +26,14 @@ MonoBehaviour:
     - rightarm-inner1
     - leftleg-inner1
     - rightleg-inner1
+    - heart-inner2
+    - lungs-inner2
+    - liver-inner2
+    - large-intestine-inner2
+    - small-intestine-inner2
+    - pancreas-inner2
+    - spleen-inner2
+    - autopsy-organizer
     m_values:
     - {fileID: 4779845785466914783, guid: eb86d12512121a24397340198939132b, type: 3}
     - {fileID: 1416261171713702834, guid: 8591e6ede9abd4f42b5743fb8a5924dd, type: 3}
@@ -39,6 +47,14 @@ MonoBehaviour:
     - {fileID: 5165994426923733766, guid: 99bf9e5be90e178488fad3ebb75033d9, type: 3}
     - {fileID: 3708794358125858803, guid: a314aae39a2860649bd5db58de0caa88, type: 3}
     - {fileID: 249295213482296602, guid: aa2758a079a17ee4ab161845b045fd29, type: 3}
+    - {fileID: 564772645679431947, guid: 4f1ab9382cd4f6e4cb6dc310580241ee, type: 3}
+    - {fileID: 7837089807563660772, guid: 3f8ff3cda8f308a4db20b3f6aa4991c7, type: 3}
+    - {fileID: 1093276725086481948, guid: fe83a26635c6d5e40ab0c39f8f8664c0, type: 3}
+    - {fileID: 4554799557812335171, guid: fac819f6752636644b45602e7ff90ad2, type: 3}
+    - {fileID: 7939125226560274356, guid: 971668485be017b4c9b965ee400df221, type: 3}
+    - {fileID: 5099916682372736161, guid: eb0d2957fa8931d418cf0b903ed7740e, type: 3}
+    - {fileID: 6661355460293994495, guid: 204df6629500e9d4f882c0b4fac1e235, type: 3}
+    - {fileID: 4661026782768771559, guid: 636071699905e774ea3cc63be1fdde61, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
