@@ -14,7 +14,6 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.WSA;
-using GIGXR.Platform.Mobile.WebView.EventBus.UnityToWebView.Events;
 
 public class TegadermAssetTypeComponent : BaseAssetTypeComponent<TegadermAssetData>
 {
