@@ -351,4 +351,5 @@ MonoBehaviour:
   slideDirection: {fileID: 0}
   tearSlider: {fileID: 0}
   manipulationCollider: {fileID: 0}
+  sliderArrow: {fileID: 0}
   packetMesh: {fileID: 0}

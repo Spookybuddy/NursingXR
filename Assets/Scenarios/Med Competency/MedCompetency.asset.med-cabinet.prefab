@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8865700554682735922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9049176128303750675}
+  - component: {fileID: 5483200892447918613}
+  - component: {fileID: 5096598360922554934}
+  - component: {fileID: 6684475847136774386}
+  - component: {fileID: 7667314524114078631}
+  - component: {fileID: 4864254787624423151}
+  - component: {fileID: 5567637260137864426}
+  - component: {fileID: 2746029041556884983}
+  m_Layer: 0
+  m_Name: MedCompetency.asset.med-cabinet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9049176128303750675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5483200892447918613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b25f72b7711cb4b847a690c9ad5fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabModelVersion: 
+  infoMenuPrefab: {fileID: 7927868563203143453, guid: e9ede9b33fa63524193d9c91a9df56d0,
+    type: 3}
+  positionOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &5096598360922554934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f9344c133d9ae4784ff3349c180156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetTypeId: 
+  presetAssetId: 
+  assetTypeDependencyIds: []
+  version: 0
+--- !u!114 &6684475847136774386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e8a32abe2933845aa38d9ad9a42c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: Is Enabled
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: Sets the asset's active state in the scenario.
+      runtimeData:
+        value: 
+    isEnabled:
+      designTimeData:
+        isEditableByAuthor: 1
+        defaultValue: 1
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    isEnabledHostOnly:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+--- !u!114 &7667314524114078631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 2
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 4864254787624423151}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4864254787624423151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0494f5b448a76b240a9fbc3c4b9ddb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
+--- !u!114 &5567637260137864426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c64de1b9c5fba48bb1d835abf19d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: Position
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: The start position of the interactable.
+      runtimeData:
+        value: 
+    position:
+      designTimeData:
+        isEditableByAuthor: 1
+        defaultValue: {x: 0, y: 0, z: 0}
+      runtimeData:
+        sharedValue: {x: -0.5, y: -0.5, z: 0}
+        stageAssetProperties: []
+--- !u!114 &2746029041556884983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865700554682735922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bd77a98cf9a8a4f94e3912447f96f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    medsDispensed:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+  medButton: {fileID: 0}
+  tempMeds: {fileID: 0}

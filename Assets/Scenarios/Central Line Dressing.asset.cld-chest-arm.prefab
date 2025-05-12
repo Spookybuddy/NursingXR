@@ -268,3 +268,4 @@ MonoBehaviour:
         stageAssetProperties: []
   oldTegadermSlider: {fileID: 0}
   oldTegaderm: {fileID: 0}
+  sliderArrow: {fileID: 0}

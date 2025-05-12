@@ -269,6 +269,34 @@ MonoBehaviour:
     m_Address: supply-packet
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 425710bcb29263640ac50ed1b54865ca
+    m_Address: KenTestAsset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6d2d4093df79b2940bae7f0bd008d6de
+    m_Address: mar-clipboard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6ffe25aa7f0de524ba98e74a364e3756
+    m_Address: patient-board
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 74f3159323bdc2d4690e0d33b5f7a321
+    m_Address: hospital-bed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 795a249bdd230ff4092cc8aa2aa59420
+    m_Address: med-cabinet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fdd9a79b78a6aa2478dcdb5afe56053b
+    m_Address: sink
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ee391a2d4077bd4c860b9a5527b9c57
+    m_Address: temp-med
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90719d1b836062c449b69fae3a0f7d16, type: 2}
   m_SchemaSet:
