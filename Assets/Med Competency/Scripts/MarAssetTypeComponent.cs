@@ -50,7 +50,6 @@ public class MarAssetTypeComponent : BaseAssetTypeComponent<MarAssetData>
         //Assigns the med as chosen from the med list
         assetData.patientMed = assetData.medList[medIndex, 0];
 
-
         //Displays the text of the med info in the proper format
         patientMedText.text = assetData.medList[medIndex,0] + "\n" +
             assetData.medList[medIndex, 1] + " mg " + assetData.medList[medIndex, 2] + "\n" +

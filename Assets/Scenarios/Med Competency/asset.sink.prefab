@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8973246376489992444}
   - component: {fileID: 4641776989523764609}
   - component: {fileID: 7810877571992111636}
+  - component: {fileID: 3393726906781227631}
   m_Layer: 0
   m_Name: asset.sink
   m_TagString: Untagged
@@ -177,3 +178,19 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0.5, y: -0.5, z: 1}
         stageAssetProperties: []
+--- !u!114 &3393726906781227631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599046277150914487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c548fac215a994a498a5f266653329ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  handsWashedText: {fileID: 0}
+  stepManager: {fileID: 0}
+  roomChange: {fileID: 0}

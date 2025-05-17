@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class MedVerifier : MonoBehaviour
 {
-    public MarAssetTypeComponent mar;
+    private bool medsChecked = false;
+    
+    private StepManagerMedCompAssetTypeComponent stepManager;
+    
+    private MarAssetTypeComponent mar;
     private MedAssetTypeComponent meds;
 
     public void Start()
@@ -14,18 +18,26 @@ public class MedVerifier : MonoBehaviour
 
     public void OralMedCheck()
     {
-        meds = GameObject.Find("temp-med (TempMeds(Clone))").GetComponent<MedAssetTypeComponent>();
-
-        Debug.Log("MAR med is " + mar.AssetData.patientMed + " woop");
-        Debug.Log("Provide med is " + meds.AssetData.MedName + " woop");
-
-        if (mar.AssetData.patientMed == meds.AssetData.MedName)
+        if (medsChecked == false)
         {
-            Debug.Log("SUCCESS WOOP");
-        }
-        else
-        {
-            Debug.Log("Failure :[ woop");
+            medsChecked = true;
+            
+            stepManager = GameObject.Find("stepManager (Step Manager(Clone))").GetComponent<StepManagerMedCompAssetTypeComponent>();
+            meds = GameObject.Find("temp-med (TempMeds(Clone))").GetComponent<MedAssetTypeComponent>();
+
+            Debug.Log("woop Steps = " + stepManager.AssetData.stepCompletedBool.Length);
+            
+            stepManager.AssetData.stepCompletedBool[4] = true;
+
+            if (mar.AssetData.patientName.runtimeData.Value == meds.AssetData.PatientName.runtimeData.Value)
+            {
+                stepManager.AssetData.stepCompletedBool[1] = true;
+            }
+
+            if (mar.AssetData.patientMed == meds.AssetData.MedName.runtimeData.Value)
+            {
+                stepManager.AssetData.stepCompletedBool[2] = true;
+            }
         }
     }
 }

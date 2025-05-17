@@ -281,11 +281,11 @@ MonoBehaviour:
     m_Address: patient-board
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 74f3159323bdc2d4690e0d33b5f7a321
+  - m_GUID: 9b0052a527999bf4cad15c913344e2ef
     m_Address: hospital-bed
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 795a249bdd230ff4092cc8aa2aa59420
+  - m_GUID: 6609161b89fe91d47a33121c927a2b82
     m_Address: med-cabinet
     m_ReadOnly: 0
     m_SerializedLabels: []
@@ -295,6 +295,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8ee391a2d4077bd4c860b9a5527b9c57
     m_Address: temp-med
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4e579cc93fdc0bd4c905a65ad7d4e2b2
+    m_Address: medComp-stepManager
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

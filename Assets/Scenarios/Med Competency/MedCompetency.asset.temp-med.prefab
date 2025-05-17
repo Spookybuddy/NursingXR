@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3854660728089915500}
   - component: {fileID: 1431057851795257166}
   - component: {fileID: 9005444384975416791}
+  - component: {fileID: 4896651214745880194}
   m_Layer: 0
   m_Name: MedCompetency.asset.temp-med
   m_TagString: Untagged
@@ -313,3 +314,45 @@ MonoBehaviour:
       runtimeData:
         sharedValue: {x: 0, y: 0, z: 0, w: 1}
         stageAssetProperties: []
+--- !u!114 &4896651214745880194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521583827781762147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63e7e4eba661bb4e9ce2728b7957dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+  assetData:
+    name:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    description:
+      designTimeData:
+        defaultValue: 
+      runtimeData:
+        value: 
+    MedName: 
+    MedDosage: 0
+    MedExpirationMonth:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    MedExpirationYear:
+      designTimeData:
+        isEditableByAuthor: 0
+        defaultValue: 0
+      runtimeData:
+        sharedValue: 0
+        stageAssetProperties: []
+    MedRoute: 
+    PatientName: 

@@ -23,9 +23,9 @@ MonoBehaviour:
     m_values:
     - {fileID: 113760376615944128, guid: effb2646f8fd4bd47907036aa818c22a, type: 3}
     - {fileID: 5427389510403684973, guid: c3b4c38f1d20f0240975d4487cddb3d7, type: 3}
-    - {fileID: 6445840832521632018, guid: edbcde1479857464d8bb9013e0b69a42, type: 3}
+    - {fileID: 8306255544061935698, guid: edbcde1479857464d8bb9013e0b69a42, type: 3}
     - {fileID: 2599046277150914487, guid: d5e70996322b6d644b293a0e6dd299cb, type: 3}
-    - {fileID: 8865700554682735922, guid: d28caa910a0fcd340825faeee28f7701, type: 3}
+    - {fileID: 8103450958946794367, guid: d28caa910a0fcd340825faeee28f7701, type: 3}
     - {fileID: 521583827781762147, guid: 695a7609a87b878479032f8140fc5e58, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
     assetData: 
   - presetAssetId: hospital-bed
     assetTypePrefabReference:
-      m_AssetGUID: 74f3159323bdc2d4690e0d33b5f7a321
+      m_AssetGUID: 9b0052a527999bf4cad15c913344e2ef
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
     assetData: 
   - presetAssetId: med-cabinet
     assetTypePrefabReference:
-      m_AssetGUID: 795a249bdd230ff4092cc8aa2aa59420
+      m_AssetGUID: 6609161b89fe91d47a33121c927a2b82
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
@@ -95,6 +95,15 @@ MonoBehaviour:
       m_EditorAssetChanged: 0
     assetTypePrefab: {fileID: 0}
     assetId: c167d589-fe65-43e6-b490-1e0a21b2876d
+    assetData: 
+  - presetAssetId: stepManager
+    assetTypePrefabReference:
+      m_AssetGUID: 4e579cc93fdc0bd4c905a65ad7d4e2b2
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    assetTypePrefab: {fileID: 0}
+    assetId: 32aa4178-31d2-4435-a62e-2486eb782c05
     assetData: 
   assetDataPrefabReferences: {fileID: -2132217347582890893}
   presetAssetTypeLoadBundles: []

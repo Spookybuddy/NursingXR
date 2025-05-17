@@ -174,7 +174,7 @@ public class MedCabinetAssetTypeComponent : BaseAssetTypeComponent<MedCabinetAss
 
             tempMeds.transform.position = new Vector3(0.2f,-0.45f,0.75f);
 
-            tempMedAssetTypeComponent.AssetData.MedName = assetData.medList[assetData.medIndex.runtimeData.Value, 0];
+            tempMedAssetTypeComponent.AssetData.MedName.runtimeData.Value = assetData.medList[assetData.medIndex.runtimeData.Value, 0];
             tempMedAssetTypeComponent.AssetData.MedDosage = float.Parse(assetData.medList[assetData.medIndex.runtimeData.Value, 1]);
             tempMedAssetTypeComponent.AssetData.MedRoute = assetData.medList[assetData.medIndex.runtimeData.Value, 2];
         }
